@@ -20,4 +20,4 @@ The way to running an open-source community.
 
 Please join discussions at the [GitHub Discussion forum](https://github.com/flossway/flossway/discussions).
 
-File an issue if you find something on building, setups, or grammar. Other topics will be ignored or just closed.
+File an issue if you find something on building, setups, or grammar. If you have a topic to discuss, a question to ask or any other topics, go to the discussion forum.

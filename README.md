@@ -1,4 +1,20 @@
-# FLOSS Way
+# Project FLOSSWAY
+
+## Intro
+
+### What is the goal of this project?
+
+This project is going to answer the question how to running an open-source community.
+
+* How to build and maintain developer relationship?
+* How to work in both community and company?
+* How to measure an open-source community?
+
+### What does FLOSSWAY stand for?
+
+FLOSSWAY is almost the way to building a "Free/Libre and Open Source Software". Read the article [FLOSS and FOSS](https://www.gnu.org/philosophy/floss-and-foss.html).
+
+FLOSS is possibly also "flowers" + "blossom" in pronunciation.
 
 ## License
 
@@ -6,15 +22,7 @@
 
 This work is licensed under a [Creative Commons Attribution 4.0 International License](http://creativecommons.org/licenses/by/4.0/).
 
-Please refer "FLOSSWay Creators" as copyright owners.
-
-## Intro
-
-The way to running an open-source community.
-
-* How to deal with developer relationship?
-* How to deal with the relationship between community and company?
-* How to measure an open-source community?
+Please refer "FLOSSWAY Creators" as copyright owners.
 
 ## Contributing
 

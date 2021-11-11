@@ -1,6 +1,7 @@
 ---
 title: TEMPLATE
-discussion: https://github.com/flossway/flossway/discussions/1
+category: category
+discussion: https://github.com/flossway/flossway/discussions/0
 ---
 
 <!--

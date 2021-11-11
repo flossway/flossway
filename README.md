@@ -1,12 +1,12 @@
 # Project FLOSSWAY
 
-## Intro
+## Introduction
 
 ### What is the goal of this project?
 
-This project is going to answer the question how to running an open-source community.
+This project is going to answer the question of how to run an open-source community.
 
-* How to build and maintain developer relationship?
+* How to build and maintain developer relationships?
 * How to work in both community and company?
 * How to measure an open-source community?
 

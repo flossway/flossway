@@ -8,6 +8,8 @@ discussion: https://github.com/flossway/flossway/discussions/10
 
 The Engula Community Project plans to build the Engula community, i.e., make the Engula community a world-class open-source infrastructure software community. This project is stored here to provide a neutral perspective on the Engula project on behalf of an evangelist.
 
+> DISCLAIMER: Up to the time this post was published, the project proposal in the Engula community is still under discussion. Check out https://github.com/engula/engula.github.io/pull/15 for details.
+
 ## Positioning
 
 The [Engula](https://github.com/engula/engula) project aims to provide fundamental building blocks for developers of data processing software such as databases and a robust infrastructure software ecosystem that can be built by collaborating with various developers.

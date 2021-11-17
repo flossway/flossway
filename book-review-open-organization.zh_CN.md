@@ -1,6 +1,5 @@
 ---
 title: 'Open Organization'
-category: 'book review'
 discussion: https://github.com/flossway/flossway/discussions/8
 ---
 

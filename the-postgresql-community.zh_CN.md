@@ -1,6 +1,5 @@
 ---
 title: 'The PostgreSQL Community'
-category: 'case study'
 discussion: https://github.com/flossway/flossway/discussions/6
 ---
 

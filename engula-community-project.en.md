@@ -1,6 +1,5 @@
 ---
 title: Engula Community Project
-category: engula
 discussion: https://github.com/flossway/flossway/discussions/10
 ---
 

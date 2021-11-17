@@ -19,7 +19,8 @@ FLOSS is possibly also "flowers" + "blossom" in pronunciation.
 * Case Study
   * [Engula Community Project](engula-community-project.en.md)
   * [The PostgreSQL Community](the-postgresql-community.zh_CN.md)
-* Methodology
+* How-tos
+  * [Effective Open-source Participant](effective-open-source-participant.en.md)
 
 ## License
 
@@ -34,3 +35,5 @@ Please refer "FLOSSWAY Creators" as copyright owners.
 Please join discussions at the [GitHub Discussion forum](https://github.com/flossway/flossway/discussions).
 
 File an issue if you find something on building, setups, or grammar. If you have a topic to discuss, a question to ask or any other topics, go to the discussion forum.
+
+Translations are welcomed! You don't have to translate word-by-word, but follow the spirit of the original context and write in your own understanding. Just mention the link of the original text at the beginning, and maintainers will coordinate incoming contributions.

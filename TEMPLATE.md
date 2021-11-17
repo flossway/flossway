@@ -1,6 +1,5 @@
 ---
 title: TEMPLATE
-category: category
 discussion: https://github.com/flossway/flossway/discussions/0
 ---
 

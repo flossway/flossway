@@ -6,15 +6,20 @@
 
 This project is going to answer the question of how to run an open-source community.
 
-* How to build and maintain developer relationships?
-* How to work in both community and company?
-* How to measure an open-source community?
-
 ### What does FLOSSWAY stand for?
 
 FLOSSWAY is almost the way to building a "Free/Libre and Open Source Software". Read the article [FLOSS and FOSS](https://www.gnu.org/philosophy/floss-and-foss.html).
 
 FLOSS is possibly also "flowers" + "blossom" in pronunciation.
+
+## Table of Content
+
+* Book Review
+  * [Open Organization](book-review-open-organization.zh_CN.md)
+* Case Study
+  * [Engula Community Project](engula-community-project.en.md)
+  * [The PostgreSQL Community](the-postgresql-community.zh_CN.md)
+* Methodology
 
 ## License
 

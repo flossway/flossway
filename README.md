@@ -21,6 +21,7 @@ FLOSS is possibly also "flowers" + "blossom" in pronunciation.
   * [The PostgreSQL Community](the-postgresql-community.zh_CN.md)
 * How-tos
   * [Effective Open-source Participant](effective-open-source-participant.en.md)
+  * [How to Practice Open-source Collaboration (Enterprise)](open-source-collaboration-enterprise-perspective.zh_CN.md)
 
 ## License
 

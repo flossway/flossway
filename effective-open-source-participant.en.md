@@ -1,5 +1,6 @@
 ---
 title: Effective Open-source Participant
+author: tison
 discussion: https://github.com/flossway/flossway/discussions/15
 ---
 

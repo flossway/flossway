@@ -28,8 +28,6 @@ FLOSS is possibly also "flowers" + "blossom" in pronunciation.
 
 This work is licensed under a [Creative Commons Attribution 4.0 International License](http://creativecommons.org/licenses/by/4.0/).
 
-Please refer "FLOSSWAY Creators" as copyright owners.
-
 ## Contributing
 
 Please join discussions at the [GitHub Discussion forum](https://github.com/flossway/flossway/discussions).

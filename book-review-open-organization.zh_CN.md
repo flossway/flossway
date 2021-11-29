@@ -1,5 +1,6 @@
 ---
-title: 'Open Organization'
+title: Open Organization
+author: tison
 discussion: https://github.com/flossway/flossway/discussions/8
 ---
 

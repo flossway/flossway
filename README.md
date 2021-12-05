@@ -4,7 +4,7 @@
 
 ### What is the goal of this project?
 
-This project is going to answer the question of how to run an open-source community.
+This project is going to answer the question of how to build an open-source community.
 
 ### What does FLOSSWAY stand for?
 

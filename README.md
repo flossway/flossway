@@ -20,8 +20,8 @@ FLOSS is possibly also "flowers" + "blossom" in pronunciation.
   * [Engula Community Project](engula-community-project.en.md)
   * [The PostgreSQL Community](the-postgresql-community.zh_CN.md)
 * How-tos
-  * [Effective Open-source Participant](effective-open-source-participant.en.md)
-  * [How to Practice Open-source Collaboration (Enterprise)](open-source-collaboration-enterprise-perspective.zh_CN.md)
+  * [Effective Open-source Participant](effective-open-source-participant.zh_CN.md)
+  * [How to Practice Open-source Collaboration (Enterprise Perspective)](open-source-collaboration-enterprise-perspective.zh_CN.md)
 
 ## License
 

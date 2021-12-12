@@ -1,5 +1,6 @@
 ---
 title: TEMPLATE
+author: author
 discussion: https://github.com/flossway/flossway/discussions/0
 ---
 

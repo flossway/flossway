@@ -1,5 +1,5 @@
 ---
-title: 'The PostgreSQL Community'
+title: The PostgreSQL Community
 discussion: https://github.com/flossway/flossway/discussions/6
 ---
 

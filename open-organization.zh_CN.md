@@ -1,5 +1,5 @@
 ---
-title: Open Organization
+title: 《开放式组织》书评
 author: tison
 discussion: https://github.com/flossway/flossway/discussions/8
 ---

@@ -1,5 +1,5 @@
 ---
-title: Effective Open-source Participant
+title: 高效参与开源的诀窍
 author: tison
 discussion: https://github.com/flossway/flossway/discussions/15
 ---

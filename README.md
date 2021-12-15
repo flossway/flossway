@@ -16,6 +16,7 @@ FLOSS is possibly also "flowers" + "blossom" in pronunciation.
 
 * Book Review
   * [Open Organization](open-organization.zh_CN.md)
+  * [The Cathedral and the Bazaar](the-cathedral-and-the-bazaar.zh_CN.md)
 * Case Study
   * [Engula Community Project](engula-community-project.en.md)
   * [The PostgreSQL Community](the-postgresql-community.zh_CN.md)

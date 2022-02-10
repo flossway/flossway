@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 6.0.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/flossway/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/flossway/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/flossway/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/flossway/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/flossway/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Serif+SC:300,300italic,400,400italic,700,700italic%7CPingFang+SC:300,300italic,400,400italic,700,700italic%7CSource+Code+Pro:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css" integrity="sha256-mUZM63G8m73Mcidfrv5E+Y61y7a12O5mW4ezU3bxqW4=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"flossway.github.io","root":"/flossway/","images":"/flossway/images","scheme":"Mist","darkmode":false,"version":"8.10.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/flossway/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/flossway/js/config.js"></script>
+
+  <meta name="description" content="本文部分启发自在 ALC Beijing 录制播客时讨论的内容，仅引用我个人的观点。播客内容应该近期会在前面链接的网站上发布。 《开放式组织》这本书单看它本身，讲的是红帽公司的组织管理经验。这是一个将商业价值建立在开源项目之上的公司审视公司内部的组织形式的著作，并且主要关注在红帽这个案例上。这样，不管是在经验的普遍性上，还是在开放式组织这种形式跨越组织，尤其是建立商业公司和开源社区之间的联系这方面">
+<meta property="og:type" content="article">
+<meta property="og:title" content="《开放式组织》书评">
+<meta property="og:url" content="https://flossway.github.io/flossway/2022/02/10/open-organization/index.html">
+<meta property="og:site_name" content="FLOSSWAY">
+<meta property="og:description" content="本文部分启发自在 ALC Beijing 录制播客时讨论的内容，仅引用我个人的观点。播客内容应该近期会在前面链接的网站上发布。 《开放式组织》这本书单看它本身，讲的是红帽公司的组织管理经验。这是一个将商业价值建立在开源项目之上的公司审视公司内部的组织形式的著作，并且主要关注在红帽这个案例上。这样，不管是在经验的普遍性上，还是在开放式组织这种形式跨越组织，尤其是建立商业公司和开源社区之间的联系这方面">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2022-02-10T00:00:00.000Z">
+<meta property="article:modified_time" content="2022-02-10T11:13:45.598Z">
+<meta property="article:author" content="FLOSSWAY Authors">
+<meta property="article:tag" content="开源">
+<meta property="article:tag" content="开源之书">
+<meta property="article:tag" content="组织管理">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://flossway.github.io/flossway/media/flossway.png">
+
+
+<link rel="canonical" href="https://flossway.github.io/flossway/2022/02/10/open-organization/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://flossway.github.io/flossway/2022/02/10/open-organization/","path":"2022/02/10/open-organization/","title":"《开放式组织》书评"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>《开放式组织》书评 | FLOSSWAY</title>
+  
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/flossway/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/flossway/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">FLOSSWAY</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">building open-source community</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home"><a href="/flossway/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li>
+        <li class="menu-item menu-item-tags"><a href="/flossway/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li>
+        <li class="menu-item menu-item-categories"><a href="/flossway/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li>
+        <li class="menu-item menu-item-archives"><a href="/flossway/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E7%90%86%E8%A7%A3%E5%BC%80%E6%94%BE%E5%BC%8F%E7%BB%84%E7%BB%87%E8%BF%99%E7%A7%8D%E5%BD%A2%E5%BC%8F%EF%BC%9F"><span class="nav-number">1.</span> <span class="nav-text">为什么要理解开放式组织这种形式？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A6%82%E4%BD%95%E7%82%B9%E7%87%83%E5%B7%A5%E4%BD%9C%E7%83%AD%E6%83%85%EF%BC%9F"><span class="nav-number">2.</span> <span class="nav-text">如何点燃工作热情？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A6%82%E4%BD%95%E6%8F%90%E9%AB%98%E5%91%98%E5%B7%A5%E7%9A%84%E5%8F%82%E4%B8%8E%E5%BA%A6%EF%BC%9F"><span class="nav-number">3.</span> <span class="nav-text">如何提高员工的参与度？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BD%95%E4%B8%BA%E7%B2%BE%E8%8B%B1%E9%A2%86%E5%AF%BC%E5%88%B6%EF%BC%9F"><span class="nav-number">4.</span> <span class="nav-text">何为精英领导制？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BC%80%E6%94%BE%E5%BC%8F%E7%BB%84%E7%BB%87%E6%98%AF%E4%B8%8D%E6%98%AF%E6%9C%AA%E6%9D%A5%E5%94%AF%E4%B8%80%E7%9A%84%E6%88%96%E8%80%85%E6%9C%80%E9%AB%98%E7%BA%A7%E7%9A%84%E7%BB%84%E7%BB%87%E5%BD%A2%E5%BC%8F%EF%BC%9F"><span class="nav-number">5.</span> <span class="nav-text">开放式组织是不是未来唯一的或者最高级的组织形式？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BA%A2%E5%B8%BD%E5%85%AC%E5%8F%B8%E7%9A%84%E7%AE%A1%E7%90%86%E5%8E%9F%E5%88%99"><span class="nav-number">6.</span> <span class="nav-text">红帽公司的管理原则</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="FLOSSWAY Authors"
+      src="/flossway/media/flossway.png">
+  <p class="site-author-name" itemprop="name">FLOSSWAY Authors</p>
+  <div class="site-description" itemprop="description">Building your open-source community.</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/flossway/archives/">
+          <span class="site-state-item-count">5</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/flossway/categories/">
+        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/flossway/tags/">
+        <span class="site-state-item-count">5</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/flossway" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;flossway" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i></a>
+      </span>
+  </div>
+
+
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://flossway.github.io/flossway/2022/02/10/open-organization/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/flossway/media/flossway.png">
+      <meta itemprop="name" content="FLOSSWAY Authors">
+      <meta itemprop="description" content="Building your open-source community.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="FLOSSWAY">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          《开放式组织》书评
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2022-02-10 00:00:00 / 修改时间：11:13:45" itemprop="dateCreated datePublished" datetime="2022-02-10T00:00:00+00:00">2022-02-10</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/flossway/categories/tison/" itemprop="url" rel="index"><span itemprop="name">tison</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>3.8k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>3 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <p>本文部分启发自在 <a target="_blank" rel="noopener" href="https://alc-beijing.github.io/alc-site/">ALC Beijing</a> 录制播客时讨论的内容，仅引用我个人的观点。播客内容应该近期会在前面链接的网站上发布。</p>
+<p><a target="_blank" rel="noopener" href="https://book.douban.com/subject/26894636">《开放式组织》</a>这本书单看它本身，讲的是红帽公司的组织管理经验。这是一个将商业价值建立在开源项目之上的公司审视公司内部的组织形式的著作，并且主要关注在红帽这个案例上。这样，不管是在经验的普遍性上，还是在开放式组织这种形式跨越组织，尤其是建立商业公司和开源社区之间的联系这方面的讨论上，都有所欠缺。</p>
+<p>从理论到实践，从企业审视内部到跨越组织边界，连接商业公司和开源社区，这样一个广义上的“开放式组织”阅读主题，我推荐以下几本书共读。</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://book.douban.com/subject/27125968/">《企业的人性面》</a></li>
+<li><a target="_blank" rel="noopener" href="https://book.douban.com/subject/34834429/">《协同》</a></li>
+<li><a target="_blank" rel="noopener" href="https://book.douban.com/subject/26976995/">《社区运营的艺术》</a></li>
+<li><a target="_blank" rel="noopener" href="https://book.douban.com/subject/35531548/">《用户共创》</a></li>
+</ul>
+<p>《企业的人性面》我认为是《开放式组织》背后的理论基础，成书于 1960 年，历久弥新。《协同》是国内学者关注“内破部门墙，外拓企业边界”的研究跨越组织边界合作的当代著作。《社区运营的艺术》和《用户共创》均出自 Ubuntu 社区经理 Jono Bacon 之手，讨论了开源社区这一开放式组织的运行方式与最佳实践。这几本书都是阅读《开放式组织》的有益补充。</p>
+<span id="more"></span>
+
+<h2 id="为什么要理解开放式组织这种形式？"><a href="#为什么要理解开放式组织这种形式？" class="headerlink" title="为什么要理解开放式组织这种形式？"></a>为什么要理解开放式组织这种形式？</h2><p>这个问题也是计划中的“开源协同”系列文章里会展开讨论的问题，这里做简略的回答。这个问题在《开放式组织》里没有直接讨论，而是作为已知假设。然而，这个问题却是想在国内推行开放式组织这种管理模式首先要回答的问题。</p>
+<p>本书涉及这个问题的一句话</p>
+<blockquote>
+<p>我们发现，开发开源软件的最佳方法同样也非常适用于管理整个公司。</p>
+</blockquote>
+<p>也就是说，开放式组织就是开发开源软件时协调开发团队或者说开源社区的组织管理手段。我喜欢将开放式组织这种组织管理手段简称为“开源协同”。开源软件在开源协同的生产力加持下，在不同领域攻城略地，击溃了专有软件的统治。如果企业想要基于开源软件打造商业价值，那么它就必须了解开源软件。在这种情况下，传统的控制管理模型会导致企业和开源社区激烈的摩擦。要想获得生产力的提升，企业必须成为开放式组织。</p>
+<p>这种摩擦来自于时代发展带来的对于组织管理的颠覆。《协同》当中提到的“强个体的价值崛起”，以及《用户共创》当中提到的“社区成员为社区工作，而不是为商业公司工作”都是这一点的佐证。如今，开源社区有能力依靠其同侪社区当中强大的个体打造高价值的软件，其力量足以支持 Linux 赢下服务端操作系统，支持 Rust 成为富有竞争力的系统级编程语言，支持 PostgreSQL 成为世界前列的数据库软件。开源社区及其成员无需依赖于企业尤其是单一企业的控制而生存。因此，他们可以坚持为社区工作，而不是为商业公司工作。</p>
+<p>在这种情况下，如果坚持传统的控制管理模型，试图将社区成员驯化成免费劳动力，必将破坏可能的跨越组织边界的合作的信任基石，回退到商业公司雇佣一批员工实现一个本身即是产品的软件。前文说到，开源软件得益于开源协同的生产力加持，正在不同领域中击溃专有软件的统治。在这一背景下，仍然希望聚集起一批员工写出足以媲美开源软件的专有软件，是不太现实的。绝大部分情况下，你无法聚拢起比拟开源社区的专家团队。<a target="_blank" rel="noopener" href="https://book.douban.com/subject/2265341/">《维基经济学》</a>当中提到，“唯一有资质做出新发现的人可能在他的组织范围之外”，这将是越来越常见的情况。</p>
+<p>《开放式组织》并没有过多的讲这部分内容，因为红帽已经走过了这个阶段。要想跟 Linux 社区达成最好的协同，乃至形成某种意义上的“原厂”品牌，必须以开放式组织的形式运作。本书更多的是讲在已经要运行一个开放式组织的前提下，如何发挥这一组织形式最大的生产力。其实作者 Jim 已经在第一章中提到过，他一开始也试图以传统的控制管理模型来管理红帽公司，但是开放式组织的力量已经不可阻挡，正如开源社区这一开放式组织的力量也不会以商业公司的意志为转移一样。于是他开始学习、理解并运用开放式组织的形式来释放红帽公司员工的生产力。</p>
+<h2 id="如何点燃工作热情？"><a href="#如何点燃工作热情？" class="headerlink" title="如何点燃工作热情？"></a>如何点燃工作热情？</h2><p>开放式组织具体的管理策略和<a target="_blank" rel="noopener" href="https://book.douban.com/subject/30356081/">《奈飞文化手册》</a>所介绍的准则多有共通之处，其理论基础则都很可能来自《企业的人性面》当中提到的企业管理的 Y 理论。</p>
+<p>点燃工作热情是这类组织要面临的第一个挑战。《奈飞文化手册》写到，“成年人最渴望的奖励，就是成功”。《开放式组织》在本章中也提到</p>
+<blockquote>
+<p>你需要一个能让大家时刻铭记在心的目标，而不只是停留在追求利润这个层面上，这是吸引顶尖人才的唯一方法。</p>
+</blockquote>
+<p>如果利用马斯洛的需求层次理论来分析，这是要求激发员工对尊重和自我实现的需要的追求。传统的控制管理模型压抑员工的安全需要乃至生理需要的满足，主要使用金钱和职位来激励员工，但是这种激励不能持续。不仅仅是因为员工得到满足后激励作用就会消失，更因为商业公司无法持续用金钱和职位激励每一位员工。与之相反，开放式组织不会压迫员工的生理需要和安全需要，而是激发新时代高价值的强个体的热忱和渴望，也即点燃工作热情来发掘被压抑而无法释放的生产力。</p>
+<p>值得注意的是，本章名为“构建充满热情的工作环境”，对于如何做到上面提到的激发热忱和渴望，书中的论调也是</p>
+<blockquote>
+<p>对于管理者而言，如今最重要的任务就是建立一个启发思考、培育积极的投入精神，并且推崇无限热情、想象力和主动性的工作环境。</p>
+</blockquote>
+<p>也就是说，组织管理要做的是构建环境。虽然需要关注个体在环境中的发挥来校正对环境状况的认识，但也不用过分纠结某一个人的热情是否点燃。一个人没有热情，是很难点燃出热情的，根本就不可燃。管理者能做的是破除环境当中压抑了人原本的热情的限制条件，释放原本就存在的工作热情。</p>
+<p>这一思路也出现在《企业的人性面》当中，书中对比纠结个体，试图利用一致的模式创造标准化人才的“制造”手段，提出了人才的“栽培”方法。</p>
+<blockquote>
+<p>个人将成长为他可以成为的样子，只要为他们创造适当的成长环境。</p>
+</blockquote>
+<p>也就是说，开放式组织基于对个人价值的认可和个人能力的信任，致力于创造出能点燃员工工作热情，积极投入工作的环境。</p>
+<h2 id="如何提高员工的参与度？"><a href="#如何提高员工的参与度？" class="headerlink" title="如何提高员工的参与度？"></a>如何提高员工的参与度？</h2><p>首先自己要参与，而不是作为一个局外人去提升其他员工的参与度。《开放式组织》当中写到，“想要得到，就先要付出”，就是对每个希望提高员工参与的成员提出的建议。</p>
+<p>《企业的人性面》当中花了一整章的篇幅讨论何为参与以及如何参与。根本是要树立诚信，员工能够真正地参与到事务活动和决策中来，整个旅程没有破坏安全感和信任的坏例子。</p>
+<p>假模假样的号召参与，实际并不采纳意见等仍然遵循控制管理模型的做法，并不能够瞒天过海，反而是失掉员工的信任，进而整个提高参与度的努力都会失败。</p>
+<h2 id="何为精英领导制？"><a href="#何为精英领导制？" class="headerlink" title="何为精英领导制？"></a>何为精英领导制？</h2><p>本书的第四章、第五章和第六章都聚焦在如何做决策这个议题上，而开放式组织从开源社区当中借鉴到的决策方式，自然是精英领导制。</p>
+<p>《开放式组织》很有价值的一点在于对比了精英制度和民主制度，并明确地指出了精英制度不同于民主制度的要点。</p>
+<blockquote>
+<p>精英制度是指根据提出的最佳方案做决定的方式；才能是选择的唯一标准，而非地位、偏见或特权。在一个公民公司里，最优的行动方案是在公开、充分、信息量足够的辩论之后胜出的方案。精英就是每一个有思想、有知识的人，每一个在真正理解之后得出的好想法都会得到重视。毫无才华的吹牛皮之人不会得到尊重。实施了精英制度之后，参与性民主必然将权利转移至最低一级人群的说法也将不攻自破。</p>
+</blockquote>
+<p>许多开源社区做得不好的一点，就是太强调平等乃至于变成平均主义。其实社区成员积累社会资本，应该是一个 earn authority 的过程，积极主动的 contribution 获得别人的尊重，而不是凑人头投票决策。</p>
+<p>Linus 多次表示自己他只以技术论高低，PostgreSQL 社区和 Apache 社区推选新的 Committer 时是核心成员闭门会决议后公示，都是反对民粹的体现。开源社区的公平是基于 contribution 赢得权威的精英领导制，遵守 earn authority by contribution, not by position 的原则。近年来不少开源社区的维护者不堪民粹道德绑架的压力频频爆出“开源世界的暗面”，就是没有形成健康的精英领导制的认知。</p>
+<p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1454y1E7xp">Linus Torvalds: 我不在乎政治正确，我只在乎技术本身</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV19f4y1F7QQ">荣耀还是负担？开源大神们居然这么累</a></p>
+<h2 id="开放式组织是不是未来唯一的或者最高级的组织形式？"><a href="#开放式组织是不是未来唯一的或者最高级的组织形式？" class="headerlink" title="开放式组织是不是未来唯一的或者最高级的组织形式？"></a>开放式组织是不是未来唯一的或者最高级的组织形式？</h2><p>最后，我想讨论一下这个问题。因为在我讨论开源项目和开放式组织的话题的时候，经常会有人举单一反例，以开源项目和开放式组织如果不是普适的那么就是错的这种无厘头逻辑，来搅乱讨论的氛围。</p>
+<p>对于这个问题的答案，我只能说不是。开放式组织是一种选择。控制管理模型也有适合它的军队或教会等组织，前面已经讨论过需要理解开放式组织的原因。现在仍然有专有软件领跑某个领域，仍然有技术领先的源码可得的专有软件开放 API 或允许带有限制的修改，如果你的商业模式适用于这些形式，大可不必采用开放式组织的形式。</p>
+<p>但是，软件复杂度将不断提高，基础软件乃至其部分再也无法仅凭一个人或一个公司的全体员工来编写。开源社区这种跨越组织边界，凝聚不同背景专家共同开发的形式，将会生产出高质量的软件，成为事实标准并击溃专有软件。这样的事情正在持续不断的发生。所以至少这个领域的企业，应当理解和采取开放式组织的形式。这种形式也是当前开源社区唯一成功的组织形式。</p>
+<h2 id="红帽公司的管理原则"><a href="#红帽公司的管理原则" class="headerlink" title="红帽公司的管理原则"></a>红帽公司的管理原则</h2><ol>
+<li>因为想来，所以加入我们。</li>
+<li>贡献是决定性因素，但不是交换条件。</li>
+<li>不论由谁提出，只要是最好的想法就能胜出。</li>
+<li>我们鼓励并且期待开放、坦诚、充满热情的辩论。</li>
+<li>我们欢迎反馈意见，本着“早发行，勤发行”的精神做出改变。</li>
+</ol>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>原作者： </strong>tison
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://flossway.github.io/flossway/2022/02/10/open-organization/" title="《开放式组织》书评">https://flossway.github.io/flossway/2022/02/10/open-organization/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+          <div class="post-tags">
+              <a href="/flossway/tags/%E5%BC%80%E6%BA%90/" rel="tag"># 开源</a>
+              <a href="/flossway/tags/%E5%BC%80%E6%BA%90%E4%B9%8B%E4%B9%A6/" rel="tag"># 开源之书</a>
+              <a href="/flossway/tags/%E7%BB%84%E7%BB%87%E7%AE%A1%E7%90%86/" rel="tag"># 组织管理</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/flossway/2022/02/10/open-source-collaboration-enterprise-perspective/" rel="prev" title="企业如何实践开源协同">
+                  <i class="fa fa-chevron-left"></i> 企业如何实践开源协同
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/flossway/2022/02/10/effective-open-source-participant/" rel="next" title="高效参与开源的诀窍">
+                  高效参与开源的诀窍 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    
+  
+  <div class="comments">
+    <script src="https://giscus.app/client.js"
+        data-repo="flossway/flossway" 
+        data-repo-id="R_kgDOGSeasg" 
+        data-category="Comments"
+        data-category-id="DIC_kwDOGSeass4CBGJZ"
+        data-mapping="title" 
+        data-reactions-enabled="1" 
+        data-emit-metadata="1" 
+        data-theme="light"
+        data-lang="en"
+        crossorigin="anonymous"
+        async>
+    </script>
+  </div>
+  
+  
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">FLOSSWAY Authors</span>
+</div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+    <span title="站点总字数">42k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">38 分钟</span>
+  </span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/mist/" rel="noopener" target="_blank">NexT.Mist</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/flossway/js/comments.js"></script><script src="/flossway/js/utils.js"></script><script src="/flossway/js/motion.js"></script><script src="/flossway/js/schemes/muse.js"></script><script src="/flossway/js/next-boot.js"></script>
+
+  
+<script src="https://cdn.jsdelivr.net/npm/hexo-generator-searchdb@1.4.0/dist/search.js" integrity="sha256-vXZMYLEqsROAXkEw93GGIvaB2ab+QW6w3+1ahD9nXXA=" crossorigin="anonymous"></script>
+<script src="/flossway/js/third-party/search/local-search.js"></script>
+
+
+
+
+
+  
+
+
+
+
+
+</body>
+</html>

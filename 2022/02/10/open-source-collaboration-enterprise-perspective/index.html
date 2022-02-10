@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 6.0.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/flossway/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/flossway/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/flossway/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/flossway/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/flossway/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Serif+SC:300,300italic,400,400italic,700,700italic%7CPingFang+SC:300,300italic,400,400italic,700,700italic%7CSource+Code+Pro:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css" integrity="sha256-mUZM63G8m73Mcidfrv5E+Y61y7a12O5mW4ezU3bxqW4=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"flossway.github.io","root":"/flossway/","images":"/flossway/images","scheme":"Mist","darkmode":false,"version":"8.10.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/flossway/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/flossway/js/config.js"></script>
+
+  <meta name="description" content="随着开源概念的红火，越来越多的企业将内部项目公开托管到 GitHub 等平台，也有越来越多依托开源项目建立起来的企业。对于这些企业来说，它们的目标不只是开放项目源代码，更希望能够形成开源共同体，打造围绕项目的软件生态。 然而，其中大部分项目由于成员背景的单一性，最终都终结于仅源码可得的形态。对于这些新兴项目来说，初始成员从属于同一企业是既定事实。在这样的前提下，企业应该如何实践开源协同，形成开源共">
+<meta property="og:type" content="article">
+<meta property="og:title" content="企业如何实践开源协同">
+<meta property="og:url" content="https://flossway.github.io/flossway/2022/02/10/open-source-collaboration-enterprise-perspective/index.html">
+<meta property="og:site_name" content="FLOSSWAY">
+<meta property="og:description" content="随着开源概念的红火，越来越多的企业将内部项目公开托管到 GitHub 等平台，也有越来越多依托开源项目建立起来的企业。对于这些企业来说，它们的目标不只是开放项目源代码，更希望能够形成开源共同体，打造围绕项目的软件生态。 然而，其中大部分项目由于成员背景的单一性，最终都终结于仅源码可得的形态。对于这些新兴项目来说，初始成员从属于同一企业是既定事实。在这样的前提下，企业应该如何实践开源协同，形成开源共">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2022-02-10T00:00:00.000Z">
+<meta property="article:modified_time" content="2022-02-10T11:13:45.598Z">
+<meta property="article:author" content="FLOSSWAY Authors">
+<meta property="article:tag" content="开源">
+<meta property="article:tag" content="开源协同">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://flossway.github.io/flossway/media/flossway.png">
+
+
+<link rel="canonical" href="https://flossway.github.io/flossway/2022/02/10/open-source-collaboration-enterprise-perspective/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://flossway.github.io/flossway/2022/02/10/open-source-collaboration-enterprise-perspective/","path":"2022/02/10/open-source-collaboration-enterprise-perspective/","title":"企业如何实践开源协同"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>企业如何实践开源协同 | FLOSSWAY</title>
+  
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/flossway/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/flossway/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">FLOSSWAY</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">building open-source community</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home"><a href="/flossway/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li>
+        <li class="menu-item menu-item-tags"><a href="/flossway/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li>
+        <li class="menu-item menu-item-categories"><a href="/flossway/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li>
+        <li class="menu-item menu-item-archives"><a href="/flossway/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%B1%E4%BA%AB%E5%B7%A5%E4%BD%9C%E6%B5%81"><span class="nav-number">1.</span> <span class="nav-text">共享工作流</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Case-Study-OceanBase"><span class="nav-number">1.1.</span> <span class="nav-text">Case Study: OceanBase</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Case-Study-Apache-InLong-incubating"><span class="nav-number">1.2.</span> <span class="nav-text">Case Study: Apache InLong (incubating)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Case-Study-TiDB"><span class="nav-number">1.3.</span> <span class="nav-text">Case Study: TiDB</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Case-Study-Taichi"><span class="nav-number">1.4.</span> <span class="nav-text">Case Study: Taichi</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8B%9B%E5%8B%9F%E6%96%B0%E6%88%90%E5%91%98"><span class="nav-number">2.</span> <span class="nav-text">招募新成员</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#End-user"><span class="nav-number">2.1.</span> <span class="nav-text">End user</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Ecosystem"><span class="nav-number">2.2.</span> <span class="nav-text">Ecosystem</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Kernel"><span class="nav-number">2.3.</span> <span class="nav-text">Kernel</span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="FLOSSWAY Authors"
+      src="/flossway/media/flossway.png">
+  <p class="site-author-name" itemprop="name">FLOSSWAY Authors</p>
+  <div class="site-description" itemprop="description">Building your open-source community.</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/flossway/archives/">
+          <span class="site-state-item-count">5</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/flossway/categories/">
+        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/flossway/tags/">
+        <span class="site-state-item-count">5</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/flossway" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;flossway" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i></a>
+      </span>
+  </div>
+
+
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://flossway.github.io/flossway/2022/02/10/open-source-collaboration-enterprise-perspective/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/flossway/media/flossway.png">
+      <meta itemprop="name" content="FLOSSWAY Authors">
+      <meta itemprop="description" content="Building your open-source community.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="FLOSSWAY">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          企业如何实践开源协同
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2022-02-10 00:00:00 / 修改时间：11:13:45" itemprop="dateCreated datePublished" datetime="2022-02-10T00:00:00+00:00">2022-02-10</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/flossway/categories/tison/" itemprop="url" rel="index"><span itemprop="name">tison</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>8.5k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>8 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <p>随着开源概念的红火，越来越多的企业将内部项目公开托管到 GitHub 等平台，也有越来越多依托开源项目建立起来的企业。对于这些企业来说，它们的目标不只是开放项目源代码，更希望能够形成开源共同体，打造围绕项目的软件生态。</p>
+<p>然而，其中大部分项目由于成员背景的单一性，最终都终结于仅源码可得的形态。对于这些新兴项目来说，初始成员从属于同一企业是既定事实。在这样的前提下，企业应该如何实践开源协同，形成开源共同体呢？</p>
+<span id="more"></span>
+
+<h2 id="共享工作流"><a href="#共享工作流" class="headerlink" title="共享工作流"></a>共享工作流</h2><p>从开发者的角度出发，根本问题是要共享工作流。共享工作流，即项目开发的核心流程只有一套，所有 contributor 无论背景都基于这套核心流程工作。</p>
+<p>对于企业内部项目开放源代码的情况，要做到这一点并不容易。项目往往在企业内部已经有一套成熟的工作流。如果在设计开源方案的时候，没有把共享工作流考虑在内，即使代码公开，大部分开发流程也会保持在企业内部。如果 contributor 不是企业员工，则根本无法参与。</p>
+<h3 id="Case-Study-OceanBase"><a href="#Case-Study-OceanBase" class="headerlink" title="Case Study: OceanBase"></a>Case Study: OceanBase</h3><p>这个问题的典型案例是 <a target="_blank" rel="noopener" href="https://github.com/oceanbase/oceanbase">OceanBase</a> 项目。</p>
+<p>OceanBase 项目的源代码托管在 GitHub 和 Gitee 两个平台上，同时接受问题报告和补丁提交。通常来说，一个项目只会有唯一的问题报告和补丁提交方式。例如，Linux 采用 Bugzilla 记录问题，邮件列表提交和评审补丁。GitHub 上有 Linux 的镜像，但是是只读的。其他的例子包括 GCC 和 PostgreSQL 等，都会有唯一的工作流，其他代码仓库只是镜像。OceanBase 两边都接受问题报告和补丁提交，反而是对两边的反馈都不重视。</p>
+<p>可以猜测，它的核心流程既不是 GitHub 上的工作流，也不是 Gitee 上的，而是企业内部的工作流。这种情况下，能从开放可参与的平台上提交的大概率就只有简单的拼写错误或者代码重构补丁。因为即使是资深的开发者，缺少必要的信息和充分的讨论，也无法更进一步参与。实际情况也是如此，内部的活动别说讨论和设计文档，就连提交都不是实时同步的。此外，项目在两个平台上的活动，基本只有一名维护者出面在处理。</p>
+<p>企业开放内部项目源代码，允许任何人学习和使用，是有社会价值的。但是内外两套工作流，甚至开放可参与的工作流只是个添头，那就不可能形成开源共同体。如果这就是预期的目标，那倒也没事。只是对于辛苦应付这些留下来的缺口进来的简单补丁的维护者来说，他是否会觉得这只是另一种值班呢？无论如何，工作流的统一都有助于减少损耗。不管是干脆只保留内部工作流，托管平台上的所有活动都没有回应保证，还是尝试融合到开放工作流，真正做到开源协同，都比牺牲一部分人，做一些创造出来的边缘工作要好。</p>
+<h3 id="Case-Study-Apache-InLong-incubating"><a href="#Case-Study-Apache-InLong-incubating" class="headerlink" title="Case Study: Apache InLong (incubating)"></a>Case Study: Apache InLong (incubating)</h3><p>致力于融合到开放工作流的典型案例是 <a target="_blank" rel="noopener" href="https://github.com/apache/incubator-inlong">Apache InLong (incubating)</a> 项目。这个项目是由腾讯捐赠给 Apache 软件基金会的数据流处理平台。</p>
+<p>在项目开放初期，也存在只有内部工作流的情形。不过得益于主要维护者的软件工程经验，在明确项目要以开源协同的方式运作以后，经过对维护两套开发流程弊端的分析，得出了要融合工作流的结论。既然是开源协同，那么融合的工作流就是共享工作流了。</p>
+<p>一段时间的改造后，原先内部工作流的核心流程被迁移到共享工作流当中，包括问题报告、补丁提交和版本发布。原先内部工作流服务于企业需求的部分则基于共享工作流构建。</p>
+<p>企业内部仍然有用户问题报告，但是归结到项目本身缺陷的问题，会脱敏之后报告到 GitHub Issue 上。为了解决紧急问题，企业内部的 fork 版本仍然会打临时补丁快速上线，但是救火之后正式修复的补丁会以 contributing back 的形式提交到开源项目上。最后是版本发布。一开始，只有内部项目在发版。开放源代码之后，就有两个同类项目要分开发版。经过一系列的改进，主要是问题报告和补丁提交的及时同步，最终两个项目能够以较小的同步开销同时发版。换句话说，GitHub 上托管的版本，就是企业内部使用的版本。企业内部可能有一些临时补丁，但是并不构成一个差异化内部版本，并且这些补丁是积极地被推进 contributing back 上游的。</p>
+<p>可以看到，确定开源协同开发项目的方向后，共享工作流不是形式主义，而是能切实提高软件工程效率和减少摩擦的方案。</p>
+<p>对于企业本身依托开源项目建立的情况，要维持共享工作流也存在很多挑战。这些挑战大多出自一个原因，那就是最佳实践的匮乏导致节外生枝的私下讨论。</p>
+<h3 id="Case-Study-TiDB"><a href="#Case-Study-TiDB" class="headerlink" title="Case Study: TiDB"></a>Case Study: TiDB</h3><p><a target="_blank" rel="noopener" href="https://github.com/pingcap/tidb/tree/master/docs/design">TiDB</a> 的代码仓库中有专门存放设计文档的目录。理论上，新功能，行为变更，以及其他重要改动，都需要一个设计文档。</p>
+<p>我们可以从设计文档的时间线看出这一工作流的变迁。</p>
+<ul>
+<li>2018 年下半年，共 17 份设计文档。</li>
+<li>2019 年全年，共 6 份设计文档。</li>
+<li>2020 年全年，共 13 份设计文档。</li>
+<li>2021 年至今，共 19 份设计文档。</li>
+</ul>
+<p>从另一个维度看，2019 年 5 月到 10 月，2020 年 10 月到次年 2 月，一共将近一年的时间里，项目没有提出过任何设计文档。</p>
+<p>那么，TiDB 项目在此期间是停止开发了吗？没有。它一直以每个工作日合并 10 个 PR 以上的开发速度在前进。在此期间关于功能设计的讨论，其实是转进了企业的即时通讯工具或内部文档当中了。我们可以看几个例子。</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://github.com/tikv/tikv/issues/10540">Raft Async IO</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/pingcap/tidb/issues/25970">SPM Enhancement</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/pingcap/tidb/issues/26085">Cardinality Estimation Enhancement</a></li>
+</ul>
+<p>这几个功能并不是没有设计，而是只在小范围内通过中文文档做出设计，就开始实现。甚至在 Cardinality Estimation Enhancement 的例子当中，以为 contributor 想了解功能设计和背景，被 assignee 以时间紧迫为由回绝。虽然 assignee 承诺会在完成后进一步披露消息，但是却没了下文。</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://internals.tidb.io/t/topic/372/7">Announcing remove required integration test check when merge pr</a></li>
+</ul>
+<p>另一个例子是 pull request 上的检查项变更。不仅整个过程是在企业内部决策后直接在开源项目上上线，共同体内的其他成员一无所知，而且对于 bad case 的处理依赖于企业内部的群聊，让人摸不着头脑。</p>
+<p>其实这些案例，我相信相关成员并不是刻意要伤害开源共同体。设计和开发的需求是天然存在的，持续集成的改动也不是不能做，但是实际推动落实的成员，缺乏开源共同体当中工作的经验，难以站在一家企业之上的视角，以合理的方式开展工作，才导致了这些实际伤害了开源共同体的做法。</p>
+<p>我在这两个方向都做过一些改良的工作。对于设计文档，我发起了一个 Public Design 的讨论，并且推动了几个重大改动的公开设计。在此过程中和复数的开发者沟通了公开设计的技巧，以及在此前提下如何高效地推进重要改动的落实。实际上，公开设计并不会损失效率。因为并不是内部讨论完成后拿出来公示，而是从一开始就放在公开渠道讨论。既然是开源协同，补丁提交本身也是公开的，这些材料有什么好隐藏的呢？相反，因为得到了潜在的更多反馈，能够在设计等早期阶段避免缺陷，反而公开设计是更加高效的手段。</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://internals.tidb.io/t/topic/399">Discuss: Public Design</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/tikv/pd/issues/3839">Tracking issue for Region Label Feature</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/tikv/rfcs/pull/67">RFC: Substitute RocksDB write stall</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/pingcap/tidb/issues/26020">Tracking issue for heuristic rules enhancement for index selection</a></li>
+</ul>
+<p>对于持续集成，企业内部把研发和工程效能分成两个竖井，又把开源共同体仅关联到研发的工作上去，是这个问题的根源。组织结构问题不好解，只能先改变工程效能团队的员工的认知。当他以开源共同体成员的身份变更项目基础设施的时候，也通过提交议题，达成共识后实施的工作流来推进。实际上，这样改变以后，关注到项目功能开发的成员与维护基础设施的成员更能坦诚的交换意见，避免意料之外的改变激发矛盾。</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://github.com/pingcap/tidb/issues/28947">Integrate UT coverage with CI pipeline</a></li>
+</ul>
+<h3 id="Case-Study-Taichi"><a href="#Case-Study-Taichi" class="headerlink" title="Case Study: Taichi"></a>Case Study: Taichi</h3><p><a target="_blank" rel="noopener" href="https://github.com/taichi-dev/taichi">Taichi</a> 是一个主要面向计算机图形学的并行编程框架，由胡渊鸣博士发明。去年，他作为联合创始人创立了太极图形公司来支持项目的发展。</p>
+<p>项目早期基本是胡老师一个人的工作。开放源代码并有 contributor 加入后，画风是这样的。</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://github.com/taichi-dev/taichi/pull/1836">[async] Implement basic StateFlowGraph</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/taichi-dev/taichi/pull/479">Allow ti test_python to take in individual test files</a></li>
+</ul>
+<p>这两个 pull request 的三位参与者，彼时分别在美国波士顿、日本东京和中国上海。当时也没有成立公司，更不谈有企业内部的即时通讯工具或文档空间。所以你可以看到所有必要的讨论都发生在 GitHub 平台上。</p>
+<p>时间拉回到现在，部分项目的开发仍然是有迹可循的。比如有个置顶的 <a target="_blank" rel="noopener" href="https://github.com/taichi-dev/taichi/issues/2398">RoadMap</a> 作为当前正在投入的工作的地图，比如 <a target="_blank" rel="noopener" href="https://github.com/taichi-dev/taichi/issues/3301">Taichi 编译器前端类型检查</a>有个 tracking issue 来记录工作。</p>
+<p>不过，也会出现我在昨天看到的无描述 4000 行改动无评论合并的案例。</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://github.com/taichi-dev/taichi/pull/3567">[Mesh] The ti.Mesh class &amp; mesh-for loop implementation</a></li>
+</ul>
+<p>经过社交媒体的传播，目前这个 pull request 更新了部分描述。其实是一个学术研究相关的功能，在发出论文后希望 contributing back 到上游。由于变更较为复杂，早期设计出于研究原因不便公开，加上持续集成流水线的效率问题，所以采用了一步到位的合并方案。代码 review 私下发生在提交之前。</p>
+<p>那么，这些信息昨天凌晨看到的我能够知道吗？答案是不能。</p>
+<p>其实这种提交一个大改动的案例并不少见。Apache Flink 项目曾经多次发生过这样的事情，包括 2014 年 7 月合并 streaming 的原型，2019 年合并阿里巴巴内部版本 BLINK 等等。项目接受来自企业或学术团体的 contribution 是很正常的，其他开源项目也有研究室基于项目做出优化策略后 contributing back 的案例。</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://lists.apache.org/thread/mc4622swvv1y4dbty5x20rlh3whdjst5">[DISCUSS] A strategy for merging the Blink enhancements</a></li>
+<li><a target="_blank" rel="noopener" href="https://lists.apache.org/thread/mn1nf4p11t054zmhdglorjt40xoyz7wv">[ANNOUNCE] Contributing Alibaba’s Blink</a></li>
+</ul>
+<p>开源共同体接受 contribution 的标准做法仍然是公开讨论。只需要说明这件事情，解答潜在的疑问之后决定接受或拒绝 contribution 即可。如果 ti.Mesh 的研究结果是以这样的形式合并到代码仓库的，我想在一开始我就不会有疑惑和疑惑导致的误会。另一方面，公开讨论和 contribute 对开源项目也是一种保护。Apache 项目在接收重要 contribution 时都会考虑引入一个<a target="_blank" rel="noopener" href="http://incubator.apache.org/ip-clearance/">知识产权清理</a>流程，确保接收 contribution 不会引入知识产权相关的争端。</p>
+<p>Taichi 项目当中缺乏背景信息的还有这些例子。</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://github.com/taichi-dev/taichi/pull/3538">[bug] Remove fallback in C++ code</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/taichi-dev/taichi/pull/3433">[gui] Show f16 image as f32.</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/taichi-dev/taichi/pull/3279">[Lang] Support more SNode trees for LLVM backends</a></li>
+</ul>
+<p>当然，必须说明的是 Taichi 项目的大部分 pull request 是有背景信息的。上面这些案例的参与者，我想也不是刻意隐藏信息，而是成立公司之后，自然地在线下或者内部平台讨论。既然已经通过私下讨论得出结论，再刻意搬到 GitHub 上反而就是低效的。对于具备项目假设 contributor 应该有的知识就能理解的补丁，也不需要做作的讨论。</p>
+<p>要想避免因为已经私下讨论得出结论，从而把共同工作流的一部分切换成内部工作流的情况，应该从两个方面入手。</p>
+<p>第一个是在确定开源协同开发项目的方向后，所有技术讨论都以 GitHub 平台的内容为唯一信源。私下讨论是无法禁止的，只能从技术领袖开始以身作则，推动公开讨论。其实对于大部分企业员工来说，在哪讨论并不重要。真正让他们转向私下讨论的原因，是在 GitHub 上的评论得不到回复，而钉一下或者内部文档 at 有奇效。值得一提的是，Taichi 也有我曾经到的 TiDB 的问题，那就是没有一个活跃的开放式讨论渠道，即没有邮件列表的替代品。有个 Discourse 论坛，但是是面向中文用户而不是全球开发者的。开通了 GitHub Discussion 功能，但是只有唯一一个版本发布的公告。</p>
+<p>第二个是作为共同体的领袖，应当积极寻找不同背景的参与者。如果已经形成了私下讨论的习惯，仅仅要求员工改变习惯是很难有效的。因为公开讨论的主要原因，是为了和企业以外的 contributor 交流，以获得有意义的输入和提高生产力。如果员工发现换个地方发言，得到的回应还是同事的回应，并且 GitHub 上的评论还是得不到即时的回复，这件事就推不下去。</p>
+<p>前面的例子提到过，当 Taichi 的主要开发者天各一方，没有成立公司之前，这种沟通是自然而然的。实际上，Linux 和 Apache Httpd 也是这样的。除了邮件列表，Linus 很难找到另一个渠道收获他所需要的反馈。Apache Httpd 的早期成员一开始就是在邮件列表上沟通的。只有实际存在组织以外的高水平参与者，开源协同的最佳实践才有意义。对于企业员工来说，也才有直接合理的理由不在内部讨论。毕竟就某个特定的问题，他更希望听一听那个不同背景的共同体成员的意见。</p>
+<h2 id="招募新成员"><a href="#招募新成员" class="headerlink" title="招募新成员"></a>招募新成员</h2><p>寻找不同背景的参与者，其实就是作为共同体的领袖为共同体招募新成员。这是企业实践开源协同的另一个难题。除了为企业招募以外，应该如何为共同体招募呢？</p>
+<h3 id="End-user"><a href="#End-user" class="headerlink" title="End user"></a>End user</h3><p>第一个要讨论的是用户。不过，用户是开源协同之外的内容。商业产品同样需要自己的用户。大部分用户也不会关心软件是如何实现的。</p>
+<p>所以，要讨论用户，其实是要驳斥一些错误的观念。用户能够为你提供使用反馈，能够通过付费或捐赠支持项目开发人员持续投入，但是期待从用户群体中大规模地发现核心 contributor 则是不切实际的。</p>
+<p>我听到过很多项目领袖跟我说，他的项目是独特的，因为不像大数据项目那样，用户本身也是开发者。它可能是一个数据库。哎呀，用户都是 DBA 或者数据分析师，根本不知道数据库怎么实现的嘛。它可能是一个机器学习框架。哎呀，用户都只会操作 Python 接口，根本搞不来核心 C++ 代码。</p>
+<p>那我就想问了，你咋不去找那些就做数据库的人，就搞机器学习框架的人呢？你给团队招聘的时候知道找这些人，怎么到了给共同体招募新成员，眼里就只看到用户了。</p>
+<p>其实我也可以理解。因为开源协同不够普及，大部分人提到 open-source 这个概念，第一印象还是一个市场营销的手段。或者提到“运营开源社区”，就把用户社区那些已有经验都搬过来。在这样的认识下 open-source community 就是开源社区，而不是开源共同体。其中“我们”是唯一的开发者，是懂行的。其他人是只会小修小补的爱好者，或者干脆啥也不懂的用户。</p>
+<p>这个误区有点像思维定式。你现在要找的是有能力开发项目的参与者，那就去对应的群体里找就可以了。</p>
+<p>当然，如果你就想做用户社区，就没打算搞开源协同，也是一种选择。对于这类需求，我建议研究 MongoDB 的做法。它们搞得挺好，这里就不展开了。</p>
+<h3 id="Ecosystem"><a href="#Ecosystem" class="headerlink" title="Ecosystem"></a>Ecosystem</h3><p>抛开用户不谈，开源共同体当中的 contributor 还可以进一步细分。其中有一类 contributor 关注生态互连，另一类关注项目的核心逻辑。</p>
+<p>如果项目提供了足够多的扩展点，或者策略替换机制，那么关注生态互连的 contributor 就能够快速参与进来。</p>
+<p>例如，Flink&#x2F;Spark&#x2F;Presto 等项目都设计了 connector 机制，连来连去就能创造出大量的工作。例如，几乎所有项目都可以搞多语言 SDK 玩玩。TiKV 就有不少于五种编程语言的客户端实现。例如，PostgreSQL 提供 FDW 机制，不仅支持连接外部数据源，更暴露了参与 planning 阶段的计算下推接口。例如，Linux 其实也有丰富的扩展机制，支持多种架构和驱动就是一个例子。</p>
+<p>上面这些都是项目本身的机制，更广泛的生态还包括解决方案的整合。例如，从 Netty 的角度看，Flink 就是它的生态的一部分。从 Flink 的角度看，serverless 技术栈 StateFun 又是它的生态的一部分。经常听 database 的开发者说自己的软件直面终端用户，但是其实就互联网业务开发者来说，中间是隔了一层 ORM 框架的。哪怕是数据分析师，大概率也隔了一层可视化框架。另外，数据的同步和搬迁也是应用设计不可缺少的一部分，这就是各种中间件能发挥作用的地方了。</p>
+<p>总之，这类 contributor 还可以再细分。一类是关注项目提供的机制替换实现的，大部分可以从有可能提供实现的项目开发者当中寻找。例如项目的部署机制希望支持 Kubernetes 环境，那找一个热衷于写 Kubernetes Operator 或者刚学会跃跃欲试的开发者参与，就很有可能产生正面效果。另一类是关注项目整合形成用户解决方案的。实际上，项目开发者最终基于项目实现盈利，往往就是以某种解决方案出现。只要你发挥想象力，生态整合的可能性就是个乘法，不愁找不到参与者。即使是核心逻辑被单一企业掌控的 MongoDB 项目，其生态也是非常繁荣的。</p>
+<h3 id="Kernel"><a href="#Kernel" class="headerlink" title="Kernel"></a>Kernel</h3><p>当然，项目的核心逻辑也是非常重要的。如果项目本身不够坚挺，那么就不会有用户使用，也无法激起 contributor 连接生态的动力。</p>
+<p>项目的核心逻辑是一个项目的主要价值。这些逻辑通常由项目的初始成员定义。在企业主导项目的情况下，这些初始成员往往背景单一。同时，出于传统组织观念的影响，初始成员往往以企业当中的项目团队作为自我认同，团队等同于项目，也因此将核心逻辑的开发层层“保护”在看不见的高墙之内。</p>
+<p>以项目团队作为自我认同，无怪乎招募新成员的时候，自我认知自动翻译成团队招聘，而想不到还有其他可能性。</p>
+<p>反观成功的开源项目，数据湖项目 <a target="_blank" rel="noopener" href="http://hudi.apache.org/">Apache Hudi</a> 由 Uber 捐赠给 Apache 软件基金会，在项目快速发展过程中吸引到了阿里巴巴和 T3 出行等企业的员工的参与，并吸纳了上述企业背景的开发者作为项目 PMC 成员。对于后续参与的企业的员工来说，他们在企业当中虽然也有项目团队，但是显然不会觉得项目归企业内的项目团队所有。对于 Uber 来说，来自其他企业的核心 contributor 的声音也不可忽视。这样，Apache Hudi 成功建立了一个开源共同体。</p>
+<p>要想为项目招募开发核心逻辑的参与者，我觉得应该做到以下三点。</p>
+<p><strong>第一点是改变认知</strong>。上面已经介绍了错误认知的危害和避免错误认知的最终形态。我把这种正确的认知称为“开发者的两顶帽子”。同一个开发者，既是开源共同体的参与者，也是企业的员工。这两个身份虽然从属于同一个人，但是却有着不同的诉求。只有区分开这些不同的诉求，一部分是开源共同体的目标，一部分是企业基于开源项目创造商业价值的目标，才能避免认知混乱导致人为制造出参与的高墙。</p>
+<p><strong>第二点是公开讨论</strong>。前面讨论的很详细了，这里再补充一个点。当你真的身处一个开源共同体当中，不做公开讨论才是奇怪的。例如 Apache Hudi 的例子，如果 T3 出行的开发者想要实现某个功能，除了公开讨论寻求共识，别无他法。</p>
+<p>公开讨论还有一个额外的好处，那就是方便引用。不少基于开源项目建立起来的企业，运营人员整天发愁哪里有技术内容可以发布，写技术文章好像变成了一个苦差事。其实技术话题公开讨论，天然的就有高质量的内容可以推送，其中悬而未决的议题，也是 contributor 参与的绝佳切入点。例如 <a target="_blank" rel="noopener" href="https://twitter.com/engulaio">Engula</a> 项目在社交媒体的输出，基本就是设计文档或者开放式讨论里值得发布的内容。</p>
+<p><strong>最后一点是积极招募</strong>。前面分析 Taichi 的例子也提到过，认知改变的假设需要多样化的开源共同体成员来验证，保持公开讨论的做法也需要不同背景的 contributor 参与。除了公开讨论能够吸引到潜在的参与者，积极招募更意味着共同体的领袖要主动思考谁是你要找的人。</p>
+<p>对于每个项目来说，这个问题的答案都不一样。但是认为这个问题没有答案，或者说人才都在企业当中了，则是一种傲慢。</p>
+<p>同样举数据库的例子，哪怕你有 Oracle 那么大，世界上也还有相当一批人在开发 PostgreSQL 等项目。这些人并不是一辈子就做这一件事的。只要你的项目足够有趣，他们就有可能投入。</p>
+<p>另一方面，泛泛而谈数据库这样一个复杂的领域其实是一种懒惰。既然复杂的项目本身会分模块开发，为什么在招募新成员的时候就只想着完全理解整个领域的人呢？如果项目的并发设计不佳，只要是精通该语言并发编程的专家，愿意 contribute 做改进，你管他懂不懂数据库的专业概念。醉心于编译器前端的开发者，也许能解决 SQL Parser 当中经年的性能问题。进入 Apache 孵化器的项目的导师，往往也不是项目所在领域的专家，甚至不是开发者，但是他们能够帮助项目以 Apache 的方式建立起开源共同体。</p>
+<p>以这样的方式去寻找潜在的开发核心逻辑的成员，相信你的视野会更加广阔。</p>
+<p>其实，这才是“开源共同体”的含义。不止于项目，也不是社区居委会，而是围绕开源项目的发展，基于对项目的认同，形成的多层次合作共同体。</p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>原作者： </strong>tison
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://flossway.github.io/flossway/2022/02/10/open-source-collaboration-enterprise-perspective/" title="企业如何实践开源协同">https://flossway.github.io/flossway/2022/02/10/open-source-collaboration-enterprise-perspective/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+          <div class="post-tags">
+              <a href="/flossway/tags/%E5%BC%80%E6%BA%90/" rel="tag"># 开源</a>
+              <a href="/flossway/tags/%E5%BC%80%E6%BA%90%E5%8D%8F%E5%90%8C/" rel="tag"># 开源协同</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/flossway/2022/02/10/the-cathedral-and-the-bazaar/" rel="prev" title="《大教堂与集市》书评">
+                  <i class="fa fa-chevron-left"></i> 《大教堂与集市》书评
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/flossway/2022/02/10/open-organization/" rel="next" title="《开放式组织》书评">
+                  《开放式组织》书评 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    
+  
+  <div class="comments">
+    <script src="https://giscus.app/client.js"
+        data-repo="flossway/flossway" 
+        data-repo-id="R_kgDOGSeasg" 
+        data-category="Comments"
+        data-category-id="DIC_kwDOGSeass4CBGJZ"
+        data-mapping="title" 
+        data-reactions-enabled="1" 
+        data-emit-metadata="1" 
+        data-theme="light"
+        data-lang="en"
+        crossorigin="anonymous"
+        async>
+    </script>
+  </div>
+  
+  
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">FLOSSWAY Authors</span>
+</div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+    <span title="站点总字数">42k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">38 分钟</span>
+  </span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/mist/" rel="noopener" target="_blank">NexT.Mist</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/flossway/js/comments.js"></script><script src="/flossway/js/utils.js"></script><script src="/flossway/js/motion.js"></script><script src="/flossway/js/schemes/muse.js"></script><script src="/flossway/js/next-boot.js"></script>
+
+  
+<script src="https://cdn.jsdelivr.net/npm/hexo-generator-searchdb@1.4.0/dist/search.js" integrity="sha256-vXZMYLEqsROAXkEw93GGIvaB2ab+QW6w3+1ahD9nXXA=" crossorigin="anonymous"></script>
+<script src="/flossway/js/third-party/search/local-search.js"></script>
+
+
+
+
+
+  
+
+
+
+
+
+</body>
+</html>

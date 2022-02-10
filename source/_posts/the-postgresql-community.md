@@ -1,9 +1,17 @@
 ---
 title: The PostgreSQL Community
-discussion: https://github.com/flossway/flossway/discussions/6
+date: 2022-02-10
+author: tison
+categories: tison
+tags:
+    - 开源
+    - 开源协同
+    - 开源共同体
 ---
 
 PG 社区经过二十五年的发展，早已积累了海量的最佳实践，大多可以从 [PG 的维基页面](https://wiki.postgresql.org/wiki/Development_information)上找到。这篇文章不会覆盖所有内容，只做挑选分享，并强烈建议近期如雨后春笋般涌现的开源基础软件公司探索维基页面乃至协同编辑，学习这笔宝贵的财富。
+
+<!-- more -->
 
 ## 社区组织
 

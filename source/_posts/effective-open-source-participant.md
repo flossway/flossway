@@ -1,12 +1,18 @@
 ---
 title: 高效参与开源的诀窍
+date: 2022-02-10
 author: tison
-discussion: https://github.com/flossway/flossway/discussions/15
+categories: tison
+tags:
+    - 开源
+    - 开源协同
 ---
 
 大部分人参与开源社区会面临的一个巨大挑战，那就是缺乏时间。本文试图提供一种方式，帮助想要参与开源社区的同学高效利用有限的时间。
 
 在一个开源社区里，maintainers 需要关注的范围比 contributors 要大得多。本文分别讨论这两类人群适用的参与开源社区的技巧，以减少过程中的摩擦，提高时间的利用率。
+
+<!-- more -->
 
 ## Contributors
 

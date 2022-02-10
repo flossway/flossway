@@ -1,7 +1,12 @@
 ---
 title: 《开放式组织》书评
+date: 2022-02-10
 author: tison
-discussion: https://github.com/flossway/flossway/discussions/8
+categories: tison
+tags:
+    - 开源
+    - 开源之书
+    - 组织管理
 ---
 
 本文部分启发自在 [ALC Beijing](https://alc-beijing.github.io/alc-site/) 录制播客时讨论的内容，仅引用我个人的观点。播客内容应该近期会在前面链接的网站上发布。
@@ -16,6 +21,8 @@ discussion: https://github.com/flossway/flossway/discussions/8
 * [《用户共创》](https://book.douban.com/subject/35531548/)
 
 《企业的人性面》我认为是《开放式组织》背后的理论基础，成书于 1960 年，历久弥新。《协同》是国内学者关注“内破部门墙，外拓企业边界”的研究跨越组织边界合作的当代著作。《社区运营的艺术》和《用户共创》均出自 Ubuntu 社区经理 Jono Bacon 之手，讨论了开源社区这一开放式组织的运行方式与最佳实践。这几本书都是阅读《开放式组织》的有益补充。
+
+<!-- more -->
 
 ## 为什么要理解开放式组织这种形式？
 

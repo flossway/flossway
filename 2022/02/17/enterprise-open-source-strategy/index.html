@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 6.0.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/flossway/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/flossway/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/flossway/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/flossway/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/flossway/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Serif+SC:300,300italic,400,400italic,700,700italic%7CPingFang+SC:300,300italic,400,400italic,700,700italic%7CSource+Code+Pro:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css" integrity="sha256-mUZM63G8m73Mcidfrv5E+Y61y7a12O5mW4ezU3bxqW4=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"flossway.github.io","root":"/flossway/","images":"/flossway/images","scheme":"Mist","darkmode":false,"version":"8.10.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/flossway/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/flossway/js/config.js"></script>
+
+  <meta name="description" content="就在距壬寅虎年春节前几天，开源圈又冒出了一个大瓜：字节跳动子公司火山引擎在其发布的一个产品中使用 Apache 软件基金会下的开源软件 Apache SkyWalking 时，没有遵循 Apache 2.0 协议的规定，导致直接违规。 在如今开源许可协议种类繁多，规则复杂的情况下，Apache 软件基金会被认为是一个对开源使用方相当友善的开源组织，而 Apache 2.0 协议也是所有开源协议中被">
+<meta property="og:type" content="article">
+<meta property="og:title" content="企业开源策略 - 从火山引擎开源违规谈起">
+<meta property="og:url" content="https://flossway.github.io/flossway/2022/02/17/enterprise-open-source-strategy/index.html">
+<meta property="og:site_name" content="FLOSSWAY">
+<meta property="og:description" content="就在距壬寅虎年春节前几天，开源圈又冒出了一个大瓜：字节跳动子公司火山引擎在其发布的一个产品中使用 Apache 软件基金会下的开源软件 Apache SkyWalking 时，没有遵循 Apache 2.0 协议的规定，导致直接违规。 在如今开源许可协议种类繁多，规则复杂的情况下，Apache 软件基金会被认为是一个对开源使用方相当友善的开源组织，而 Apache 2.0 协议也是所有开源协议中被">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2022-02-17T00:00:00.000Z">
+<meta property="article:modified_time" content="2022-02-18T07:28:09.733Z">
+<meta property="article:author" content="FLOSSWAY Authors">
+<meta property="article:tag" content="开源">
+<meta property="article:tag" content="开源策略">
+<meta property="article:tag" content="开源共同体">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://flossway.github.io/flossway/media/flossway.png">
+
+
+<link rel="canonical" href="https://flossway.github.io/flossway/2022/02/17/enterprise-open-source-strategy/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://flossway.github.io/flossway/2022/02/17/enterprise-open-source-strategy/","path":"2022/02/17/enterprise-open-source-strategy/","title":"企业开源策略 - 从火山引擎开源违规谈起"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>企业开源策略 - 从火山引擎开源违规谈起 | FLOSSWAY</title>
+  
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/flossway/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/flossway/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">FLOSSWAY</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">building open-source community</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home"><a href="/flossway/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li>
+        <li class="menu-item menu-item-tags"><a href="/flossway/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li>
+        <li class="menu-item menu-item-categories"><a href="/flossway/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li>
+        <li class="menu-item menu-item-archives"><a href="/flossway/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BC%80%E6%BA%90%E7%9A%84%E6%B6%88%E8%B4%B9%E7%AD%96%E7%95%A5"><span class="nav-number">1.</span> <span class="nav-text">开源的消费策略</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BC%80%E6%BA%90%E7%9A%84%E5%8F%82%E4%B8%8E%E7%AD%96%E7%95%A5"><span class="nav-number">2.</span> <span class="nav-text">开源的参与策略</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BC%80%E6%BA%90%E5%9C%B0%E8%B4%A1%E7%8C%AE%E7%AD%96%E7%95%A5%EF%BC%9A"><span class="nav-number">3.</span> <span class="nav-text">开源地贡献策略：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BC%80%E6%BA%90%E7%9A%84%E9%A2%86%E5%AF%BC%E7%AD%96%E7%95%A5"><span class="nav-number">4.</span> <span class="nav-text">开源的领导策略</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8A%A8%E6%80%81%E7%9A%84%E5%BC%80%E6%BA%90%E7%AD%96%E7%95%A5"><span class="nav-number">5.</span> <span class="nav-text">动态的开源策略</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="FLOSSWAY Authors"
+      src="/flossway/media/flossway.png">
+  <p class="site-author-name" itemprop="name">FLOSSWAY Authors</p>
+  <div class="site-description" itemprop="description">Building your open-source community.</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/flossway/archives/">
+          <span class="site-state-item-count">7</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/flossway/categories/">
+        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/flossway/tags/">
+        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/flossway" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;flossway" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i></a>
+      </span>
+  </div>
+
+
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://flossway.github.io/flossway/2022/02/17/enterprise-open-source-strategy/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/flossway/media/flossway.png">
+      <meta itemprop="name" content="FLOSSWAY Authors">
+      <meta itemprop="description" content="Building your open-source community.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="FLOSSWAY">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          企业开源策略 - 从火山引擎开源违规谈起
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2022-02-17 00:00:00" itemprop="dateCreated datePublished" datetime="2022-02-17T00:00:00+00:00">2022-02-17</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2022-02-18 07:28:09" itemprop="dateModified" datetime="2022-02-18T07:28:09+00:00">2022-02-18</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/flossway/categories/%E7%8B%84%E5%AE%89/" itemprop="url" rel="index"><span itemprop="name">狄安</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>3.8k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>3 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <p>就在距壬寅虎年春节前几天，开源圈又冒出了一个大瓜：字节跳动子公司火山引擎在其发布的一个产品中使用 Apache 软件基金会下的开源软件 Apache SkyWalking 时，没有遵循 Apache 2.0 协议的规定，导致直接违规。</p>
+<p>在如今开源许可协议种类繁多，规则复杂的情况下，Apache 软件基金会被认为是一个对开源使用方相当友善的开源组织，而 Apache 2.0 协议也是所有开源协议中被认为是非常宽松的软件许可协议。一般使用方只要在使用这样的软件时做好声明就可以了。而这次 Apache SkyWalking 官方则直接曝出火山引擎在使用 Apache SkyWalking 期间不仅没有在他们的分发中保留 Apache 软件基金会的许可和 NOTICE 文件，还直接改变了所有使用到的软件包名称，并删除了 Apache 基金会的协议头。虽然鲁迅先生早说过一句令人警醒的话，“我向来不惮以最坏的恶意去推测国人”，然而，我还是不忍以任何恶意去揣测字节和火山引擎的行为，只是遗憾连如此顶流的科技巨头，对于开源治理也竟如此缺失。可见，开源普及的雄关漫道真如铁。</p>
+<span id="more"></span>
+
+<p>此事件一出， 也立刻引起开源圈人士各种议论纷纷，有呼吁 Apache 基金会拿起法律武器直接进行维权。火山引擎项目团队似乎也意识到了事件的严重性，随即在 1 月 30 日向 Apache SkyWalking 官方承认了自己的违规行为，并马上在产品中做出了修正更新：承认自己产品的分发是 Apache SkyWalking 的一个分叉版，同时补充加入了 Apache 2.0 协议文件和 NOTICE 文件，并恢复了相应文件的协议头。</p>
+<p>确实，开源作为软件知识的自由共享方式，开源许可作为开源软件能确保按其开源创作者的共享意愿下来进行自由分享的协议规则，它的本意不是去挑起法律争端。如Apache 基金会的董事吴晟在其朋友圈表示，“很多人理解错了 SkyWalking 进行 License 维权的原因。我们不是慈善，但是 for public good，希望联合更多的人构建世界顶尖的软件。今天的时代，很多为了 marketing 为了营收做开源，但这不是 Apache 基金会和顶级项目的目标。”</p>
+<p>吴晟在话语中表达了一个重要的观点：开源是公益，for public good, 但却也不会是无任何底线的慈善。这也正如我们 OpenTEKr 社区所一贯主张的“自由与规则同在，免费与商业共生”，这应该是开源的一个基本原则与共识。联想到之前另外一个科技巨头在开源项目运营时，完全忽视了开源中的程序员声誉文化的内涵，为了提高其开源项目的关注度而简单粗暴的用传统互联网营销中点赞送礼的方式来试图圈粉。这样那样因为对开源的误读误用而发生的笑话，实际上如出一辙。而随着开源在国内的进一步深入，如果没有正确的开源认知，无论科技大厂，还是一般企业，我相信这样的问题将绝不会是个别案例。 </p>
+<p>就如，刚刚过去的中国足球在大年初一以 1:3 惨败给越南这样令人羞耻的失败类似。虽然给球迷们添堵，但当我们回过头去看下中国足球的基础教育情况，就拿我们近十四亿人中足球注册人口区区不到 2 万人的数量，和那些足球强国虽然绝对人口只有数千万，但动不动就是百万万人的足球注册人口相比，我们也就没有什么可以埋怨的，谁让我们如此无视足球的基础教育呢！开源亦如是，我们与其去批评和谴责这些企业所犯的低级错误，不如让我们去思考该如何帮助他们在企业中建立开源的认知，以及如何开展有效的开源治理的方法。</p>
+<p>Linux 基金会在 2018 年时出过一份《企业开源实践指导》的手册。其当时就指出开源的渗透率在全球范围内已经从本世纪初的 20% 到 2018 年时的 85% 或更高的程度。事实上，无论身处哪个行业，或者开发什么样的产品或软件，你已经都可能高度依赖着各类开源软件。那么为更好的使用开源，对于企业开源实践是个无论是企业的管理着，研发部门负责人，或者是一个软件工程师，必须对开源做必要的了解和掌握。对于企业使用开源的好处已经毋庸讳言，但什么是企业用开源的正确姿势呢？那本手册里综合了近二十年以来国际上各大企业的开源实践，给出了很多极具参考价值的建议和操作指南。其中，最重要的一步就是企业在使用开源的过程中，建立与自己企业的发展相对应的开源策略。在该手册中定义了企业使用开源的四项策略：开源的消费策略，开源的参与策略，开源的贡献策略，开源的领导策略。</p>
+<p>在这里，就结合该手册的内容，和各位读者普及一下这四项策略。</p>
+<h2 id="开源的消费策略"><a href="#开源的消费策略" class="headerlink" title="开源的消费策略"></a>开源的消费策略</h2><p>大多数的企业一般是首先作为开源软件的使用方，即开源消费者，来和开源发生关系的。而企业作为开源消费者介入开源时，往往一开始是由企业内部的软件工程师驱动的，从在企业内部的软件系统设施或者自己的商业产品中使用到不同的开源技术以来提高自己的研发效率减少时间，降低研发成本，并提高产品差异化的能力。而企业在作为开源消费者并因此获得收益后，大多数的企业也会在很长的时间内保持在作为开源的消费方这一个定位上。那么，为了让自己在作为开源消费者时不发生错误，那么以下的几点就可以是作为企业开源消费策略的必要组成部分：</p>
+<ul>
+<li>建立一套开源使用的分类方案来指导关于使用哪些类别开源软件的业务决策。</li>
+<li>建立一套开源合规体系来确保公司遵守履行使用开源软件的存在的所有义务。</li>
+<li>建立一个开源审查委员会（Open Source Review Board, OSRB），作为公司开源活动的管理中心。如果条件不够，那么也至少在公司内部成立一个开源治理检查小组，</li>
+<li>建立一个开源软件的使用流程以用于评估和批准开源使用情况。必要的话，可以部署一些自动化工作流程软件来管理。</li>
+<li>建立一个和开源相关的年度预算制度，确保在工程、产品管理和法律方面的员工数量和基础设施方面定期进行一定的增量投资，以管理闭源和开源软件间的复杂组合。</li>
+</ul>
+<h2 id="开源的参与策略"><a href="#开源的参与策略" class="headerlink" title="开源的参与策略"></a>开源的参与策略</h2><p>由内部工程师驱动的企业开源消费也经常会由工程师进将此驱动进一步升级到企业以不同的形式或多或少参与到开源社区地活动中去，这是一种自下而上的企业自发地开源参与方式。而企业一旦也获得了在开源消费上的成功，那么企业也同时会自然而然地产生与开源社区更紧密地接触需要。如期望提高自己企业地知名度来从社区中招募了经验丰富的开发人员，以下是开源参与策略的必要组成部分：</p>
+<ul>
+<li>实时跟踪社区沟通平台，如聊天服务器，邮件列表，论坛和网站，以随时了解项目发展情况。</li>
+<li>参加相关会议和聚会，与社区建立关系。</li>
+<li>赞助项目活动和基金会，以提高社区内的知名度。</li>
+<li>教育开发人员如何参与和参与开源项目</li>
+</ul>
+<h2 id="开源地贡献策略："><a href="#开源地贡献策略：" class="headerlink" title="开源地贡献策略："></a>开源地贡献策略：</h2><p>当企业意识到以基层工程师驱动的开源介入转化到以业务驱动的开源介入时，也就以为意味着企业在意识上准备好了从原先开源参与的基础上进行构建开源，并开始为开源项目贡献代码。那么对于企业而言，这是就需要有选择地与目标开源项目及相应的开源社区进行合作，以推动和实现公司对于开源的需求，并为战略性开源项目做出特定的贡献以获得额外的价值。因为代码贡献可以帮助塑造项目中满足公司需要的软件功能。以下几点就是这个策略阶段的考虑要点：</p>
+<ul>
+<li>任命一名项目负责人来领导开源策略及管理企业内部的开源小组。 </li>
+<li>招募开源项目的贡献者和提交者去加入到对企业产品产生重要影响的开源社区。</li>
+<li>部署开源协作工具以支持和管理开源使用和贡献。</li>
+<li>有计划地增加一些开源开发人员资源。</li>
+<li>在工程、产品管理和法律方面进行必要地增量投资，以参与现有的外部开源社区</li>
+</ul>
+<h2 id="开源的领导策略"><a href="#开源的领导策略" class="headerlink" title="开源的领导策略"></a>开源的领导策略</h2><p>在四大开源策略的最后一项就是领导策略。此策略应当建立此前所有的策略基础之上，而此时的企业也当是希望以利用新兴的技术趋势来建立自己领导地位为自己的业务战略。在现有的开源社区中，领导角色是通过与项目成员建立信任并保持对项目的高度持续贡献而获得的。这种情况需要对目标开源社区和联盟进行大量投资，以建立领导地位。它还需要在工程，产品管理和法律方面增加投入，以在外部社区和行业联盟中建立领导地位。以下是开源领导战略的必要组成部分：</p>
+<ul>
+<li>增加与目标开源社区的互动。 </li>
+<li>有选择地采用一些开放标准来驱动公司的产品。 </li>
+<li>开展与开源基金会的合作。</li>
+<li>建立开源项目、开源组织或基金会。 </li>
+<li>在工程、产品管理和法律方面进行增量投资，以与现有的外部社区互动。</li>
+</ul>
+<h2 id="动态的开源策略"><a href="#动态的开源策略" class="headerlink" title="动态的开源策略"></a>动态的开源策略</h2><p>在以上的开源软件方面谈到的消费，参与，贡献和领导力这四大策略中，每个策略也并不是孤立的，而是一系列连贯的阶梯型策略，每个策略的部署会要求企业在前面的策略中取得成功，而一个企业在这个阶梯上能走多远完全取决于企业自己。当从一个位置过渡到另一个位置时，它们通常会重叠。如前面谈到的，在开源的早期阶段（企业作为消费和参与者）主要是由工程驱动的，因为当工程师基于技术优势开始使用各种开源组件来加速开发并且参与选定的项目时，要么加入对话，要么做出小贡献。而随着时间的推移，这种使用在公司的高层中变得众所周知，当它获得牵引力时，这种参与就会在确定的战略下成为业务驱动的开源策略。 一些公司只是作为消费方实现他们的目标，并满足于保持这个水平，而有些公司则有不同的抱负，并希望在排名中推得更高，以获得一定的领导地位。每个企业完全可以根据自己的实际情况和开源发展的成熟度，最重要的是确定自己在梯子中的当前位置以及建立自己目标位置，并且构建好从当前位置移动到目标位置的蓝图路径</p>
+<p>最后，始终不能忽略的一个关键是，在确定开源策略时，也有几个问题需要回答，并且应该越早回答越好。这些问题如下：开源要帮企业解决什么样的问题？我们参与或者建设什么样的开源项目社区？内部企业开源治理和内部企业文化是否能成为开源的赋能者？</p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>原作者： </strong>狄安
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://flossway.github.io/flossway/2022/02/17/enterprise-open-source-strategy/" title="企业开源策略 - 从火山引擎开源违规谈起">https://flossway.github.io/flossway/2022/02/17/enterprise-open-source-strategy/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+          <div class="post-tags">
+              <a href="/flossway/tags/%E5%BC%80%E6%BA%90/" rel="tag"># 开源</a>
+              <a href="/flossway/tags/%E5%BC%80%E6%BA%90%E7%AD%96%E7%95%A5/" rel="tag"># 开源策略</a>
+              <a href="/flossway/tags/%E5%BC%80%E6%BA%90%E5%85%B1%E5%90%8C%E4%BD%93/" rel="tag"># 开源共同体</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/flossway/2022/02/10/effective-open-source-participant/" rel="prev" title="高效参与开源的诀窍">
+                  <i class="fa fa-chevron-left"></i> 高效参与开源的诀窍
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    
+  
+  <div class="comments">
+    <script src="https://giscus.app/client.js"
+        data-repo="flossway/flossway" 
+        data-repo-id="R_kgDOGSeasg" 
+        data-category="Comments"
+        data-category-id="DIC_kwDOGSeass4CBGJZ"
+        data-mapping="title" 
+        data-reactions-enabled="1" 
+        data-emit-metadata="1" 
+        data-theme="light"
+        data-lang="en"
+        crossorigin="anonymous"
+        async>
+    </script>
+  </div>
+  
+  
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">FLOSSWAY Authors</span>
+</div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+    <span title="站点总字数">57k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">52 分钟</span>
+  </span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/mist/" rel="noopener" target="_blank">NexT.Mist</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/flossway/js/comments.js"></script><script src="/flossway/js/utils.js"></script><script src="/flossway/js/motion.js"></script><script src="/flossway/js/schemes/muse.js"></script><script src="/flossway/js/next-boot.js"></script>
+
+  
+<script src="https://cdn.jsdelivr.net/npm/hexo-generator-searchdb@1.4.0/dist/search.js" integrity="sha256-vXZMYLEqsROAXkEw93GGIvaB2ab+QW6w3+1ahD9nXXA=" crossorigin="anonymous"></script>
+<script src="/flossway/js/third-party/search/local-search.js"></script>
+
+
+
+
+
+  
+
+
+
+
+
+</body>
+</html>

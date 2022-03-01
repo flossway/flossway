@@ -1,6 +1,5 @@
 ---
-title: 2022关于开源的一些想法(1)：开发者社区从何而来
-subtitle: 社区常在，而项目不常在
+title: 开发者社区从何而来
 date: 2022-02-28
 author: 顾钧
 categories: 顾钧

@@ -2,6 +2,7 @@
 title: 试论开源生态的经济模型
 date: 2022-02-05
 author: 庄表伟
+categories: 庄表伟
 tags:
     - 开源
     - 经济学

@@ -132,7 +132,7 @@ tags:
 
 摘录自卫Sir的《[人话版GPL 2.0协议](https://mp.weixin.qq.com/s?src=11&timestamp=1642342050&ver=3562&signature=SU4bpJGGjZ3V*Lf3w1Yk5gA5VgQVbR9r9FQz4udKEmRVMr65tWp5iQQ0W-90qR9Orz0Ody0g6C*Dhmb2VBr4-blpWICL4-GyNqYFim1V1NzyMC*AAqhWB90bQKc57cTe&new=1)》
 
-再比如在MIT里：
+再比如在 MIT 里：
 
 > 本软件是“按原样“提供的，不附带任何明示或暗示的保证，包括没有任何有关适销性、适用性、非侵权性保证以及其他保证。在任何情况下，作者或版权持有人，对任何权益追索、损害赔偿以及其他追责，都不负任何责任。无论这些追责产生自合同、侵权，还是直接或间接来自于本软件以及与本软件使用或经营有关的情形。
 

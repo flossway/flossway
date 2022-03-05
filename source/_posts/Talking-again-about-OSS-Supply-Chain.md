@@ -137,8 +137,6 @@ tags:
 > 本软件是“按原样“提供的，不附带任何明示或暗示的保证，包括没有任何有关适销性、适用性、非侵权性保证以及其他保证。在任何情况下，作者或版权持有人，对任何权益追索、损害赔偿以及其他追责，都不负任何责任。无论这些追责产生自合同、侵权，还是直接或间接来自于本软件以及与本软件使用或经营有关的情形。
 
 摘录自卫Sir的《[开源程序员绝望毁库跑路的背后](https://mp.weixin.qq.com/s?src=11&timestamp=1642342024&ver=3562&signature=HXHa3AXIOpUss850bdZFJWTdfYFVBMmQTb2Zi-W8r-U1FnKK6pw9YfCCMG7q9PjtpyG3dMlgjC5EUeV9I9DvQQVcdjIKJTr*hQ9AtS263oqpoNhSHJ2a-rfqC8LRWcTH&new=1)》
-
-
 另一种是互联网服务的免责条款、云计算服务的免责条款、商用软件的免责条款。
 
 这里就不再摘录了，因为那种法律文本，往往都很长很长，在你使用之前，你几乎是不会去读完的。但是：你肯定已经点过“确定”或者“接受”按钮了。

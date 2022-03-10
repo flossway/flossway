@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 6.0.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/flossway/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/flossway/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/flossway/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/flossway/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/flossway/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Serif+SC:300,300italic,400,400italic,700,700italic%7CPingFang+SC:300,300italic,400,400italic,700,700italic%7CSource+Code+Pro:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/css/all.min.css" integrity="sha256-jTIdiMuX/e3DGJUGwl3pKSxuc6YOuqtJYkM0bGQESA4=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"flossway.github.io","root":"/flossway/","images":"/flossway/images","scheme":"Mist","darkmode":false,"version":"8.10.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/flossway/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/flossway/js/config.js"></script>
+
+    <meta name="description" content="这几天由于俄乌战争影响，网络上有消息传 GitHub 要制裁俄罗斯，以至于有人惊呼开源也政治化了。在这里就不得不和大家普及一下 Github 不代表开源，Github 只是代表着托管开源软件的一个商业平台，它的拥有者是微软公司，不是开源组织。所以，即使哪一天  Github 真宣布对俄罗斯程序员禁用，大家需要清楚的一点是，那不是开源对俄罗斯程序员的禁用，而是微软公司的决定而已。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="诺奖模型下的开源代码溢出">
+<meta property="og:url" content="https://flossway.github.io/flossway/2022/03/05/opensource-code-spillover/index.html">
+<meta property="og:site_name" content="FLOSSWAY">
+<meta property="og:description" content="这几天由于俄乌战争影响，网络上有消息传 GitHub 要制裁俄罗斯，以至于有人惊呼开源也政治化了。在这里就不得不和大家普及一下 Github 不代表开源，Github 只是代表着托管开源软件的一个商业平台，它的拥有者是微软公司，不是开源组织。所以，即使哪一天  Github 真宣布对俄罗斯程序员禁用，大家需要清楚的一点是，那不是开源对俄罗斯程序员的禁用，而是微软公司的决定而已。">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2022-03-05T00:00:00.000Z">
+<meta property="article:modified_time" content="2022-03-10T12:17:10.906Z">
+<meta property="article:author" content="FLOSSWAY Authors">
+<meta property="article:tag" content="开源">
+<meta property="article:tag" content="开源经济学">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://flossway.github.io/flossway/media/flossway.png">
+
+
+<link rel="canonical" href="https://flossway.github.io/flossway/2022/03/05/opensource-code-spillover/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://flossway.github.io/flossway/2022/03/05/opensource-code-spillover/","path":"2022/03/05/opensource-code-spillover/","title":"诺奖模型下的开源代码溢出"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>诺奖模型下的开源代码溢出 | FLOSSWAY</title>
+  
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/flossway/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/flossway/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">FLOSSWAY</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">building open-source community</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home"><a href="/flossway/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li>
+        <li class="menu-item menu-item-tags"><a href="/flossway/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li>
+        <li class="menu-item menu-item-categories"><a href="/flossway/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li>
+        <li class="menu-item menu-item-archives"><a href="/flossway/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BC%80%E6%BA%90%E6%BA%A2%E5%87%BA%E7%9A%84%E6%98%AF%E4%B8%80%E7%A7%8D%E5%85%AC%E5%85%B1%E7%9F%A5%E8%AF%86"><span class="nav-number">1.</span> <span class="nav-text">开源溢出的是一种公共知识</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BC%80%E6%BA%90%E4%BB%A3%E7%A0%81%E6%BA%A2%E5%87%BA"><span class="nav-number">2.</span> <span class="nav-text">开源代码溢出</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AF%BA%E5%A5%96%E6%A8%A1%E5%9E%8B%E4%B8%8B%E4%BB%A3%E7%A0%81%E6%BA%A2%E5%87%BA%E4%B9%8B%E7%BB%8F%E6%B5%8E%E5%AD%A6%E5%87%BD%E6%95%B0%E8%A1%A8%E8%BE%BE"><span class="nav-number">3.</span> <span class="nav-text">诺奖模型下代码溢出之经济学函数表达</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BC%80%E6%BA%90%E4%BB%A3%E7%A0%81%E6%BA%A2%E5%87%BA%E7%94%9F%E4%BA%A7%E5%87%BD%E6%95%B0%E4%B8%8B%E7%9A%84%E7%BB%8F%E6%B5%8E%E5%AD%A6%E5%88%86%E6%9E%90"><span class="nav-number">4.</span> <span class="nav-text">开源代码溢出生产函数下的经济学分析</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AC%AC%E4%B8%80%E9%A1%B9%E5%88%86%E6%9E%90"><span class="nav-number">4.1.</span> <span class="nav-text">第一项分析</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AC%AC%E4%BA%8C%E9%A1%B9%E5%88%86%E6%9E%90"><span class="nav-number">4.2.</span> <span class="nav-text">第二项分析</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AC%AC%E4%B8%89%E9%A1%B9%E5%88%86%E6%9E%90"><span class="nav-number">4.3.</span> <span class="nav-text">第三项分析</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81%E6%BA%A2%E5%87%BA%E6%A8%A1%E5%9E%8B%E4%B8%8B%E7%9A%84%E5%BC%80%E6%BA%90%E5%BB%BA%E8%AE%AE"><span class="nav-number">5.</span> <span class="nav-text">代码溢出模型下的开源建议</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BC%80%E6%BA%90%E7%9A%84%E8%BF%9C%E7%9C%BA"><span class="nav-number">6.</span> <span class="nav-text">开源的远眺</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="FLOSSWAY Authors"
+      src="/flossway/media/flossway.png">
+  <p class="site-author-name" itemprop="name">FLOSSWAY Authors</p>
+  <div class="site-description" itemprop="description">Building your open-source community.</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/flossway/archives/">
+          <span class="site-state-item-count">15</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/flossway/categories/">
+        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/flossway/tags/">
+        <span class="site-state-item-count">13</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/flossway" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;flossway" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i></a>
+      </span>
+  </div>
+
+
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://flossway.github.io/flossway/2022/03/05/opensource-code-spillover/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/flossway/media/flossway.png">
+      <meta itemprop="name" content="FLOSSWAY Authors">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="FLOSSWAY">
+      <meta itemprop="description" content="Building your open-source community.">
+    </span>
+    
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="诺奖模型下的开源代码溢出 | FLOSSWAY">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          诺奖模型下的开源代码溢出
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2022-03-05 00:00:00" itemprop="dateCreated datePublished" datetime="2022-03-05T00:00:00+00:00">2022-03-05</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2022-03-10 12:17:10" itemprop="dateModified" datetime="2022-03-10T12:17:10+00:00">2022-03-10</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/flossway/categories/%E7%8B%84%E5%AE%89/" itemprop="url" rel="index"><span itemprop="name">狄安</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>5k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>5 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <p>这几天由于俄乌战争影响，网络上有消息传 GitHub 要制裁俄罗斯，以至于有人惊呼开源也政治化了。在这里就不得不和大家普及一下 Github 不代表开源，Github 只是代表着托管开源软件的一个商业平台，它的拥有者是微软公司，不是开源组织。所以，即使哪一天  Github 真宣布对俄罗斯程序员禁用，大家需要清楚的一点是，那不是开源对俄罗斯程序员的禁用，而是微软公司的决定而已。</p>
+<span id="more"></span>
+
+<h2 id="开源溢出的是一种公共知识"><a href="#开源溢出的是一种公共知识" class="headerlink" title="开源溢出的是一种公共知识"></a>开源溢出的是一种公共知识</h2><p>开源软件作为一种从开源社区溢出的代码知识，其属性随着开源的那一刻，就在与它一起发布的开源许可协议内都定义清楚了。事实上，开源软件作为公共知识的一种，是很难去禁止谁的。除非，开源软件所属的开源社区或者基金会组织采取一些极端的行动。</p>
+<p>在 SAP、Apple、Google 等科技巨头公司宣布停止对俄罗斯的服务后，网络媒体上甚至冒出了“技术还有国界吗？”的言论。当然，这也可以理解，作为一个科技公司，肯定是有国界的，也完全可以选择自己的政治立场。</p>
+<p>但，科技公司并不就简单等价于科技知识。至于技术和知识有没有国界，其实这是要区分清楚的。因为知识分为公共知识和私有知识。“科学没有国界，科学家是有祖国的。” 这句话里对于科学没有国界的表达，指的就应该是人类所共有的那些公共的科学知识，而科学家在公共知识下通过自身所掌握的的一些专有和私有化知识确实会产生国界的。所以，如今，如果说那些宣称暂停服务所代表的技术，充其量就是一些科技公司所拥有的私有技术和知识罢了。</p>
+<p>而作为人类所共同拥有的公共知识，不仅是科学家或技术专家们用于形成私有知识的基础，更是推动社会经济增长的驱动力。我们今天要聊的开源话题，就是软件因为代码的开源开放后，在开源社区产生了知识的显性化，然后形成知识溢出，于是成为了一种人类的公共知识。因为开源的知识表现为代码形式，所以我也把这种现象称作开源代码溢出。</p>
+<h2 id="开源代码溢出"><a href="#开源代码溢出" class="headerlink" title="开源代码溢出"></a>开源代码溢出</h2><p>进一步而言，知识溢出是什么？这是经济学家保罗•罗默（Paul M. Romer），新增长理论的创建者，首先系统性提出了知识溢出的观点。他把知识完整纳入到经济和技术体系之内，建立了两个著名的内生经济增长模型，然后用来解释经济的增长，并得出了一个重要的观点：知识溢出所形成的公共知识是推动技术进步的一个重要基础，而技术进步是推动经济增长的驱动力。他也因为这些理论成就和威廉•诺德豪斯(William D. Nordhaus)共同获得了 2018 年度的诺贝尔经济学奖。</p>
+<p>开源软件通过开源使得软件代码公开，所有人只要遵循开源软件发布的开源许可协议就可以公开免费可得，同时这部分代码在“拥有上的非排他性”和“使用上的非竞争性”，进而几乎可以让人人使用。于是，软件开源的直接结果就是开源代码对应的那部分技术知识成为了一项社会公共物品和公共知识。也就这样，开源软件实际就完美的符合了罗墨的新增长理论下的知识溢出效应。关于知识溢出，则涉及到两个主体：知识溢出的供给者和知识溢出的接受者。在开源的知识溢出这件事上，对应的则是开源使用方和开源贡献方。</p>
+<p>那么，什么又是开源代码溢出呢？我试着这样来进行定义：开源的使用方通过自觉或者不自觉地吸收来自开源贡献方的代码，并结合现有知识进行创新。而这种代码知识在转移时，由于具有非竞争性和非垄断性的外部特征，就会产生在开源使用方没有给开源贡献方以经济补偿或者回报情况下的代码使用。或者可以说，开源的贡献方没有获得全部地收益，同时开源的使用方也没有承担全部软件代码地创造成本，这就叫做开源代码溢出。</p>
+<h2 id="诺奖模型下代码溢出之经济学函数表达"><a href="#诺奖模型下代码溢出之经济学函数表达" class="headerlink" title="诺奖模型下代码溢出之经济学函数表达"></a>诺奖模型下代码溢出之经济学函数表达</h2><p>罗墨的新增长理论有两个模型，一个是假设在完全竞争条件下基于知识溢出的内生增长模型，另一个是假设在非完全竞争和部分知识垄断下的内生增长模型。有兴趣的朋友可以把他的论文找出来仔细学习一下。在开源生态中，如果严格按照开放源代码促进会（OSI, Open Source Initiative）制定的开源标准来发布的开源软件，实际上就属于罗墨假设在完全竞争条件下的第一个知识溢出模型。那么，按照罗默给出的第一个数学模型，就让我们试着从开源使用方角度来阐述一下代码溢出后的经济学分析，我们就可以给出一个开源使用方的生产函数表达式：</p>
+<p>Y_I&#x3D;F(K_I,V,X_I )             (1)</p>
+<p>V&#x3D;∑_(i&#x3D;1)^n▒Vi                (2)</p>
+<p>对于表达式 (1），可以这样来理解：开源使用方的产品产出水平由使用方自身拥有的知识水平(Ki)、开源代码溢出的公共知识拥有水平(V)及传统投入的要素向量水平(Xi)的这三个因素来决定。具体如下</p>
+<ul>
+<li>Y 为使用了开源技术的使用方的产出水平；</li>
+<li>Ki 为企业为产品拥有的专有知识；</li>
+<li>V 则为企业可以拥有的开源软件的知识总量水平；</li>
+<li>Xi 为厂商的投入要素向量(如资金，设备等)；</li>
+</ul>
+<p>对于表达式（2），则可以这样理解：开源代码溢出的公共知识水平总量（V) 由所有的开源社区贡献方的代码贡献水平 (Vi) 的总和来决定。</p>
+<p>对于以上两个函数表达式，如果我们再把它们应用到开源具体场景，并试着用开源人了解的语境来表达，那么应当可以做出以下这样一些分析：</p>
+<h2 id="开源代码溢出生产函数下的经济学分析"><a href="#开源代码溢出生产函数下的经济学分析" class="headerlink" title="开源代码溢出生产函数下的经济学分析"></a>开源代码溢出生产函数下的经济学分析</h2><h3 id="第一项分析"><a href="#第一项分析" class="headerlink" title="第一项分析"></a>第一项分析</h3><p>假设在开源使用方的资本投入和其私有知识恒定的前提下，那么更高的开源代码溢出总量水平有利于企业产品的产出水平。开源使用方能否拥有更高的开源代码知识拥有水平，则取决于：</p>
+<ol>
+<li>其所在生态内可以触达的开源代码溢出水平的总量大小;</li>
+<li>在所拥有的开源代码溢出总水平量下，其所能实现的的转化率大小。</li>
+</ol>
+<p>于是，我们也不难形成这样的一个推论：即在开源发达的国家和区域下的企业，由于可以触达到更多开源知识总量水平高，从而将更有利于提高企业产品的产出水平。同时，具体的企业如果注重开源技术的拥有和使用并关注其转化率，那么该企业的产品产出水平也将相应获得改善。实际情况也确实在美国的科技公司似乎更容易产出更高科技水平的产品。而在国内市场上，我们可以毫不夸张的说，在过去二十年成功的互联网和高科技公司中，无论是阿里、腾讯、华为、小米还是字节跳动等，无一不是充分享用了开源代码溢出的红利，它们的成功就正是因为充分关注了开源技术的拥有及使用转化率。而这样的事实，对于在当下的开源热浪的涌动之下的各类想跑步进入数字原生化的企业而言，谁能更多的拥有可以触达的开源代码溢出下的总知识水平，同时谁又能更专注提高开源知识总水平在企业产品中的使用转化率，那么谁就更有可能提高自己产品的产出水平从而获得更大的竞争力。</p>
+<p>进而，我们也可以看到在去年年底因为一个被广泛使用的开源软件 Log4j。因为严重的安全漏洞而引发的各类对于开源软件使用担忧的言论以及开源软件的责任方问题，其实这样的困境我们也就迎刃而解，按照这个表达式来看，实际这就是对于一个有效 V 值的求解而已。</p>
+<h3 id="第二项分析"><a href="#第二项分析" class="headerlink" title="第二项分析"></a>第二项分析</h3><p>假设在开源代码溢出的总量水平和资本投入恒定的前提下，则开源使用方的企业如果提高自身私有知识的水平，则可以显著提高自身产品的产出水平。</p>
+<p>关于这个结论，我们可以看到，如果一个开源技术的贡献方同时又是一个开源技术的企业使用方而言，那么它的产品产出水平由其自身所有的私有知识 Ki 决定。那么如果它同时是个开源技术贡献者，因为它的贡献而导致了它自身 Ki 的减小，事实上就减弱了它自身产品的产出水品。那么，如果它要和其他同类企业进行产品竞争的话，则似乎一个可行的办法就是去减少对于开源社区的代码贡献，或者提高它的资本投入来提升它的产出水平。</p>
+<p>对于这个事实的发现，我们也就明白了开源创业公司如 MongoDB 和 Elastic 等企业，当发现来自亚马逊等公有云公司这些有着更大资本投入的公司竞争时，由于意识到自己根本无法在资本投入水平上与其抗衡，所以就只能想办法提高自己的Ki值，和降低竞争对手的V值这两项策略，这样就出现了它们所采取的行动：</p>
+<ol>
+<li>不以OSI开源许可的标准来发布代码，并开发更多自身专属的私有技术知识来提升Ki值;</li>
+<li>通过增加开源许可协议的条款限制来设法降低公有云厂商对开源代码溢出总量的使用和转化。</li>
+</ol>
+<h3 id="第三项分析"><a href="#第三项分析" class="headerlink" title="第三项分析"></a>第三项分析</h3><p>开源代码溢出的总量水平 V，对于任何一个使用方而言，其实在开源知识溢出的那一刻，已经是个给定的值。</p>
+<p>按照上述第二个表达式，V 就是所有开源贡献者的代码贡献总水平。开源社的庄表伟老师前段时间发表了一篇<a href="economic-model-of-open-source-ecology.md">《试论开源生态的经济模型》</a>，文章从传统的劳动价值理论，初步假设了一个以劳动时间为变量的开源生态经济学模型，并建议以贡献者在开源社区投入的必要劳动时间来定义开源软件的经济学价值，以开源社区的总劳动时间来定义开源社区的活跃度。这的确给出了一个来分析开源生态经济学价值很好的思路。</p>
+<p>但，开源软件作为过去三十年发展起来的在知识经济和数字经济新时代下的技术现象，它的产出物不仅和必要的劳动时间相关，更和无法用时间去度量的人类智力（人力资本）和累积的知识水平相关。这样使得开源软件和开源社区又和工业时代的商品生产拥有了一些完全不一样的特征。事实上，开源社区的产出水平也同样可以罗墨的生产函数加些变形后以递归的形式来表示。</p>
+<p>V&#x3D;∑_(i&#x3D;1)^n▒Vi&#x3D;∑_(i&#x3D;1)^n▒V(K_I,V,Xi) +V</p>
+<p>即，开源代码溢出的总量水平，一方面是所有开源贡献者的代码贡献总和，另外一方面也是存量的开源社区溢出代码总量水平 ，再加上当下各个开源贡献者的代码贡献量水平的总和。而当下的每个开源贡献者的开源贡献量又由其自身在开源贡献上的资本投入，对于原有的开源知识水平的使用及自身私有知识的三个要素决定。</p>
+<p>那么我们可以看出，要将开源溢出代码总量水平即V值提高，那么就是提升Vi的贡献量。而从每个开源贡献方的角度而言，那么无论代码贡献，还是对于开源社区的资本投入，都将有利于开源代码溢出总水平量V的提高。</p>
+<p>这样，我们从罗墨的理论可以预见，开源溢出的知识总量水平，从全社会的角度而言，将影响整个社会的数字经济发展。从一个国家、地区和行业领域的角度而言，则其所具有的开源知识总量水平将决定了它的数字经济增长水平。</p>
+<h2 id="代码溢出模型下的开源建议"><a href="#代码溢出模型下的开源建议" class="headerlink" title="代码溢出模型下的开源建议"></a>代码溢出模型下的开源建议</h2><p>对于开源的使用方而言，在开源软件的公共知识属性下尽快建立自己在这部分公共知识之上的竞争力将是一个不二之选。通过拥有更多对于开源溢代码总量水平的使用可以提高自己产品的产出水平。但，同时作为开源的使用方必须意识到一点，以各种形式的投入开源，或者为开源付费都将有助于提升开源代码溢出的总量水平。</p>
+<p>对于某一类开源技术的贡献方同时又是自身贡献的使用方而言，的确面临着一项挑战，即一方面因为自身的贡献有力的提升了开源溢出知识的总量水平，另一方面却因为自己的贡献无可避免的降低了自身专有知识水平，从而产生了自身产品产生水平竞争力下降。这似乎是一个不可调和的矛盾。但，似乎不用担心，因为事实上罗墨在他的第一个模型之后，他随后又专门研究了在非完全竞争下的第二个知识溢出模型，并引入了人力资本和新思想的概念。 </p>
+<p>人力资本理论的提出者是威廉•诺德豪斯(William D. Nordhaus)，他在 2018 年和罗墨一同获得了诺奖。以他们的观点对应到开源现象，我们则可以这样来解读，虽然贡献方因为既有开源的代码贡献形成了公共知识后不再对这部分知识具有垄断性和排他性，但贡献方本身作为人力资本的拥有方却是具有天生的排他性和垄断性的，而这些有价值的人力资本的新思想却是不断涌现的，从而将有效保持贡献方的竞争力。所以，贡献方可能会因为自己的开源贡献而失去局部或者阶段性的竞争力，但他们所拥有的人力资本的排他性和垄断性最终将决定它的竞争力，除非它失去了这部分人力资本。</p>
+<p>这个理论模型可能是理想化的，却确凿无疑的给我们指明了一个方向：对于人力资本的拥有，有时将比私有知识的拥有更加重要和更具有垄断性竞争力。</p>
+<h2 id="开源的远眺"><a href="#开源的远眺" class="headerlink" title="开源的远眺"></a>开源的远眺</h2><p>对于个体贡献者而言，除了基于个人兴趣爱好或个体利益驱动参与开源贡献之外，则完全可以站在更高的立意上去看待自己对开源社区的代码贡献——这是在推动人类社会的经济增长的有价值工作，将自己的代码开源置于全社会的公共知识体系之内，可能会因为自己的代码开源丧失局部的或者阶段性的经济利益，但却绝不会丧失自己作为人力资本本身的竞争力和垄断性。</p>
+<p>而对于政策制定者而言，如果能够不断加大对开源社区的扶持和资助，如通过向开源社区的资金扶持、向开源软件的服务提供方付费购买，或向开源贡献的企业予以政策补贴，都将有助于提升开源技术公共知识的总量水平，而这部分公共知识总量水平最终提高将推动经济的长期增长。</p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>原作者： </strong>狄安
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://flossway.github.io/flossway/2022/03/05/opensource-code-spillover/" title="诺奖模型下的开源代码溢出">https://flossway.github.io/flossway/2022/03/05/opensource-code-spillover/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+          <div class="post-tags">
+              <a href="/flossway/tags/%E5%BC%80%E6%BA%90/" rel="tag"># 开源</a>
+              <a href="/flossway/tags/%E5%BC%80%E6%BA%90%E7%BB%8F%E6%B5%8E%E5%AD%A6/" rel="tag"># 开源经济学</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/flossway/2022/02/28/where-comes-the-community/" rel="prev" title="开发者社区从何而来">
+                  <i class="fa fa-chevron-left"></i> 开发者社区从何而来
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    
+  
+  <div class="comments">
+    <script src="https://giscus.app/client.js"
+        data-repo="flossway/flossway" 
+        data-repo-id="R_kgDOGSeasg" 
+        data-category="Comments"
+        data-category-id="DIC_kwDOGSeass4CBGJZ"
+        data-mapping="title" 
+        data-reactions-enabled="1" 
+        data-emit-metadata="1" 
+        data-theme="light"
+        data-lang="en"
+        crossorigin="anonymous"
+        async>
+    </script>
+  </div>
+  
+  
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">FLOSSWAY Authors</span>
+</div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+    <span title="站点总字数">91k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">1:23</span>
+  </span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/mist/" rel="noopener" target="_blank">NexT.Mist</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/flossway/js/comments.js"></script><script src="/flossway/js/utils.js"></script><script src="/flossway/js/motion.js"></script><script src="/flossway/js/schemes/muse.js"></script><script src="/flossway/js/next-boot.js"></script>
+
+  
+<script src="https://cdn.jsdelivr.net/npm/hexo-generator-searchdb@1.4.0/dist/search.js" integrity="sha256-vXZMYLEqsROAXkEw93GGIvaB2ab+QW6w3+1ahD9nXXA=" crossorigin="anonymous"></script>
+<script src="/flossway/js/third-party/search/local-search.js"></script>
+
+
+
+
+
+  
+
+
+
+
+
+</body>
+</html>

@@ -1,5 +1,5 @@
 ---
-title: “影响力” v.s. “营销”
+title: “影响力” vs. “营销”
 date: 2022-03-13
 author: 顾钧
 categories: 顾钧

@@ -28,7 +28,7 @@
 <meta property="og:description" content="随着开源概念的红火，越来越多的企业将内部项目公开托管到 GitHub 等平台，也有越来越多依托开源项目建立起来的企业。对于这些企业来说，它们的目标不只是开放项目源代码，更希望能够形成开源共同体，打造围绕项目的软件生态。 然而，其中大部分项目由于成员背景的单一性，最终都终结于仅源码可得的形态。对于这些新兴项目来说，初始成员从属于同一企业是既定事实。在这样的前提下，企业应该如何实践开源协同，形成开源共">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-02-10T00:00:00.000Z">
-<meta property="article:modified_time" content="2022-03-19T02:31:58.572Z">
+<meta property="article:modified_time" content="2022-03-22T02:33:00.475Z">
 <meta property="article:author" content="FLOSSWAY Authors">
 <meta property="article:tag" content="开源">
 <meta property="article:tag" content="开源协同">
@@ -150,7 +150,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%B1%E4%BA%AB%E5%B7%A5%E4%BD%9C%E6%B5%81"><span class="nav-number">1.</span> <span class="nav-text">共享工作流</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Case-Study-OceanBase"><span class="nav-number">1.1.</span> <span class="nav-text">Case Study: OceanBase</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Case-Study-Apache-InLong-incubating"><span class="nav-number">1.2.</span> <span class="nav-text">Case Study: Apache InLong (incubating)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Case-Study-TiDB"><span class="nav-number">1.3.</span> <span class="nav-text">Case Study: TiDB</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Case-Study-Taichi"><span class="nav-number">1.4.</span> <span class="nav-text">Case Study: Taichi</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8B%9B%E5%8B%9F%E6%96%B0%E6%88%90%E5%91%98"><span class="nav-number">2.</span> <span class="nav-text">招募新成员</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#End-user"><span class="nav-number">2.1.</span> <span class="nav-text">End user</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Ecosystem"><span class="nav-number">2.2.</span> <span class="nav-text">Ecosystem</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Kernel"><span class="nav-number">2.3.</span> <span class="nav-text">Kernel</span></a></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%B1%E4%BA%AB%E5%B7%A5%E4%BD%9C%E6%B5%81"><span class="nav-number">1.</span> <span class="nav-text"> 共享工作流</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#case-study-oceanbase"><span class="nav-number">1.1.</span> <span class="nav-text"> Case Study: OceanBase</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#case-study-apache-inlong-incubating"><span class="nav-number">1.2.</span> <span class="nav-text"> Case Study: Apache InLong (incubating)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#case-study-tidb"><span class="nav-number">1.3.</span> <span class="nav-text"> Case Study: TiDB</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#case-study-taichi"><span class="nav-number">1.4.</span> <span class="nav-text"> Case Study: Taichi</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8B%9B%E5%8B%9F%E6%96%B0%E6%88%90%E5%91%98"><span class="nav-number">2.</span> <span class="nav-text"> 招募新成员</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#end-user"><span class="nav-number">2.1.</span> <span class="nav-text"> End user</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ecosystem"><span class="nav-number">2.2.</span> <span class="nav-text"> Ecosystem</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#kernel"><span class="nav-number">2.3.</span> <span class="nav-text"> Kernel</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -256,7 +256,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-03-19 02:31:58" itemprop="dateModified" datetime="2022-03-19T02:31:58+00:00">2022-03-19</time>
+      <time title="修改时间：2022-03-22 02:33:00" itemprop="dateModified" datetime="2022-03-22T02:33:00+00:00">2022-03-22</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -296,20 +296,23 @@
         <p>随着开源概念的红火，越来越多的企业将内部项目公开托管到 GitHub 等平台，也有越来越多依托开源项目建立起来的企业。对于这些企业来说，它们的目标不只是开放项目源代码，更希望能够形成开源共同体，打造围绕项目的软件生态。</p>
 <p>然而，其中大部分项目由于成员背景的单一性，最终都终结于仅源码可得的形态。对于这些新兴项目来说，初始成员从属于同一企业是既定事实。在这样的前提下，企业应该如何实践开源协同，形成开源共同体呢？</p>
 <span id="more"></span>
-
-<h2 id="共享工作流"><a href="#共享工作流" class="headerlink" title="共享工作流"></a>共享工作流</h2><p>从开发者的角度出发，根本问题是要共享工作流。共享工作流，即项目开发的核心流程只有一套，所有 contributor 无论背景都基于这套核心流程工作。</p>
+<h2 id="共享工作流"><a class="markdownIt-Anchor" href="#共享工作流"></a> 共享工作流</h2>
+<p>从开发者的角度出发，根本问题是要共享工作流。共享工作流，即项目开发的核心流程只有一套，所有 contributor 无论背景都基于这套核心流程工作。</p>
 <p>对于企业内部项目开放源代码的情况，要做到这一点并不容易。项目往往在企业内部已经有一套成熟的工作流。如果在设计开源方案的时候，没有把共享工作流考虑在内，即使代码公开，大部分开发流程也会保持在企业内部。如果 contributor 不是企业员工，则根本无法参与。</p>
-<h3 id="Case-Study-OceanBase"><a href="#Case-Study-OceanBase" class="headerlink" title="Case Study: OceanBase"></a>Case Study: OceanBase</h3><p>这个问题的典型案例是 <a target="_blank" rel="noopener" href="https://github.com/oceanbase/oceanbase">OceanBase</a> 项目。</p>
+<h3 id="case-study-oceanbase"><a class="markdownIt-Anchor" href="#case-study-oceanbase"></a> Case Study: OceanBase</h3>
+<p>这个问题的典型案例是 <a target="_blank" rel="noopener" href="https://github.com/oceanbase/oceanbase">OceanBase</a> 项目。</p>
 <p>OceanBase 项目的源代码托管在 GitHub 和 Gitee 两个平台上，同时接受问题报告和补丁提交。通常来说，一个项目只会有唯一的问题报告和补丁提交方式。例如，Linux 采用 Bugzilla 记录问题，邮件列表提交和评审补丁。GitHub 上有 Linux 的镜像，但是是只读的。其他的例子包括 GCC 和 PostgreSQL 等，都会有唯一的工作流，其他代码仓库只是镜像。OceanBase 两边都接受问题报告和补丁提交，反而是对两边的反馈都不重视。</p>
 <p>可以猜测，它的核心流程既不是 GitHub 上的工作流，也不是 Gitee 上的，而是企业内部的工作流。这种情况下，能从开放可参与的平台上提交的大概率就只有简单的拼写错误或者代码重构补丁。因为即使是资深的开发者，缺少必要的信息和充分的讨论，也无法更进一步参与。实际情况也是如此，内部的活动别说讨论和设计文档，就连提交都不是实时同步的。此外，项目在两个平台上的活动，基本只有一名维护者出面在处理。</p>
 <p>企业开放内部项目源代码，允许任何人学习和使用，是有社会价值的。但是内外两套工作流，甚至开放可参与的工作流只是个添头，那就不可能形成开源共同体。如果这就是预期的目标，那倒也没事。只是对于辛苦应付这些留下来的缺口进来的简单补丁的维护者来说，他是否会觉得这只是另一种值班呢？无论如何，工作流的统一都有助于减少损耗。不管是干脆只保留内部工作流，托管平台上的所有活动都没有回应保证，还是尝试融合到开放工作流，真正做到开源协同，都比牺牲一部分人，做一些创造出来的边缘工作要好。</p>
-<h3 id="Case-Study-Apache-InLong-incubating"><a href="#Case-Study-Apache-InLong-incubating" class="headerlink" title="Case Study: Apache InLong (incubating)"></a>Case Study: Apache InLong (incubating)</h3><p>致力于融合到开放工作流的典型案例是 <a target="_blank" rel="noopener" href="https://github.com/apache/incubator-inlong">Apache InLong (incubating)</a> 项目。这个项目是由腾讯捐赠给 Apache 软件基金会的数据流处理平台。</p>
+<h3 id="case-study-apache-inlong-incubating"><a class="markdownIt-Anchor" href="#case-study-apache-inlong-incubating"></a> Case Study: Apache InLong (incubating)</h3>
+<p>致力于融合到开放工作流的典型案例是 <a target="_blank" rel="noopener" href="https://github.com/apache/incubator-inlong">Apache InLong (incubating)</a> 项目。这个项目是由腾讯捐赠给 Apache 软件基金会的数据流处理平台。</p>
 <p>在项目开放初期，也存在只有内部工作流的情形。不过得益于主要维护者的软件工程经验，在明确项目要以开源协同的方式运作以后，经过对维护两套开发流程弊端的分析，得出了要融合工作流的结论。既然是开源协同，那么融合的工作流就是共享工作流了。</p>
 <p>一段时间的改造后，原先内部工作流的核心流程被迁移到共享工作流当中，包括问题报告、补丁提交和版本发布。原先内部工作流服务于企业需求的部分则基于共享工作流构建。</p>
 <p>企业内部仍然有用户问题报告，但是归结到项目本身缺陷的问题，会脱敏之后报告到 GitHub Issue 上。为了解决紧急问题，企业内部的 fork 版本仍然会打临时补丁快速上线，但是救火之后正式修复的补丁会以 contributing back 的形式提交到开源项目上。最后是版本发布。一开始，只有内部项目在发版。开放源代码之后，就有两个同类项目要分开发版。经过一系列的改进，主要是问题报告和补丁提交的及时同步，最终两个项目能够以较小的同步开销同时发版。换句话说，GitHub 上托管的版本，就是企业内部使用的版本。企业内部可能有一些临时补丁，但是并不构成一个差异化内部版本，并且这些补丁是积极地被推进 contributing back 上游的。</p>
 <p>可以看到，确定开源协同开发项目的方向后，共享工作流不是形式主义，而是能切实提高软件工程效率和减少摩擦的方案。</p>
 <p>对于企业本身依托开源项目建立的情况，要维持共享工作流也存在很多挑战。这些挑战大多出自一个原因，那就是最佳实践的匮乏导致节外生枝的私下讨论。</p>
-<h3 id="Case-Study-TiDB"><a href="#Case-Study-TiDB" class="headerlink" title="Case Study: TiDB"></a>Case Study: TiDB</h3><p><a target="_blank" rel="noopener" href="https://github.com/pingcap/tidb/tree/master/docs/design">TiDB</a> 的代码仓库中有专门存放设计文档的目录。理论上，新功能，行为变更，以及其他重要改动，都需要一个设计文档。</p>
+<h3 id="case-study-tidb"><a class="markdownIt-Anchor" href="#case-study-tidb"></a> Case Study: TiDB</h3>
+<p><a target="_blank" rel="noopener" href="https://github.com/pingcap/tidb/tree/master/docs/design">TiDB</a> 的代码仓库中有专门存放设计文档的目录。理论上，新功能，行为变更，以及其他重要改动，都需要一个设计文档。</p>
 <p>我们可以从设计文档的时间线看出这一工作流的变迁。</p>
 <ul>
 <li>2018 年下半年，共 17 份设计文档。</li>
@@ -341,7 +344,8 @@
 <ul>
 <li><a target="_blank" rel="noopener" href="https://github.com/pingcap/tidb/issues/28947">Integrate UT coverage with CI pipeline</a></li>
 </ul>
-<h3 id="Case-Study-Taichi"><a href="#Case-Study-Taichi" class="headerlink" title="Case Study: Taichi"></a>Case Study: Taichi</h3><p><a target="_blank" rel="noopener" href="https://github.com/taichi-dev/taichi">Taichi</a> 是一个主要面向计算机图形学的并行编程框架，由胡渊鸣博士发明。去年，他作为联合创始人创立了太极图形公司来支持项目的发展。</p>
+<h3 id="case-study-taichi"><a class="markdownIt-Anchor" href="#case-study-taichi"></a> Case Study: Taichi</h3>
+<p><a target="_blank" rel="noopener" href="https://github.com/taichi-dev/taichi">Taichi</a> 是一个主要面向计算机图形学的并行编程框架，由胡渊鸣博士发明。去年，他作为联合创始人创立了太极图形公司来支持项目的发展。</p>
 <p>项目早期基本是胡老师一个人的工作。开放源代码并有 contributor 加入后，画风是这样的。</p>
 <ul>
 <li><a target="_blank" rel="noopener" href="https://github.com/taichi-dev/taichi/pull/1836">[async] Implement basic StateFlowGraph</a></li>
@@ -372,20 +376,24 @@
 <p>第一个是在确定开源协同开发项目的方向后，所有技术讨论都以 GitHub 平台的内容为唯一信源。私下讨论是无法禁止的，只能从技术领袖开始以身作则，推动公开讨论。其实对于大部分企业员工来说，在哪讨论并不重要。真正让他们转向私下讨论的原因，是在 GitHub 上的评论得不到回复，而钉一下或者内部文档 at 有奇效。值得一提的是，Taichi 也有我曾经到的 TiDB 的问题，那就是没有一个活跃的开放式讨论渠道，即没有邮件列表的替代品。有个 Discourse 论坛，但是是面向中文用户而不是全球开发者的。开通了 GitHub Discussion 功能，但是只有唯一一个版本发布的公告。</p>
 <p>第二个是作为共同体的领袖，应当积极寻找不同背景的参与者。如果已经形成了私下讨论的习惯，仅仅要求员工改变习惯是很难有效的。因为公开讨论的主要原因，是为了和企业以外的 contributor 交流，以获得有意义的输入和提高生产力。如果员工发现换个地方发言，得到的回应还是同事的回应，并且 GitHub 上的评论还是得不到即时的回复，这件事就推不下去。</p>
 <p>前面的例子提到过，当 Taichi 的主要开发者天各一方，没有成立公司之前，这种沟通是自然而然的。实际上，Linux 和 Apache Httpd 也是这样的。除了邮件列表，Linus 很难找到另一个渠道收获他所需要的反馈。Apache Httpd 的早期成员一开始就是在邮件列表上沟通的。只有实际存在组织以外的高水平参与者，开源协同的最佳实践才有意义。对于企业员工来说，也才有直接合理的理由不在内部讨论。毕竟就某个特定的问题，他更希望听一听那个不同背景的共同体成员的意见。</p>
-<h2 id="招募新成员"><a href="#招募新成员" class="headerlink" title="招募新成员"></a>招募新成员</h2><p>寻找不同背景的参与者，其实就是作为共同体的领袖为共同体招募新成员。这是企业实践开源协同的另一个难题。除了为企业招募以外，应该如何为共同体招募呢？</p>
-<h3 id="End-user"><a href="#End-user" class="headerlink" title="End user"></a>End user</h3><p>第一个要讨论的是用户。不过，用户是开源协同之外的内容。商业产品同样需要自己的用户。大部分用户也不会关心软件是如何实现的。</p>
+<h2 id="招募新成员"><a class="markdownIt-Anchor" href="#招募新成员"></a> 招募新成员</h2>
+<p>寻找不同背景的参与者，其实就是作为共同体的领袖为共同体招募新成员。这是企业实践开源协同的另一个难题。除了为企业招募以外，应该如何为共同体招募呢？</p>
+<h3 id="end-user"><a class="markdownIt-Anchor" href="#end-user"></a> End user</h3>
+<p>第一个要讨论的是用户。不过，用户是开源协同之外的内容。商业产品同样需要自己的用户。大部分用户也不会关心软件是如何实现的。</p>
 <p>所以，要讨论用户，其实是要驳斥一些错误的观念。用户能够为你提供使用反馈，能够通过付费或捐赠支持项目开发人员持续投入，但是期待从用户群体中大规模地发现核心 contributor 则是不切实际的。</p>
 <p>我听到过很多项目领袖跟我说，他的项目是独特的，因为不像大数据项目那样，用户本身也是开发者。它可能是一个数据库。哎呀，用户都是 DBA 或者数据分析师，根本不知道数据库怎么实现的嘛。它可能是一个机器学习框架。哎呀，用户都只会操作 Python 接口，根本搞不来核心 C++ 代码。</p>
 <p>那我就想问了，你咋不去找那些就做数据库的人，就搞机器学习框架的人呢？你给团队招聘的时候知道找这些人，怎么到了给共同体招募新成员，眼里就只看到用户了。</p>
 <p>其实我也可以理解。因为开源协同不够普及，大部分人提到 open-source 这个概念，第一印象还是一个市场营销的手段。或者提到“运营开源社区”，就把用户社区那些已有经验都搬过来。在这样的认识下 open-source community 就是开源社区，而不是开源共同体。其中“我们”是唯一的开发者，是懂行的。其他人是只会小修小补的爱好者，或者干脆啥也不懂的用户。</p>
 <p>这个误区有点像思维定式。你现在要找的是有能力开发项目的参与者，那就去对应的群体里找就可以了。</p>
 <p>当然，如果你就想做用户社区，就没打算搞开源协同，也是一种选择。对于这类需求，我建议研究 MongoDB 的做法。它们搞得挺好，这里就不展开了。</p>
-<h3 id="Ecosystem"><a href="#Ecosystem" class="headerlink" title="Ecosystem"></a>Ecosystem</h3><p>抛开用户不谈，开源共同体当中的 contributor 还可以进一步细分。其中有一类 contributor 关注生态互连，另一类关注项目的核心逻辑。</p>
+<h3 id="ecosystem"><a class="markdownIt-Anchor" href="#ecosystem"></a> Ecosystem</h3>
+<p>抛开用户不谈，开源共同体当中的 contributor 还可以进一步细分。其中有一类 contributor 关注生态互连，另一类关注项目的核心逻辑。</p>
 <p>如果项目提供了足够多的扩展点，或者策略替换机制，那么关注生态互连的 contributor 就能够快速参与进来。</p>
-<p>例如，Flink&#x2F;Spark&#x2F;Presto 等项目都设计了 connector 机制，连来连去就能创造出大量的工作。例如，几乎所有项目都可以搞多语言 SDK 玩玩。TiKV 就有不少于五种编程语言的客户端实现。例如，PostgreSQL 提供 FDW 机制，不仅支持连接外部数据源，更暴露了参与 planning 阶段的计算下推接口。例如，Linux 其实也有丰富的扩展机制，支持多种架构和驱动就是一个例子。</p>
+<p>例如，Flink/Spark/Presto 等项目都设计了 connector 机制，连来连去就能创造出大量的工作。例如，几乎所有项目都可以搞多语言 SDK 玩玩。TiKV 就有不少于五种编程语言的客户端实现。例如，PostgreSQL 提供 FDW 机制，不仅支持连接外部数据源，更暴露了参与 planning 阶段的计算下推接口。例如，Linux 其实也有丰富的扩展机制，支持多种架构和驱动就是一个例子。</p>
 <p>上面这些都是项目本身的机制，更广泛的生态还包括解决方案的整合。例如，从 Netty 的角度看，Flink 就是它的生态的一部分。从 Flink 的角度看，serverless 技术栈 StateFun 又是它的生态的一部分。经常听 database 的开发者说自己的软件直面终端用户，但是其实就互联网业务开发者来说，中间是隔了一层 ORM 框架的。哪怕是数据分析师，大概率也隔了一层可视化框架。另外，数据的同步和搬迁也是应用设计不可缺少的一部分，这就是各种中间件能发挥作用的地方了。</p>
 <p>总之，这类 contributor 还可以再细分。一类是关注项目提供的机制替换实现的，大部分可以从有可能提供实现的项目开发者当中寻找。例如项目的部署机制希望支持 Kubernetes 环境，那找一个热衷于写 Kubernetes Operator 或者刚学会跃跃欲试的开发者参与，就很有可能产生正面效果。另一类是关注项目整合形成用户解决方案的。实际上，项目开发者最终基于项目实现盈利，往往就是以某种解决方案出现。只要你发挥想象力，生态整合的可能性就是个乘法，不愁找不到参与者。即使是核心逻辑被单一企业掌控的 MongoDB 项目，其生态也是非常繁荣的。</p>
-<h3 id="Kernel"><a href="#Kernel" class="headerlink" title="Kernel"></a>Kernel</h3><p>当然，项目的核心逻辑也是非常重要的。如果项目本身不够坚挺，那么就不会有用户使用，也无法激起 contributor 连接生态的动力。</p>
+<h3 id="kernel"><a class="markdownIt-Anchor" href="#kernel"></a> Kernel</h3>
+<p>当然，项目的核心逻辑也是非常重要的。如果项目本身不够坚挺，那么就不会有用户使用，也无法激起 contributor 连接生态的动力。</p>
 <p>项目的核心逻辑是一个项目的主要价值。这些逻辑通常由项目的初始成员定义。在企业主导项目的情况下，这些初始成员往往背景单一。同时，出于传统组织观念的影响，初始成员往往以企业当中的项目团队作为自我认同，团队等同于项目，也因此将核心逻辑的开发层层“保护”在看不见的高墙之内。</p>
 <p>以项目团队作为自我认同，无怪乎招募新成员的时候，自我认知自动翻译成团队招聘，而想不到还有其他可能性。</p>
 <p>反观成功的开源项目，数据湖项目 <a target="_blank" rel="noopener" href="http://hudi.apache.org/">Apache Hudi</a> 由 Uber 捐赠给 Apache 软件基金会，在项目快速发展过程中吸引到了阿里巴巴和 T3 出行等企业的员工的参与，并吸纳了上述企业背景的开发者作为项目 PMC 成员。对于后续参与的企业的员工来说，他们在企业当中虽然也有项目团队，但是显然不会觉得项目归企业内的项目团队所有。对于 Uber 来说，来自其他企业的核心 contributor 的声音也不可忽视。这样，Apache Hudi 成功建立了一个开源共同体。</p>
@@ -521,6 +529,11 @@
   
 
 
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">false</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.css" integrity="sha256-94CNZ/bJtwrBYZrXhCOBvpB4rZUzBnvAsirFv31TMGo=" crossorigin="anonymous">
 
 
 

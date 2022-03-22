@@ -20,15 +20,15 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"flossway.github.io","root":"/flossway/","images":"/flossway/images","scheme":"Mist","darkmode":false,"version":"8.10.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/flossway/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/flossway/js/config.js"></script>
 
-    <meta name="description" content="玩开源的程序员，大多了解 Linus 曾经说过的那句霸气无比的话： Talk is cheap. Show me the code. 代码胜于雄辩这是 Linus 于 2000 年 8 月 25 日在社区邮件列表上讨论关于 Linux 内核线程优化问题时，其中一个人提出了个他认为非常高效的方案，而 Linus 认为这个方案不够好，于是他在回信中就写下了这句在今天足以堪称经典的话，这也令很多程序员感">
+    <meta name="description" content="玩开源的程序员，大多了解 Linus 曾经说过的那句霸气无比的话： Talk is cheap. Show me the code.  代码胜于雄辩 这是 Linus 于 2000 年 8 月 25 日在社区邮件列表上讨论关于 Linux 内核线程优化问题时，其中一个人提出了个他认为非常高效的方案，而 Linus 认为这个方案不够好，于是他在回信中就写下了这句在今天足以堪称经典的话，这也令很多程序">
 <meta property="og:type" content="article">
 <meta property="og:title" content="代码穿流">
 <meta property="og:url" content="https://flossway.github.io/flossway/2022/02/25/code-flows-with-opensource/index.html">
 <meta property="og:site_name" content="FLOSSWAY">
-<meta property="og:description" content="玩开源的程序员，大多了解 Linus 曾经说过的那句霸气无比的话： Talk is cheap. Show me the code. 代码胜于雄辩这是 Linus 于 2000 年 8 月 25 日在社区邮件列表上讨论关于 Linux 内核线程优化问题时，其中一个人提出了个他认为非常高效的方案，而 Linus 认为这个方案不够好，于是他在回信中就写下了这句在今天足以堪称经典的话，这也令很多程序员感">
+<meta property="og:description" content="玩开源的程序员，大多了解 Linus 曾经说过的那句霸气无比的话： Talk is cheap. Show me the code.  代码胜于雄辩 这是 Linus 于 2000 年 8 月 25 日在社区邮件列表上讨论关于 Linux 内核线程优化问题时，其中一个人提出了个他认为非常高效的方案，而 Linus 认为这个方案不够好，于是他在回信中就写下了这句在今天足以堪称经典的话，这也令很多程序">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-02-25T00:00:00.000Z">
-<meta property="article:modified_time" content="2022-03-19T02:31:58.568Z">
+<meta property="article:modified_time" content="2022-03-22T02:33:00.471Z">
 <meta property="article:author" content="FLOSSWAY Authors">
 <meta property="article:tag" content="开源">
 <meta property="article:tag" content="开源协同">
@@ -151,7 +151,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81%E8%83%9C%E4%BA%8E%E9%9B%84%E8%BE%A9"><span class="nav-number">1.</span> <span class="nav-text">代码胜于雄辩</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF%E4%BB%A3%E7%A0%81%E7%A9%BF%E6%B5%81%EF%BC%9F"><span class="nav-number">2.</span> <span class="nav-text">什么是代码穿流？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%9F%A5%E8%AF%86%E7%9A%84%E6%98%BE%E6%80%A7%E5%8C%96%E5%92%8C%E5%8E%BB%E7%B2%98%E6%80%A7"><span class="nav-number">3.</span> <span class="nav-text">知识的显性化和去粘性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%88%91%E4%BB%AC%E7%9A%84%E7%BB%93%E8%AE%BA"><span class="nav-number">4.</span> <span class="nav-text">我们的结论</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BB%93%E8%AE%BA%E4%B8%80%EF%BC%9A%E5%BC%80%E6%BA%90%E7%9A%84%E8%BD%AF%E4%BB%B6%E4%BB%A3%E7%A0%81%E6%98%AF%E8%BD%AF%E4%BB%B6%E7%B1%BB%E7%9F%A5%E8%AF%86%E4%BC%A0%E9%80%92%E6%8D%9F%E8%80%97%E7%B3%BB%E6%95%B0%E6%9C%80%E5%B0%8F%E7%9A%84%E4%BC%A0%E9%80%92%E8%BD%BD%E4%BD%93"><span class="nav-number">4.1.</span> <span class="nav-text">结论一：开源的软件代码是软件类知识传递损耗系数最小的传递载体</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BB%93%E8%AE%BA%E4%BA%8C%EF%BC%9A%E5%BC%80%E6%BA%90%E7%9A%84%E4%BB%A3%E7%A0%81%E5%9C%A8%E6%97%B6%E9%97%B4%EF%BC%8C%E7%A9%BA%E9%97%B4%E5%92%8C%E4%B8%8D%E5%90%8C%E4%BA%BA%E7%BE%A4%E4%B9%8B%E9%97%B4%E7%A9%BF%E6%B5%81%E7%9A%84%E7%A8%8B%E5%BA%A6%E5%86%B3%E5%AE%9A%E4%BA%86%E8%BF%99%E4%B8%AA%E5%BC%80%E6%BA%90%E7%A4%BE%E5%8C%BA%E7%9A%84%E4%BB%B7%E5%80%BC"><span class="nav-number">4.2.</span> <span class="nav-text">结论二：开源的代码在时间，空间和不同人群之间穿流的程度决定了这个开源社区的价值</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BB%93%E8%AE%BA%E4%B8%89%EF%BC%9A%E5%BC%80%E6%BA%90%E7%A4%BE%E5%8C%BA%E5%86%85%E7%9A%84%E6%BF%80%E7%83%88%E4%BA%89%E8%AE%BA%E5%B0%86%E6%9C%89%E5%88%A9%E4%BA%8E%E5%BC%80%E6%BA%90%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%88%9B%E6%96%B0"><span class="nav-number">4.3.</span> <span class="nav-text">结论三：开源社区内的激烈争论将有利于开源软件的创新</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8A%89%E6%8B%A9"><span class="nav-number">5.</span> <span class="nav-text">抉择</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81%E8%83%9C%E4%BA%8E%E9%9B%84%E8%BE%A9"><span class="nav-number">1.</span> <span class="nav-text"> 代码胜于雄辩</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF%E4%BB%A3%E7%A0%81%E7%A9%BF%E6%B5%81"><span class="nav-number">2.</span> <span class="nav-text"> 什么是代码穿流？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%9F%A5%E8%AF%86%E7%9A%84%E6%98%BE%E6%80%A7%E5%8C%96%E5%92%8C%E5%8E%BB%E7%B2%98%E6%80%A7"><span class="nav-number">3.</span> <span class="nav-text"> 知识的显性化和去粘性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%88%91%E4%BB%AC%E7%9A%84%E7%BB%93%E8%AE%BA"><span class="nav-number">4.</span> <span class="nav-text"> 我们的结论</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BB%93%E8%AE%BA%E4%B8%80%E5%BC%80%E6%BA%90%E7%9A%84%E8%BD%AF%E4%BB%B6%E4%BB%A3%E7%A0%81%E6%98%AF%E8%BD%AF%E4%BB%B6%E7%B1%BB%E7%9F%A5%E8%AF%86%E4%BC%A0%E9%80%92%E6%8D%9F%E8%80%97%E7%B3%BB%E6%95%B0%E6%9C%80%E5%B0%8F%E7%9A%84%E4%BC%A0%E9%80%92%E8%BD%BD%E4%BD%93"><span class="nav-number">4.1.</span> <span class="nav-text"> 结论一：开源的软件代码是软件类知识传递损耗系数最小的传递载体</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BB%93%E8%AE%BA%E4%BA%8C%E5%BC%80%E6%BA%90%E7%9A%84%E4%BB%A3%E7%A0%81%E5%9C%A8%E6%97%B6%E9%97%B4%E7%A9%BA%E9%97%B4%E5%92%8C%E4%B8%8D%E5%90%8C%E4%BA%BA%E7%BE%A4%E4%B9%8B%E9%97%B4%E7%A9%BF%E6%B5%81%E7%9A%84%E7%A8%8B%E5%BA%A6%E5%86%B3%E5%AE%9A%E4%BA%86%E8%BF%99%E4%B8%AA%E5%BC%80%E6%BA%90%E7%A4%BE%E5%8C%BA%E7%9A%84%E4%BB%B7%E5%80%BC"><span class="nav-number">4.2.</span> <span class="nav-text"> 结论二：开源的代码在时间，空间和不同人群之间穿流的程度决定了这个开源社区的价值</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BB%93%E8%AE%BA%E4%B8%89%E5%BC%80%E6%BA%90%E7%A4%BE%E5%8C%BA%E5%86%85%E7%9A%84%E6%BF%80%E7%83%88%E4%BA%89%E8%AE%BA%E5%B0%86%E6%9C%89%E5%88%A9%E4%BA%8E%E5%BC%80%E6%BA%90%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%88%9B%E6%96%B0"><span class="nav-number">4.3.</span> <span class="nav-text"> 结论三：开源社区内的激烈争论将有利于开源软件的创新</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8A%89%E6%8B%A9"><span class="nav-number">5.</span> <span class="nav-text"> 抉择</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -257,7 +257,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-03-19 02:31:58" itemprop="dateModified" datetime="2022-03-19T02:31:58+00:00">2022-03-19</time>
+      <time title="修改时间：2022-03-22 02:33:00" itemprop="dateModified" datetime="2022-03-22T02:33:00+00:00">2022-03-22</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -296,7 +296,8 @@
     <div class="post-body" itemprop="articleBody">
         <p>玩开源的程序员，大多了解 Linus 曾经说过的那句霸气无比的话：</p>
 <p><strong>Talk is cheap. Show me the code.</strong></p>
-<h2 id="代码胜于雄辩"><a href="#代码胜于雄辩" class="headerlink" title="代码胜于雄辩"></a>代码胜于雄辩</h2><p>这是 Linus 于 2000 年 8 月 25 日在社区邮件列表上讨论关于 Linux 内核线程优化问题时，其中一个人提出了个他认为非常高效的方案，而 Linus 认为这个方案不够好，于是他在回信中就写下了这句在今天足以堪称经典的话，这也令很多程序员感觉非常惬意。</p>
+<h2 id="代码胜于雄辩"><a class="markdownIt-Anchor" href="#代码胜于雄辩"></a> 代码胜于雄辩</h2>
+<p>这是 Linus 于 2000 年 8 月 25 日在社区邮件列表上讨论关于 Linux 内核线程优化问题时，其中一个人提出了个他认为非常高效的方案，而 Linus 认为这个方案不够好，于是他在回信中就写下了这句在今天足以堪称经典的话，这也令很多程序员感觉非常惬意。</p>
 <p>从此，每当程序员们产生各种言语纷争而又一时无果时，往往便以这句话来结束唾沫横飞的争论。一方面，我们看到的是程序员文化中“与其你口头装逼，不如代码牛逼”的内涵；另一方面，我们也可这样理解：代码胜过一切含糊不清的争论。因为平常的语言沟通，即使一个明确的想法，即使用同样的字词，却因为语境或者语法造句等因素，让自己原本想表达的构想无法被对方精准理解和捕捉，从而产生各种歧义和误解。而写出来的程序因为代码规则的标准性和编译后的可运行性产生了所见即所得的效果，让代码就不言自证了其原先想法的清晰性，正确性或者优越性。当一切用可见的代码及运行结果来说话，争论自然就偃旗息鼓。</p>
 <p>Facebook 创始人扎克伯格也曾在自己公司上市的前一天发表的上市演讲中说过了类似的话，他当是这样说的：“Code wins argument（代码胜于雄辩）”。 其言下之意是想说两层意思：</p>
 <ol>
@@ -305,11 +306,12 @@
 </ol>
 <p>于此，我们必须接受和承认这样一个事实：在沟通误解和语言歧义的困境面前，程序代码比日常语言有着更加精准表达的优势。程序员拥有着比普通人更好的沟通载体。这个载体就叫程序代码。代码首先是一种能清晰和精准表达思想的语言载体，其次是可以通过编译后运行来直接验证效果的沟通工具。如果说数学是最精准而抽象的语言，那么程序代码可以说是精准而同时有事半具象半抽象的语言。</p>
 <span id="more"></span>
-
-<h2 id="什么是代码穿流？"><a href="#什么是代码穿流？" class="headerlink" title="什么是代码穿流？"></a>什么是代码穿流？</h2><p>开源因为继承了由理查德斯托曼所开启的自由软件运动以来所倡导的代码开放共享精神，使得程序员们可以在拥有了代码语言进行精准表达自己构想的基础上，更可以通过这些开放且透明可见的源代码承载着他们的思想，在不同的程序员间或者开源社区的不同成员之间来回穿梭，以此充分交换和反馈各自自己的想法。我把它这个过程定义为代码穿流。而这样的代码穿流正是因为代码语言的精确性，成为了开源社区不同社区成员间的低歧义和几乎零误解的沟通载体，创造了开源社区独特的高效且有效的沟通基础。</p>
+<h2 id="什么是代码穿流"><a class="markdownIt-Anchor" href="#什么是代码穿流"></a> 什么是代码穿流？</h2>
+<p>开源因为继承了由理查德斯托曼所开启的自由软件运动以来所倡导的代码开放共享精神，使得程序员们可以在拥有了代码语言进行精准表达自己构想的基础上，更可以通过这些开放且透明可见的源代码承载着他们的思想，在不同的程序员间或者开源社区的不同成员之间来回穿梭，以此充分交换和反馈各自自己的想法。我把它这个过程定义为代码穿流。而这样的代码穿流正是因为代码语言的精确性，成为了开源社区不同社区成员间的低歧义和几乎零误解的沟通载体，创造了开源社区独特的高效且有效的沟通基础。</p>
 <p>一般我们认为，开源共同体的创新基础在于分布式的社会化协作。实际上，社会化协作是代码穿流后的一种结果表现。而开源的代码语言作为沟通基础，辅之以如 GitHub 一类的开源协作平台工具，直接效果当然是提高了开发效率，但究其本质其实应该是代码穿流后形成了开源共同体间的创新价值。</p>
 <p>为什么这样说呢？</p>
-<h2 id="知识的显性化和去粘性"><a href="#知识的显性化和去粘性" class="headerlink" title="知识的显性化和去粘性"></a>知识的显性化和去粘性</h2><p>在知识创新的领域里，实现价值创新的一个重要基础是知识的可传递。知识作为一个特殊而无形的物品，其可传递的核心是解决两个问题</p>
+<h2 id="知识的显性化和去粘性"><a class="markdownIt-Anchor" href="#知识的显性化和去粘性"></a> 知识的显性化和去粘性</h2>
+<p>在知识创新的领域里，实现价值创新的一个重要基础是知识的可传递。知识作为一个特殊而无形的物品，其可传递的核心是解决两个问题</p>
 <ol>
 <li>知识的显性化</li>
 <li>知识的去粘性</li>
@@ -324,20 +326,25 @@
 <p>实际上，这个游戏的隐含意义就是粘性知识在信息的传递过程中，由于传递者自身及语言，动作姿势的模糊性及多义性，信息会被迅速衰减。从这个游戏的结果，我们大致可以得出一个粗浅的结论：粘性知识的传播是距离的衰减函数。</p>
 <p>编译成二进制且不提供源代码的程序，虽然通过运行可以看到显性结果或者使用，但事实上因为代码的不可见就是一种典型的隐性且粘性的知识。传统的软件提供商在提供可运行的软件时会附带软件使用手册或者技术文档来局部显性化，也会通过一些面对面的交流沟通（这些往往以培训，现场指导等形式出现）来局部去粘性。但最直接和最透彻的显性化无疑就是提供源代码。当初自由软件运动和随后兴起的开源运动的初心，就是为了让代码知识显性化的无损穿流。</p>
 <p>所以开源软件实践中，程序员通过代码编写将自己的想法精确表达出来，并且通过代码开源行动开放共享出来，就是一次非常典型的知识显性化过程，随后通过社区开展的各类活动如论坛，meetup，会议等线上线下活动进行知识的去粘性化，进而让显性化的代码知识在开源社区的不同成员间无损穿流达到分享传递和协同，让不同程序员的匠性得以聚合，最终达到社会化协同创新。</p>
-<h2 id="我们的结论"><a href="#我们的结论" class="headerlink" title="我们的结论"></a>我们的结论</h2><p>所以，软件代码通过开源让软件程序的隐形知识显性化加强，显性化的知识进而通过开源社区的各类活动以最大限度去粘性化，形成代码穿流。这，应是开源集市模式卓越性的一个本质所在。这也就是代码穿流力。由此，我们可以得出第一个结论：</p>
-<h3 id="结论一：开源的软件代码是软件类知识传递损耗系数最小的传递载体"><a href="#结论一：开源的软件代码是软件类知识传递损耗系数最小的传递载体" class="headerlink" title="结论一：开源的软件代码是软件类知识传递损耗系数最小的传递载体"></a>结论一：开源的软件代码是软件类知识传递损耗系数最小的传递载体</h3><p>软件代码的开源是软件知识显性化的最优方式，而积极的开源社区活动则是软件知识去粘性化的最佳手段。</p>
+<h2 id="我们的结论"><a class="markdownIt-Anchor" href="#我们的结论"></a> 我们的结论</h2>
+<p>所以，软件代码通过开源让软件程序的隐形知识显性化加强，显性化的知识进而通过开源社区的各类活动以最大限度去粘性化，形成代码穿流。这，应是开源集市模式卓越性的一个本质所在。这也就是代码穿流力。由此，我们可以得出第一个结论：</p>
+<h3 id="结论一开源的软件代码是软件类知识传递损耗系数最小的传递载体"><a class="markdownIt-Anchor" href="#结论一开源的软件代码是软件类知识传递损耗系数最小的传递载体"></a> 结论一：开源的软件代码是软件类知识传递损耗系数最小的传递载体</h3>
+<p>软件代码的开源是软件知识显性化的最优方式，而积极的开源社区活动则是软件知识去粘性化的最佳手段。</p>
 <p>前不久，Apache 基金会主席 David Nelly 在美国参议院的听证会上所言中看到，开源已经成为数字经济的重要基础设施。那么程序代码必然是开源创新协同的重要载体。Linux 基金会的执行董事 Jim Zemlin 曾经在 2013 年的一次 TEDx 演讲中提到这样一些数据：荷马史诗《伊利亚德》共 15000 行，《战争与和平》共 45 万字，在 Linux 项目中，每一天的每一小时至少有 7 个变化在 Linux 项目里发生，仅 2012 年就有近一百万行的代码被提交，这又是由分布在全球的 407 个公司、几千个程序员一起合作产生的结果。到今天，Linux 毫无疑义地已经成为在过去 30 年以来最成功的全球化开源协作项目。正是这些 Linux 里开源的代码穿越了时间，跨越了地理空间，更涵盖了不同种族的人群，进而造就了人类软件史上的一次伟大奇迹，这几乎和代码穿流的力量密不可分。由此，我们可以得到了代码穿流的另一个结论：</p>
-<h3 id="结论二：开源的代码在时间，空间和不同人群之间穿流的程度决定了这个开源社区的价值"><a href="#结论二：开源的代码在时间，空间和不同人群之间穿流的程度决定了这个开源社区的价值" class="headerlink" title="结论二：开源的代码在时间，空间和不同人群之间穿流的程度决定了这个开源社区的价值"></a>结论二：开源的代码在时间，空间和不同人群之间穿流的程度决定了这个开源社区的价值</h3><p>我们也可以这样认为，在开源项目原始创意价值确定的前提下，开源社区的价值是代码穿流的时间，空间和人群的函数。即如果代码所穿越的群体越广泛、时间和空间，那么价值可能就越大。而它的逆否命题则可以这样描述，如果一个开源社区无法在跨时空和跨群体里穿越，那么它的创新价值有限。</p>
+<h3 id="结论二开源的代码在时间空间和不同人群之间穿流的程度决定了这个开源社区的价值"><a class="markdownIt-Anchor" href="#结论二开源的代码在时间空间和不同人群之间穿流的程度决定了这个开源社区的价值"></a> 结论二：开源的代码在时间，空间和不同人群之间穿流的程度决定了这个开源社区的价值</h3>
+<p>我们也可以这样认为，在开源项目原始创意价值确定的前提下，开源社区的价值是代码穿流的时间，空间和人群的函数。即如果代码所穿越的群体越广泛、时间和空间，那么价值可能就越大。而它的逆否命题则可以这样描述，如果一个开源社区无法在跨时空和跨群体里穿越，那么它的创新价值有限。</p>
 <p>代码穿流后，软件代码知识就不再是时间和空间的衰减函数，反而可能成为时间和空间的递增函数。进一步而言，开源社区也未必会因为多样化成岩和多元化角色间的差异衰减社区价值，它们可能表现为随着社区成员多样化和多元化，并随着成员间的争论增多而更显得有价值。那时，如果开源社区的代码如果想更快更新迭代，也未必需要社区成员很擅长懂得如何协作，也未必需要每个社区成员成为一个不敢争论的“老好人”，社区可能更多需要的是能够经常进行相互批评并能捍卫自己的想法的成员，当然这里有一个必要的前提就是对于所有的争论，最后能够以 show me the code 来终结，而 show me the code 也足以让争论分出胜负。也许我的这个想法有些乌托邦，但事实可能也就如此。</p>
 <p>而关于激烈辩论有利于创新这一点，在 2003 年伯克利大学曾经做过一次称作“一个想法是如何被创造出来的？”的实验。当时，一些实验者被分成两组，其中一个组采用“传统的头脑风暴法”，即该组成员不相互批评、而鼓励每个被提出来的想法，认为没有一个想法是坏的想法。另外一个组则采用“激烈辩论法”，即小组成员相互批评各自想法，鼓励以积极的辩论去捍卫自己的想法。出乎我们的意料，这个实验最后的结果竟然是激烈辩论法的那一组获胜，相比头脑风暴组而言，他们反而产生了高出头脑风暴组一个数量级的好想法。由此，我们又得出第三个结论：</p>
-<h3 id="结论三：开源社区内的激烈争论将有利于开源软件的创新"><a href="#结论三：开源社区内的激烈争论将有利于开源软件的创新" class="headerlink" title="结论三：开源社区内的激烈争论将有利于开源软件的创新"></a>结论三：开源社区内的激烈争论将有利于开源软件的创新</h3><p>当然，这基于代码语言的精准表达性和代码编译运行后的可校验性的前提。</p>
+<h3 id="结论三开源社区内的激烈争论将有利于开源软件的创新"><a class="markdownIt-Anchor" href="#结论三开源社区内的激烈争论将有利于开源软件的创新"></a> 结论三：开源社区内的激烈争论将有利于开源软件的创新</h3>
+<p>当然，这基于代码语言的精准表达性和代码编译运行后的可校验性的前提。</p>
 <p>Jim Zemlin 在那年的 TEDx 演讲中还如此动情地讲到：</p>
 <blockquote>
 <p>All of us are smarter than any one of us.  there is a whole generation of code poets out there, working furiously. Poets who love what they do, they may not get along, but are creating … These individuals have created the coal and steel of the information age … The future is a world in which can enrich your self, while at the same time enriching others.</p>
 </blockquote>
 <p>这就是代码穿流的威力。</p>
 <p>也恰如关于乔布斯生前往事的纪录片《失落的访谈》中曾记录了乔布斯在 1995 年接受的采访中所提到的一个观点，程序语言在未来应当像其他我们日常所用来沟通的语言一样，成为我们每个人必备的交流工具。虽然这对一般普通人要求过高，但无疑他看到了代码语言作为思想的传达载体具有比数学更具象，比语言更精准的表达。</p>
-<h2 id="抉择"><a href="#抉择" class="headerlink" title="抉择"></a>抉择</h2><p>如今开源的代码已经成为了软件知识传递过程中的一种最佳工具和载体。开源的内在价值取决于开源的代码在时间，空间和不同人群间的无损穿流力。我们也由此相信，任何一个开源项目的创建者在明白了开源的生命力和创新力来源于代码的穿流力之后，他们应该可以在他们所处的环境里去做出一个理智的选择，除非他们已经放弃了开源的初衷。</p>
+<h2 id="抉择"><a class="markdownIt-Anchor" href="#抉择"></a> 抉择</h2>
+<p>如今开源的代码已经成为了软件知识传递过程中的一种最佳工具和载体。开源的内在价值取决于开源的代码在时间，空间和不同人群间的无损穿流力。我们也由此相信，任何一个开源项目的创建者在明白了开源的生命力和创新力来源于代码的穿流力之后，他们应该可以在他们所处的环境里去做出一个理智的选择，除非他们已经放弃了开源的初衷。</p>
 
     </div>
 
@@ -461,6 +468,11 @@
   
 
 
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">false</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.css" integrity="sha256-94CNZ/bJtwrBYZrXhCOBvpB4rZUzBnvAsirFv31TMGo=" crossorigin="anonymous">
 
 
 

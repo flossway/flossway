@@ -20,15 +20,15 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"flossway.github.io","root":"/flossway/","images":"/flossway/images","scheme":"Mist","darkmode":false,"version":"8.10.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/flossway/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/flossway/js/config.js"></script>
 
-    <meta name="description" content="缘起之前写过一篇文章《我所理解的开源软件供应链安全》，当时的情况，还没有出现一些值得探讨的，堪称紧迫的热点事件，所以我也仅仅是泛泛而谈，到最后留了一句话：「我的提议是：不再提“开源供应链安全”，而是提“开源生态建设”。」 在最近一段时间，接连出现了Log4j2事件，与Marak Squires删库事件，一时间大家都议论纷纷，我也觉得自己有责任，来更加深入的探讨一下，这个方面的问题。 一、时代已经发">
+    <meta name="description" content="缘起 之前写过一篇文章《我所理解的开源软件供应链安全》，当时的情况，还没有出现一些值得探讨的，堪称紧迫的热点事件，所以我也仅仅是泛泛而谈，到最后留了一句话：「我的提议是：不再提“开源供应链安全”，而是提“开源生态建设”。」 在最近一段时间，接连出现了Log4j2事件，与Marak Squires删库事件，一时间大家都议论纷纷，我也觉得自己有责任，来更加深入的探讨一下，这个方面的问题。  一、时代">
 <meta property="og:type" content="article">
 <meta property="og:title" content="再谈“开源软件供应链安全”">
 <meta property="og:url" content="https://flossway.github.io/flossway/2022/01/15/talking-again-about-oss-supply-chain/index.html">
 <meta property="og:site_name" content="FLOSSWAY">
-<meta property="og:description" content="缘起之前写过一篇文章《我所理解的开源软件供应链安全》，当时的情况，还没有出现一些值得探讨的，堪称紧迫的热点事件，所以我也仅仅是泛泛而谈，到最后留了一句话：「我的提议是：不再提“开源供应链安全”，而是提“开源生态建设”。」 在最近一段时间，接连出现了Log4j2事件，与Marak Squires删库事件，一时间大家都议论纷纷，我也觉得自己有责任，来更加深入的探讨一下，这个方面的问题。 一、时代已经发">
+<meta property="og:description" content="缘起 之前写过一篇文章《我所理解的开源软件供应链安全》，当时的情况，还没有出现一些值得探讨的，堪称紧迫的热点事件，所以我也仅仅是泛泛而谈，到最后留了一句话：「我的提议是：不再提“开源供应链安全”，而是提“开源生态建设”。」 在最近一段时间，接连出现了Log4j2事件，与Marak Squires删库事件，一时间大家都议论纷纷，我也觉得自己有责任，来更加深入的探讨一下，这个方面的问题。  一、时代">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-01-15T00:00:00.000Z">
-<meta property="article:modified_time" content="2022-03-19T02:31:58.572Z">
+<meta property="article:modified_time" content="2022-03-22T02:33:00.475Z">
 <meta property="article:author" content="FLOSSWAY Authors">
 <meta property="article:tag" content="开源">
 <meta property="article:tag" content="供应链">
@@ -150,7 +150,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BC%98%E8%B5%B7"><span class="nav-number">1.</span> <span class="nav-text">缘起</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E6%97%B6%E4%BB%A3%E5%B7%B2%E7%BB%8F%E5%8F%91%E7%94%9F%E4%BA%86%E5%8F%98%E5%8C%96"><span class="nav-number">2.</span> <span class="nav-text">一、时代已经发生了变化</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%AF%94%E5%B0%94%E7%9B%96%E8%8C%A8%E7%9A%84%E4%B8%80%E5%B0%81%E4%BF%A1"><span class="nav-number">2.1.</span> <span class="nav-text">比尔盖茨的一封信</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%97%A9%E6%9C%9F%E7%9A%84%E9%BB%91%E5%AE%A2%E6%98%AF%E4%B8%80%E7%BE%A4%E4%BB%80%E4%B9%88%E4%BA%BA%EF%BC%9F"><span class="nav-number">2.2.</span> <span class="nav-text">早期的黑客是一群什么人？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BE%9B%E6%B1%82%E5%8F%8C%E6%96%B9%EF%BC%8C%E4%BB%8E%E5%90%88%E4%B8%80%E5%88%B0%E5%88%86%E7%A6%BB"><span class="nav-number">2.3.</span> <span class="nav-text">供求双方，从合一到分离</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8C%E3%80%81%E4%BB%8E%E2%80%9C%E7%A4%BC%E7%89%A9%E6%96%87%E5%8C%96%E2%80%9D%E5%88%B0%E2%80%9C%E6%B3%A8%E6%84%8F%E5%8A%9B%E5%85%91%E6%8D%A2%E2%80%9D"><span class="nav-number">3.</span> <span class="nav-text">二、从“礼物文化”到“注意力兑换”</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%A4%BC%E7%89%A9%E7%9A%84%E4%BB%B7%E5%80%BC%EF%BC%8C%E6%98%AF%E7%94%B1%E7%A4%BC%E7%89%A9%E6%9C%AC%E8%BA%AB%E5%86%B3%E5%AE%9A%E7%9A%84%EF%BC%9F"><span class="nav-number">3.1.</span> <span class="nav-text">礼物的价值，是由礼物本身决定的？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BC%80%E6%BA%90%E8%BD%AF%E4%BB%B6%E7%9A%84%E4%BB%B7%E5%80%BC%EF%BC%8C%E7%8E%B0%E5%9C%A8%E6%98%AF%E7%94%B1%E2%80%9C%E4%BB%B7%E5%80%BC-%E5%85%B3%E6%B3%A8%E5%BA%A6%E2%80%9D%E5%86%B3%E5%AE%9A%E7%9A%84"><span class="nav-number">3.2.</span> <span class="nav-text">开源软件的价值，现在是由“价值+关注度”决定的</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A6%82%E4%BD%95%E5%B0%86%E6%B3%A8%E6%84%8F%E5%8A%9B%E5%85%91%E6%8D%A2%E6%88%90%E5%85%B6%E4%BB%96%E4%BA%8B%E7%89%A9%EF%BC%9F"><span class="nav-number">3.3.</span> <span class="nav-text">如何将注意力兑换成其他事物？</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%89%E3%80%81%E4%BE%9B%E5%BA%94%E9%93%BE%E3%80%81%E8%B4%A3%E4%BB%BB%E9%93%BE%E4%B8%8E%E5%88%A9%E7%9B%8A%E9%93%BE"><span class="nav-number">4.</span> <span class="nav-text">三、供应链、责任链与利益链</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%94%B1%E5%BC%80%E6%BA%90%E8%BD%AF%E4%BB%B6%E7%9A%84%E4%BE%9D%E8%B5%96%E5%85%B3%E7%B3%BB%EF%BC%8C%E8%87%AA%E7%84%B6%E5%BD%A2%E6%88%90%E7%9A%84%E4%BE%9B%E5%BA%94%E9%93%BE"><span class="nav-number">4.1.</span> <span class="nav-text">由开源软件的依赖关系，自然形成的供应链</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%8D%E8%B4%A3%E6%9D%A1%E6%AC%BE"><span class="nav-number">4.2.</span> <span class="nav-text">免责条款</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%A9%E7%9B%8A%E6%96%AD%E8%A3%82"><span class="nav-number">4.3.</span> <span class="nav-text">利益断裂</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%86%B0%E5%B1%B1%E7%8E%B0%E8%B1%A1"><span class="nav-number">4.4.</span> <span class="nav-text">冰山现象</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9B%9B%E3%80%81%E7%94%9F%E6%80%81%E8%B4%A3%E4%BB%BB"><span class="nav-number">5.</span> <span class="nav-text">四、生态责任</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BC%80%E6%BA%90%E5%BC%80%E5%8F%91%E8%80%85%E7%9A%84%E8%B4%A3%E4%BB%BB"><span class="nav-number">5.1.</span> <span class="nav-text">开源开发者的责任</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BC%80%E6%BA%90%E4%BD%BF%E7%94%A8%E8%80%85%E7%9A%84%E8%B4%A3%E4%BB%BB"><span class="nav-number">5.2.</span> <span class="nav-text">开源使用者的责任</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BC%80%E6%BA%90%E5%9F%BA%E9%87%91%E4%BC%9A%E7%9A%84%E8%B4%A3%E4%BB%BB"><span class="nav-number">5.3.</span> <span class="nav-text">开源基金会的责任</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BC%80%E6%BA%90%E5%B8%83%E9%81%93%E5%B8%88%E7%9A%84%E8%B4%A3%E4%BB%BB"><span class="nav-number">5.4.</span> <span class="nav-text">开源布道师的责任</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%94%BF%E5%BA%9C%E7%9A%84%E8%B4%A3%E4%BB%BB"><span class="nav-number">5.5.</span> <span class="nav-text">政府的责任</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%94%E3%80%81%E7%BB%93%E6%9D%9F%E8%AF%AD"><span class="nav-number">6.</span> <span class="nav-text">五、结束语</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BC%98%E8%B5%B7"><span class="nav-number">1.</span> <span class="nav-text"> 缘起</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80-%E6%97%B6%E4%BB%A3%E5%B7%B2%E7%BB%8F%E5%8F%91%E7%94%9F%E4%BA%86%E5%8F%98%E5%8C%96"><span class="nav-number">2.</span> <span class="nav-text"> 一、时代已经发生了变化</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%AF%94%E5%B0%94%E7%9B%96%E8%8C%A8%E7%9A%84%E4%B8%80%E5%B0%81%E4%BF%A1"><span class="nav-number">2.1.</span> <span class="nav-text"> 比尔盖茨的一封信</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%97%A9%E6%9C%9F%E7%9A%84%E9%BB%91%E5%AE%A2%E6%98%AF%E4%B8%80%E7%BE%A4%E4%BB%80%E4%B9%88%E4%BA%BA"><span class="nav-number">2.2.</span> <span class="nav-text"> 早期的黑客是一群什么人？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BE%9B%E6%B1%82%E5%8F%8C%E6%96%B9%E4%BB%8E%E5%90%88%E4%B8%80%E5%88%B0%E5%88%86%E7%A6%BB"><span class="nav-number">2.3.</span> <span class="nav-text"> 供求双方，从合一到分离</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8C-%E4%BB%8E%E7%A4%BC%E7%89%A9%E6%96%87%E5%8C%96%E5%88%B0%E6%B3%A8%E6%84%8F%E5%8A%9B%E5%85%91%E6%8D%A2"><span class="nav-number">3.</span> <span class="nav-text"> 二、从“礼物文化”到“注意力兑换”</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%A4%BC%E7%89%A9%E7%9A%84%E4%BB%B7%E5%80%BC%E6%98%AF%E7%94%B1%E7%A4%BC%E7%89%A9%E6%9C%AC%E8%BA%AB%E5%86%B3%E5%AE%9A%E7%9A%84"><span class="nav-number">3.1.</span> <span class="nav-text"> 礼物的价值，是由礼物本身决定的？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BC%80%E6%BA%90%E8%BD%AF%E4%BB%B6%E7%9A%84%E4%BB%B7%E5%80%BC%E7%8E%B0%E5%9C%A8%E6%98%AF%E7%94%B1%E4%BB%B7%E5%80%BC%E5%85%B3%E6%B3%A8%E5%BA%A6%E5%86%B3%E5%AE%9A%E7%9A%84"><span class="nav-number">3.2.</span> <span class="nav-text"> 开源软件的价值，现在是由“价值+关注度”决定的</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A6%82%E4%BD%95%E5%B0%86%E6%B3%A8%E6%84%8F%E5%8A%9B%E5%85%91%E6%8D%A2%E6%88%90%E5%85%B6%E4%BB%96%E4%BA%8B%E7%89%A9"><span class="nav-number">3.3.</span> <span class="nav-text"> 如何将注意力兑换成其他事物？</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%89-%E4%BE%9B%E5%BA%94%E9%93%BE-%E8%B4%A3%E4%BB%BB%E9%93%BE%E4%B8%8E%E5%88%A9%E7%9B%8A%E9%93%BE"><span class="nav-number">4.</span> <span class="nav-text"> 三、供应链、责任链与利益链</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%94%B1%E5%BC%80%E6%BA%90%E8%BD%AF%E4%BB%B6%E7%9A%84%E4%BE%9D%E8%B5%96%E5%85%B3%E7%B3%BB%E8%87%AA%E7%84%B6%E5%BD%A2%E6%88%90%E7%9A%84%E4%BE%9B%E5%BA%94%E9%93%BE"><span class="nav-number">4.1.</span> <span class="nav-text"> 由开源软件的依赖关系，自然形成的供应链</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%8D%E8%B4%A3%E6%9D%A1%E6%AC%BE"><span class="nav-number">4.2.</span> <span class="nav-text"> 免责条款</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%A9%E7%9B%8A%E6%96%AD%E8%A3%82"><span class="nav-number">4.3.</span> <span class="nav-text"> 利益断裂</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%86%B0%E5%B1%B1%E7%8E%B0%E8%B1%A1"><span class="nav-number">4.4.</span> <span class="nav-text"> 冰山现象</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9B%9B-%E7%94%9F%E6%80%81%E8%B4%A3%E4%BB%BB"><span class="nav-number">5.</span> <span class="nav-text"> 四、生态责任</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BC%80%E6%BA%90%E5%BC%80%E5%8F%91%E8%80%85%E7%9A%84%E8%B4%A3%E4%BB%BB"><span class="nav-number">5.1.</span> <span class="nav-text"> 开源开发者的责任</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BC%80%E6%BA%90%E4%BD%BF%E7%94%A8%E8%80%85%E7%9A%84%E8%B4%A3%E4%BB%BB"><span class="nav-number">5.2.</span> <span class="nav-text"> 开源使用者的责任</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BC%80%E6%BA%90%E5%9F%BA%E9%87%91%E4%BC%9A%E7%9A%84%E8%B4%A3%E4%BB%BB"><span class="nav-number">5.3.</span> <span class="nav-text"> 开源基金会的责任</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BC%80%E6%BA%90%E5%B8%83%E9%81%93%E5%B8%88%E7%9A%84%E8%B4%A3%E4%BB%BB"><span class="nav-number">5.4.</span> <span class="nav-text"> 开源布道师的责任</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%94%BF%E5%BA%9C%E7%9A%84%E8%B4%A3%E4%BB%BB"><span class="nav-number">5.5.</span> <span class="nav-text"> 政府的责任</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%94-%E7%BB%93%E6%9D%9F%E8%AF%AD"><span class="nav-number">6.</span> <span class="nav-text"> 五、结束语</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -256,7 +256,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-03-19 02:31:58" itemprop="dateModified" datetime="2022-03-19T02:31:58+00:00">2022-03-19</time>
+      <time title="修改时间：2022-03-22 02:33:00" itemprop="dateModified" datetime="2022-03-22T02:33:00+00:00">2022-03-22</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -293,42 +293,49 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <h2 id="缘起"><a href="#缘起" class="headerlink" title="缘起"></a>缘起</h2><p>之前写过一篇文章《<a href="/2021/05/12/about-OSS-Supply-Chain.html">我所理解的开源软件供应链安全</a>》，当时的情况，还没有出现一些值得探讨的，堪称紧迫的热点事件，所以我也仅仅是泛泛而谈，到最后留了一句话：「我的提议是：不再提“开源供应链安全”，而是提“开源生态建设”。」</p>
+        <h2 id="缘起"><a class="markdownIt-Anchor" href="#缘起"></a> 缘起</h2>
+<p>之前写过一篇文章《<a href="/2021/05/12/about-OSS-Supply-Chain.html">我所理解的开源软件供应链安全</a>》，当时的情况，还没有出现一些值得探讨的，堪称紧迫的热点事件，所以我也仅仅是泛泛而谈，到最后留了一句话：「我的提议是：不再提“开源供应链安全”，而是提“开源生态建设”。」</p>
 <p>在最近一段时间，接连出现了Log4j2事件，与Marak Squires删库事件，一时间大家都议论纷纷，我也觉得自己有责任，来更加深入的探讨一下，这个方面的问题。</p>
-<h2 id="一、时代已经发生了变化"><a href="#一、时代已经发生了变化" class="headerlink" title="一、时代已经发生了变化"></a>一、时代已经发生了变化</h2><p>在B站上，有一位著名的Up主：<strong>半佛仙人</strong>，发了一篇文章，后来还专门录了一期视频。因为是“外行”的缘故，所以会受到很多的批评与指责。其实我觉得他说得大致上都很有道理，作为一位热心人士，积极找程序员朋友交流，尽量深入理解开源，然后再发表自己看法，已经非常不错了。</p>
+<h2 id="一-时代已经发生了变化"><a class="markdownIt-Anchor" href="#一-时代已经发生了变化"></a> 一、时代已经发生了变化</h2>
+<p>在B站上，有一位著名的Up主：<strong>半佛仙人</strong>，发了一篇文章，后来还专门录了一期视频。因为是“外行”的缘故，所以会受到很多的批评与指责。其实我觉得他说得大致上都很有道理，作为一位热心人士，积极找程序员朋友交流，尽量深入理解开源，然后再发表自己看法，已经非常不错了。</p>
 <p>至少<strong>半佛</strong>的一个观点，我特别赞同：时代已经发生了变化。我们只有意识并理解这些变化，然后才谈得上“如何应对”。</p>
 <span id="more"></span>
-
-<h3 id="比尔盖茨的一封信"><a href="#比尔盖茨的一封信" class="headerlink" title="比尔盖茨的一封信"></a>比尔盖茨的一封信</h3><p>1976年2月3日，著名的微软公司的创始人，发布了《致电脑爱好者的一封公开信》。这封信在开源社区，估计无人不知、无人不晓。关键在于下面这段话：“谁会从事专业的软件开发却分文无获。哪有业余爱好者会花费3个人年的精力去编写软件，去修正软件，编写使用手册却免费发放给别人使用？”</p>
+<h3 id="比尔盖茨的一封信"><a class="markdownIt-Anchor" href="#比尔盖茨的一封信"></a> 比尔盖茨的一封信</h3>
+<p>1976年2月3日，著名的微软公司的创始人，发布了《致电脑爱好者的一封公开信》。这封信在开源社区，估计无人不知、无人不晓。关键在于下面这段话：“谁会从事专业的软件开发却分文无获。哪有业余爱好者会花费3个人年的精力去编写软件，去修正软件，编写使用手册却免费发放给别人使用？”</p>
 <p>在很长一段时间里，开源社区的人都视微软是开源的敌人，而且常常喜欢拿段话出来“打脸”。现在就是有那么多人，那么多技术水平高超，却不求回报的人，愿意花费极其惊人的时间，去写软件，修bug，写文档。甚至还有社区运营、技术布道等等诸多工作。</p>
 <p><strong>“你们这些资本家们无法理解的事情，正在这个世界上发生着，而且越来越多”。</strong></p>
-<h3 id="早期的黑客是一群什么人？"><a href="#早期的黑客是一群什么人？" class="headerlink" title="早期的黑客是一群什么人？"></a>早期的黑客是一群什么人？</h3><p>有一些事情，确实很难理解。尤其是像半佛这样的人，无法理解那些早期黑客的动机。因为按照“理性经济人”的假设，那些黑客完全是在做一些一味付出，不求回报的事情。</p>
+<h3 id="早期的黑客是一群什么人"><a class="markdownIt-Anchor" href="#早期的黑客是一群什么人"></a> 早期的黑客是一群什么人？</h3>
+<p>有一些事情，确实很难理解。尤其是像半佛这样的人，无法理解那些早期黑客的动机。因为按照“理性经济人”的假设，那些黑客完全是在做一些一味付出，不求回报的事情。</p>
 <p>事实上，我们可以从两个角度，来理解黑客的逻辑。</p>
 <ul>
 <li>关于回报：如果我们扩展经济人假设，将回报，不仅仅局限于经济上的，金钱的，直接的回报。而是按照功利主义的定义：“效用最大化”。所谓效用，包括幸福、快乐、满足等等情感体验。通过获得经济收入，当然是一种方式。但是：社会地位的提升，甚至仅仅是在社区范围内的备受尊崇，也是一种方式。更有甚至，仅仅是创造一个从未存在过的事物，这种创造的喜悦，就足以回报那些黑客的全部投入。</li>
 <li>关于未来：黑客、程序员，也许是最喜欢科幻小说的人群了吧。不仅仅是喜欢，而且他们甚至希望能够促成某种未来的早日实现。如果自己写的代码能够帮助这样的未来早日实现，如果与一群黑客一起努力，能够推动这样的世界早日降临，几乎每一个黑客都会愿意倾尽全力。</li>
 </ul>
 <p>所以，简单的总结就是：早期黑客们，在努力推动未来早日实现的过程中，已经获得了他们希望得到的回报。</p>
-<h3 id="供求双方，从合一到分离"><a href="#供求双方，从合一到分离" class="headerlink" title="供求双方，从合一到分离"></a>供求双方，从合一到分离</h3><p>我们可以引用一段自由软件的定义：“自由软件”尊重用户的自由，并且尊重整个社区。粗略来讲，一个软件如果是自由软件，这意味着用户可以自由地运行，拷贝，分发，学习，修改并改进该软件。</p>
+<h3 id="供求双方从合一到分离"><a class="markdownIt-Anchor" href="#供求双方从合一到分离"></a> 供求双方，从合一到分离</h3>
+<p>我们可以引用一段自由软件的定义：“自由软件”尊重用户的自由，并且尊重整个社区。粗略来讲，一个软件如果是自由软件，这意味着用户可以自由地运行，拷贝，分发，学习，修改并改进该软件。</p>
 <p>后来在社区里有一些不同的声音，在质疑这样的定义。为什么只谈用户的自由，却不谈“作者”的自由？为了用户可以自由的运行，拷贝，分发，学习，修改并改进，就可以不管作者的利益了吗？作者为啥不能自由的定义自己的授权协议？想授予就授予？想收回就收回？</p>
 <p>其实，根源还是在于时代不同了。在自由软件，甚至开源软件刚刚诞生的时候。软件的供求双方，是一个紧密的整体。社区里的人，既是一些软件的开发者，也是另一个软件的使用者。所谓“尊重整个社区”就是这个意思。尊重整个社区的自由，就是为了整个社区的利益。</p>
 <p>在早期：开源与互联网几乎就是一对双生子，他们一起成长，互相扶持。风借火势，火借风威。但是，渐渐的，开源社区与软件产业、互联网产业，以及由互联网产业成长起来的云计算行业，不再是一体的了。在这个过程中，供应方发生了变化，需求方也发生了变化。要想再愉快的一起玩耍，就需要从新思考各自的定位了。</p>
 <p>所以，下面我将从分离之后的供求双方，来分析这个问题。</p>
-<h2 id="二、从“礼物文化”到“注意力兑换”"><a href="#二、从“礼物文化”到“注意力兑换”" class="headerlink" title="二、从“礼物文化”到“注意力兑换”"></a>二、从“礼物文化”到“注意力兑换”</h2><p>在Eric Raymond的《大教堂与集市》中，有一个最经典的比喻，就是礼物文化。我们引用其中的两段：</p>
+<h2 id="二-从礼物文化到注意力兑换"><a class="markdownIt-Anchor" href="#二-从礼物文化到注意力兑换"></a> 二、从“礼物文化”到“注意力兑换”</h2>
+<p>在Eric Raymond的《大教堂与集市》中，有一个最经典的比喻，就是礼物文化。我们引用其中的两段：</p>
 <blockquote>
 <p>在礼物文化下，其成员通过送出礼物而竞争社会地位。</p>
 </blockquote>
 <blockquote>
 <p>礼物文化并不是对物质稀缺的适应，而是对物质充裕的适应。 充裕性会使命令关系难以维持，会使交换关系变成无意义的游戏。在礼物文化中，社会地位并不取决于你控制了什么，而是你给予了什么。</p>
 </blockquote>
-<h3 id="礼物的价值，是由礼物本身决定的？"><a href="#礼物的价值，是由礼物本身决定的？" class="headerlink" title="礼物的价值，是由礼物本身决定的？"></a>礼物的价值，是由礼物本身决定的？</h3><p>我们来分析一下礼物这个比喻的内涵。一个人送出了一个礼物。人们根据这个礼物的贵重程度，而“赋予”这个送礼者，相应的社会地位。</p>
+<h3 id="礼物的价值是由礼物本身决定的"><a class="markdownIt-Anchor" href="#礼物的价值是由礼物本身决定的"></a> 礼物的价值，是由礼物本身决定的？</h3>
+<p>我们来分析一下礼物这个比喻的内涵。一个人送出了一个礼物。人们根据这个礼物的贵重程度，而“赋予”这个送礼者，相应的社会地位。</p>
 <p>这意味着三个并未明确讲述的要素：</p>
 <ul>
 <li>礼物的价值是客观存在的吗？是可以被客观、准确、以公认的方式判定的吗？</li>
 <li>人们，注意这里的人们，到底是一百个人，还是一万个人？这些人的数量应该会有多少，他们如何达成共识？</li>
 <li>所谓社会地位，到底是什么？尊重，礼让，还是某种“注目礼”？</li>
 </ul>
-<h3 id="开源软件的价值，现在是由“价值-关注度”决定的"><a href="#开源软件的价值，现在是由“价值-关注度”决定的" class="headerlink" title="开源软件的价值，现在是由“价值+关注度”决定的"></a>开源软件的价值，现在是由“价值+关注度”决定的</h3><p>假设我们还是沿用“礼物”这个思路，来看现在的开源软件，我们需要如何来衡量一个人做出了多大的贡献？或者说“送出了多贵重的礼物？”</p>
+<h3 id="开源软件的价值现在是由价值关注度决定的"><a class="markdownIt-Anchor" href="#开源软件的价值现在是由价值关注度决定的"></a> 开源软件的价值，现在是由“价值+关注度”决定的</h3>
+<p>假设我们还是沿用“礼物”这个思路，来看现在的开源软件，我们需要如何来衡量一个人做出了多大的贡献？或者说“送出了多贵重的礼物？”</p>
 <p>先区分两种情况，一个人独立开发出一款开源软件，作为一个礼物。一个人参与一个开源项目，在其中贡献了一部分“代码、文档、讨论、布道等等”</p>
 <ul>
 <li>首先应该是软件价值本身，一个加密软件，应该比一个加法软件，更有价值。</li>
@@ -336,9 +343,10 @@
 <li>然后就是争夺关注度的情况了，一款对一百万人有用的软件，现在只有一百个人知道，这个软件的价值说到底也不大。</li>
 </ul>
 <p>现在来计算礼物的价值：一个人，做了一个开源软件，有多少人知道这个软件，而且知道是他做的，而且认可他的工作。这个数量，大概可以用来推算他所贡献的礼物的价值。</p>
-<h3 id="如何将注意力兑换成其他事物？"><a href="#如何将注意力兑换成其他事物？" class="headerlink" title="如何将注意力兑换成其他事物？"></a>如何将注意力兑换成其他事物？</h3><p>自从互联网流行以后，尤其是互联网上免费的商业模式流行起来以后，大家都会谈一个词，叫做“流量变现”。其实在开源软件领域，简单的“礼物文化”，也需要升级为“注意力兑换”。</p>
-<p>以前的逻辑是：一个人贡献礼物 –&gt; 获得社会地位</p>
-<p>现在的逻辑是：一个人贡献礼物 –&gt; 吸引了多少注意力 –&gt; 这些注意力能够兑换多少社会地位</p>
+<h3 id="如何将注意力兑换成其他事物"><a class="markdownIt-Anchor" href="#如何将注意力兑换成其他事物"></a> 如何将注意力兑换成其他事物？</h3>
+<p>自从互联网流行以后，尤其是互联网上免费的商业模式流行起来以后，大家都会谈一个词，叫做“流量变现”。其实在开源软件领域，简单的“礼物文化”，也需要升级为“注意力兑换”。</p>
+<p>以前的逻辑是：一个人贡献礼物 --&gt; 获得社会地位</p>
+<p>现在的逻辑是：一个人贡献礼物 --&gt; 吸引了多少注意力 --&gt; 这些注意力能够兑换多少社会地位</p>
 <p>当然，我们也可以将兑换这个词，用来描述更多的现象。</p>
 <ul>
 <li>兑换内心满足（有人用，我就很开心）</li>
@@ -350,66 +358,81 @@
 <p>但是，所有的这些，还需要一个前提：注意力。如果没有足够高的关注度，你啥也兑换不了。</p>
 <p>事实上，早期开源那种“爱用就用，别来烦我”的态度，当然没有问题。但是：那样不够“友好”，也就会影响关注度的快速提升。无论是在社区快速响应，和蔼可亲的回答问题，快速修复bug，其实都是一种吸引更多注意力，留住更多关注度的办法。</p>
 <p>虽然这么说有些残忍，但是我还是想说：“Marak Squires的做法错了，一款开源软件有几千万次下载，并不能够自动兑换成社会地位，个人收入或者其他东西”。</p>
-<h2 id="三、供应链、责任链与利益链"><a href="#三、供应链、责任链与利益链" class="headerlink" title="三、供应链、责任链与利益链"></a>三、供应链、责任链与利益链</h2><p>下面再来说说需求方的问题。现在我们常常说：软件吞噬世界，开源吞噬软件。但是，我们为啥还会接着说：云计算吞噬开源呢？</p>
+<h2 id="三-供应链-责任链与利益链"><a class="markdownIt-Anchor" href="#三-供应链-责任链与利益链"></a> 三、供应链、责任链与利益链</h2>
+<p>下面再来说说需求方的问题。现在我们常常说：软件吞噬世界，开源吞噬软件。但是，我们为啥还会接着说：云计算吞噬开源呢？</p>
 <ul>
 <li>软件吞噬世界：全世界都运行在软件之上</li>
 <li>开源吞噬软件：几乎所有的软件，都有开源的成分，甚至完全就是开源</li>
 <li>云计算吞噬开源：云计算靠开源赚到了钱，但是并没有分给开源</li>
 </ul>
 <p>当然，这里面的每一句话，可能都有些问题。</p>
-<h3 id="由开源软件的依赖关系，自然形成的供应链"><a href="#由开源软件的依赖关系，自然形成的供应链" class="headerlink" title="由开源软件的依赖关系，自然形成的供应链"></a>由开源软件的依赖关系，自然形成的供应链</h3><p>在上一篇文章中，我写了这么一段话：“我们在做软件开发时，通常会定义的一个依赖文件。一款软件，会依赖一组其他软件（包），而这些软件（包）又会进一步的依赖某些其他的软件（包）。但是，随着包依赖描述的不断改进，我们会区分：开发期（Dev)依赖与执行期(Running)依赖。”</p>
+<h3 id="由开源软件的依赖关系自然形成的供应链"><a class="markdownIt-Anchor" href="#由开源软件的依赖关系自然形成的供应链"></a> 由开源软件的依赖关系，自然形成的供应链</h3>
+<p>在上一篇文章中，我写了这么一段话：“我们在做软件开发时，通常会定义的一个依赖文件。一款软件，会依赖一组其他软件（包），而这些软件（包）又会进一步的依赖某些其他的软件（包）。但是，随着包依赖描述的不断改进，我们会区分：开发期（Dev)依赖与执行期(Running)依赖。”</p>
 <p>在那段话里，我只是希望说明“依赖不等于风险”，由软件依赖关系形成的整个网络，可以称之为：“开源供应链”或者“开源生态”，却不能简单的等同于供应链风险。</p>
 <p>但是，我并没有进一步分析：开源软件的供应链与一般的供应链，有何区别？以下一段文字，要特别感谢李大维老师，因为与他的交谈，让我认识到这一点。</p>
 <blockquote>
 <p>传统的供应链，是一级与一级之间，都签了合同的。但是在软件，尤其是开源软件的供应链，每一级之间，都有免责条款。</p>
 </blockquote>
-<h3 id="免责条款"><a href="#免责条款" class="headerlink" title="免责条款"></a>免责条款</h3><p>事实上，有两种免责条款。一种是大多数开源软件的授权协议里写的。比如在 GPL 2.0 里。</p>
+<h3 id="免责条款"><a class="markdownIt-Anchor" href="#免责条款"></a> 免责条款</h3>
+<p>事实上，有两种免责条款。一种是大多数开源软件的授权协议里写的。比如在 GPL 2.0 里。</p>
 <blockquote>
 <ol start="11">
 <li>由于本程序是免费提供的，所以在法律许可范围内，本程序是没有担保的。除非有书面说明。本程序是“AS IS”的，没有任何明示或暗示的保证，比如默认的适销性、适用性这些保证都没有，关于本程序的功能和性能导致的风险都由用户自己承担，（你单位用我作品出了事，你可别想拉我当垫背的，大公司都不背这锅，你让我一个不挣你钱的背？）如果我这作品真有缺陷，你自己想办法搞定，你可以花钱买服务，这种公司又不是没有。</li>
 </ol>
 </blockquote>
-<p>摘录自卫Sir的《<a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s?src=11&timestamp=1642342050&ver=3562&signature=SU4bpJGGjZ3V*Lf3w1Yk5gA5VgQVbR9r9FQz4udKEmRVMr65tWp5iQQ0W-90qR9Orz0Ody0g6C*Dhmb2VBr4-blpWICL4-GyNqYFim1V1NzyMC*AAqhWB90bQKc57cTe&new=1">人话版GPL 2.0协议</a>》</p>
+<p>摘录自卫Sir的《<a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s?src=11&amp;timestamp=1642342050&amp;ver=3562&amp;signature=SU4bpJGGjZ3V*Lf3w1Yk5gA5VgQVbR9r9FQz4udKEmRVMr65tWp5iQQ0W-90qR9Orz0Ody0g6C*Dhmb2VBr4-blpWICL4-GyNqYFim1V1NzyMC*AAqhWB90bQKc57cTe&amp;new=1">人话版GPL 2.0协议</a>》</p>
 <p>再比如在 MIT 里：</p>
 <blockquote>
 <p>本软件是“按原样“提供的，不附带任何明示或暗示的保证，包括没有任何有关适销性、适用性、非侵权性保证以及其他保证。在任何情况下，作者或版权持有人，对任何权益追索、损害赔偿以及其他追责，都不负任何责任。无论这些追责产生自合同、侵权，还是直接或间接来自于本软件以及与本软件使用或经营有关的情形。</p>
 </blockquote>
-<p>摘录自卫Sir的《<a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s?src=11&timestamp=1642342024&ver=3562&signature=HXHa3AXIOpUss850bdZFJWTdfYFVBMmQTb2Zi-W8r-U1FnKK6pw9YfCCMG7q9PjtpyG3dMlgjC5EUeV9I9DvQQVcdjIKJTr*hQ9AtS263oqpoNhSHJ2a-rfqC8LRWcTH&new=1">开源程序员绝望毁库跑路的背后</a>》<br>另一种是互联网服务的免责条款、云计算服务的免责条款、商用软件的免责条款。</p>
+<p>摘录自卫Sir的《<a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s?src=11&amp;timestamp=1642342024&amp;ver=3562&amp;signature=HXHa3AXIOpUss850bdZFJWTdfYFVBMmQTb2Zi-W8r-U1FnKK6pw9YfCCMG7q9PjtpyG3dMlgjC5EUeV9I9DvQQVcdjIKJTr*hQ9AtS263oqpoNhSHJ2a-rfqC8LRWcTH&amp;new=1">开源程序员绝望毁库跑路的背后</a>》<br />
+另一种是互联网服务的免责条款、云计算服务的免责条款、商用软件的免责条款。</p>
 <p>这里就不再摘录了，因为那种法律文本，往往都很长很长，在你使用之前，你几乎是不会去读完的。但是：你肯定已经点过“确定”或者“接受”按钮了。</p>
-<h3 id="利益断裂"><a href="#利益断裂" class="headerlink" title="利益断裂"></a>利益断裂</h3><p>一方面是供应链的延续性，另一方面是责任的断裂（免除）。于是，我们就会发现一个实际存在的现象：因为责任链条断裂，所以利益链条也断裂了。</p>
+<h3 id="利益断裂"><a class="markdownIt-Anchor" href="#利益断裂"></a> 利益断裂</h3>
+<p>一方面是供应链的延续性，另一方面是责任的断裂（免除）。于是，我们就会发现一个实际存在的现象：因为责任链条断裂，所以利益链条也断裂了。</p>
 <p>因为事实上软件出现问题之后，厂商可能损失的金额并不太高，所以在平时厂商也没有任何动力，投入足够的人力与预算，去确保他所用到的开源软件的供应链安全。</p>
 <p>前两天听到的一个课程，在介绍影响全球互联网产业的美国《通信规范法》230条款。互联网公司被免除了涉及用户生成内容的法律责任。一方面这些内容的存在不会损害互联网厂商的利益，另一方面，互联网厂商又可以出于“出于良善的信念”自行删除或管理这些内容。</p>
 <p>这当然大大降低了互联网厂商的法律风险与投入成本。再加上他们所用到的开源软件，又是无需支付费用的。这才带来了互联网产业的高速发展与如今的繁荣。</p>
-<h3 id="冰山现象"><a href="#冰山现象" class="headerlink" title="冰山现象"></a>冰山现象</h3><p>与此同时，我们还在开源社区里，积极的宣传礼物文化。“充裕性会使命令关系难以维持，会使交换关系变成无意义的游戏。”</p>
+<h3 id="冰山现象"><a class="markdownIt-Anchor" href="#冰山现象"></a> 冰山现象</h3>
+<p>与此同时，我们还在开源社区里，积极的宣传礼物文化。“充裕性会使命令关系难以维持，会使交换关系变成无意义的游戏。”</p>
 <p>结果就变成了：开源世界的冰火两重天</p>
 <ul>
-<li>一座冰山是“开源项目”，海面之上看得到的开源项目，只是开源世界里的极小部分<ul>
+<li>一座冰山是“开源项目”，海面之上看得到的开源项目，只是开源世界里的极小部分
+<ul>
 <li>海面之下的开源项目，不仅重要，而且是海面上的开源项目，存在的基础</li>
 <li>但是，海面之下的开源项目，几乎没有商业价值，也没有投资前景</li>
 </ul>
 </li>
-<li>另一种冰山是“开源贡献者”，海面之上的开源开发者，只是开源社区里的一小部分人<ul>
+<li>另一种冰山是“开源贡献者”，海面之上的开源开发者，只是开源社区里的一小部分人
+<ul>
 <li>他们的确做出了极大的贡献，也因此享受到了“礼物文化”</li>
 <li>海面之下的开发者，他们的贡献甚至被忽略了，社区的尊崇地位，几乎与他们无关</li>
 </ul>
 </li>
 </ul>
-<h2 id="四、生态责任"><a href="#四、生态责任" class="headerlink" title="四、生态责任"></a>四、生态责任</h2><p>当我们来谈开源软件的供应链风险，或者开源生态的问题时，首先需要达成一个共识：现在的开源生态，的确存在问题，而且是一个亟待解决的，严重的问题。</p>
+<h2 id="四-生态责任"><a class="markdownIt-Anchor" href="#四-生态责任"></a> 四、生态责任</h2>
+<p>当我们来谈开源软件的供应链风险，或者开源生态的问题时，首先需要达成一个共识：现在的开源生态，的确存在问题，而且是一个亟待解决的，严重的问题。</p>
 <p>基于这一共识，我们才能够来讨论，在这个生态之中，有哪些角色，各自有什么责任？</p>
-<h3 id="开源开发者的责任"><a href="#开源开发者的责任" class="headerlink" title="开源开发者的责任"></a>开源开发者的责任</h3><p>大家应该都能承认，开源是一种软件开发的<strong>协作方式</strong>。对于某些人来说，开源甚至是一种<strong>娱乐方式</strong>。当然，如果有公司愿意雇佣你写开源代码，开源也是一种很不错的<strong>工作方式</strong>。但是，如果你希望将开源作为自己的<strong>生活方式</strong>，要么你家里有矿，要么你非常擅长兑换注意力。否则，难免会伤心失望。</p>
+<h3 id="开源开发者的责任"><a class="markdownIt-Anchor" href="#开源开发者的责任"></a> 开源开发者的责任</h3>
+<p>大家应该都能承认，开源是一种软件开发的<strong>协作方式</strong>。对于某些人来说，开源甚至是一种<strong>娱乐方式</strong>。当然，如果有公司愿意雇佣你写开源代码，开源也是一种很不错的<strong>工作方式</strong>。但是，如果你希望将开源作为自己的<strong>生活方式</strong>，要么你家里有矿，要么你非常擅长兑换注意力。否则，难免会伤心失望。</p>
 <p>虽然我们都认为，开源是一种纯个人的行为，但是单纯的发泄不满。最多引发同情，却未必会得到支持，更是难以获取自己真正想要的结果。</p>
 <p>作为一个理性行动者，知道自己想要什么，也知道自己将要付出什么，才是一种负责人的做法。</p>
-<h3 id="开源使用者的责任"><a href="#开源使用者的责任" class="headerlink" title="开源使用者的责任"></a>开源使用者的责任</h3><p>“只要足够多的眼球关注，就可让所有软件缺陷浮现。”，或者说“只要有足够的测试员及共同开发者，所有软件缺陷都会在很短时间内被发现，而且能够很容易被解决。”这句话被称之为 Linus 定律。现在我想要告诉这些开源软件的使用者，现在的开源软件已经越来越多了，眼球已经根本不够用了。</p>
+<h3 id="开源使用者的责任"><a class="markdownIt-Anchor" href="#开源使用者的责任"></a> 开源使用者的责任</h3>
+<p>“只要足够多的眼球关注，就可让所有软件缺陷浮现。”，或者说“只要有足够的测试员及共同开发者，所有软件缺陷都会在很短时间内被发现，而且能够很容易被解决。”这句话被称之为 Linus 定律。现在我想要告诉这些开源软件的使用者，现在的开源软件已经越来越多了，眼球已经根本不够用了。</p>
 <p>假设“开源软件没有质量问题，不会给你带来安全风险，完全免费，拿来就可以用。”是一种完全不负责任的冒险。</p>
 <p>开源软件并不是“免费”的，任何使用开源软件的企业，都需要为自己的使用负责，要留出预算，要么找到合格的员工，要么找到合格的服务商，来帮你应对这些风险。</p>
-<h3 id="开源基金会的责任"><a href="#开源基金会的责任" class="headerlink" title="开源基金会的责任"></a>开源基金会的责任</h3><p>一款开源软件，如果出现安全风险，这个开源软件的社区，应该要快速解决。如果这款开源软件被捐赠给某个开源基金会，那么这个基金会也有义务，为这个开源软件的质量负责。</p>
+<h3 id="开源基金会的责任"><a class="markdownIt-Anchor" href="#开源基金会的责任"></a> 开源基金会的责任</h3>
+<p>一款开源软件，如果出现安全风险，这个开源软件的社区，应该要快速解决。如果这款开源软件被捐赠给某个开源基金会，那么这个基金会也有义务，为这个开源软件的质量负责。</p>
 <p>为什么？因为：你的品牌与声望，为这款开源软件背书，使得更多的厂商选择了它。那么：如果它内含风险，你的品牌与声望，就放大了这些风险。</p>
 <p>作为一个基金会，你收到的捐款，应该更多的投入到保障软件质量的工作中去！</p>
-<h3 id="开源布道师的责任"><a href="#开源布道师的责任" class="headerlink" title="开源布道师的责任"></a>开源布道师的责任</h3><p>不要只是介绍“礼物文化”，不要反复的强调“Just for Fun”。不要仅仅宣传 Linus 眼球定律。在布道的时候，还需要介绍更多的真实世界的情况。</p>
-<h3 id="政府的责任"><a href="#政府的责任" class="headerlink" title="政府的责任"></a>政府的责任</h3><p>2022 年 1 月 13 日，白宫就 Log4j 漏洞与公私实体召开了开源软件安全峰会。其中一名高级官员表示：“开源软件虽然加速了创新并推动了巨大的社会和经济效益，但其广泛使用且由志愿者维护的事实是重大的国家安全风险，正如我们正在经历的 Log4j 漏洞事件。它并非新问题。本次峰会我们将讨论如何解决这个问题，生效的解决方案是什么以及我们还能采取哪些行动来保护我们都在依赖的开源软件安全。”</p>
-<p>引用自《<a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s?__biz=MzI2NTg4OTc5Nw==&mid=2247510134&idx=1&sn=4c2520d4e86d56f7ad4cfcc073595cfc&chksm=ea94991cdde3100a908ea1ef25ff5da15d4290d3a5c52bed99b177b0086eee39814b7871f41e&scene=178&cur_album_id=1803829618517311490#rd">白宫和科技巨头在开源软件安全峰会上说了啥？</a>》</p>
+<h3 id="开源布道师的责任"><a class="markdownIt-Anchor" href="#开源布道师的责任"></a> 开源布道师的责任</h3>
+<p>不要只是介绍“礼物文化”，不要反复的强调“Just for Fun”。不要仅仅宣传 Linus 眼球定律。在布道的时候，还需要介绍更多的真实世界的情况。</p>
+<h3 id="政府的责任"><a class="markdownIt-Anchor" href="#政府的责任"></a> 政府的责任</h3>
+<p>2022 年 1 月 13 日，白宫就 Log4j 漏洞与公私实体召开了开源软件安全峰会。其中一名高级官员表示：“开源软件虽然加速了创新并推动了巨大的社会和经济效益，但其广泛使用且由志愿者维护的事实是重大的国家安全风险，正如我们正在经历的 Log4j 漏洞事件。它并非新问题。本次峰会我们将讨论如何解决这个问题，生效的解决方案是什么以及我们还能采取哪些行动来保护我们都在依赖的开源软件安全。”</p>
+<p>引用自《<a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s?__biz=MzI2NTg4OTc5Nw==&amp;mid=2247510134&amp;idx=1&amp;sn=4c2520d4e86d56f7ad4cfcc073595cfc&amp;chksm=ea94991cdde3100a908ea1ef25ff5da15d4290d3a5c52bed99b177b0086eee39814b7871f41e&amp;scene=178&amp;cur_album_id=1803829618517311490#rd">白宫和科技巨头在开源软件安全峰会上说了啥？</a>》</p>
 <p>在我看来，各个政府，应该都会有所行动才是。</p>
-<h2 id="五、结束语"><a href="#五、结束语" class="headerlink" title="五、结束语"></a>五、结束语</h2><p>这篇文章，已经太长了，引用一段我在《2021年中国开源年度报告》中的前言，作为结尾吧。</p>
+<h2 id="五-结束语"><a class="markdownIt-Anchor" href="#五-结束语"></a> 五、结束语</h2>
+<p>这篇文章，已经太长了，引用一段我在《2021年中国开源年度报告》中的前言，作为结尾吧。</p>
 <p>在开源还只是一个小众群体的业余爱好时，几乎做任何事情，都是自由的。但是，在软件吞噬世界、开源吞噬软件的今天，开源技术，已经成为整个世界的基础设施之一。能力越大，责任越大。应用越广，风险越高。我们应该如何思考与保障开源供应链安全呢？应该如何建设更加健康的开源生态呢？在这样一种生态中，各方的责任又该如何界定呢？</p>
 <p>愿与诸位共同探索。</p>
 
@@ -534,6 +557,11 @@
   
 
 
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">false</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.css" integrity="sha256-94CNZ/bJtwrBYZrXhCOBvpB4rZUzBnvAsirFv31TMGo=" crossorigin="anonymous">
 
 
 

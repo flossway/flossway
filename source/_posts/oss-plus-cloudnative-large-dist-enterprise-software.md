@@ -69,7 +69,8 @@ IT 技术革命在过去 40 年蓬勃发展，梳理其发展脉络，不难发�
 
 ==只有使用开源加云原生的模式，才能召集足够规模的集成商和产品提供商一起，满足更大数量级的企业客户需求。==
 
-![Delivery Trend for Enterprise Softwares](/flossway/media/images/oss-plus-cloudnative-large-dist-enterprise-software/screenshot-20220323-110840.jpg)
+
+{% asset_img screenshot-20220323-110840.jpg "Delivery Trend for Enterprise Softwares" %}
 
 ## 飞轮效应
 
@@ -87,8 +88,7 @@ IT 技术革命在过去 40 年蓬勃发展，梳理其发展脉络，不难发�
 
 所以，==飞轮效应带来了各方的健康发展==。
 
-
-![Flywheel of OpenSource plus Cloud Native](/flossway/media/images/oss-plus-cloudnative-large-dist-enterprise-software/screenshot-20220323-110919.jpg)
+{% asset_img screenshot-20220323-110919.jpg "Flywheel of OpenSource plus Cloud Native" %}
 
 ## 释放中小企业需求
 
@@ -104,7 +104,7 @@ IT 技术革命在过去 40 年蓬勃发展，梳理其发展脉络，不难发�
 
 # 关于作者
 
-![Avatar of Author](/flossway/media/images/oss-plus-cloudnative-large-dist-enterprise-software/screenshot-20220323-110815.jpg)
+{% asset_img screenshot-20220323-110815.jpg "Avatar of Author" %}
 
 王海良，Chatopera CEO，曾就职于 IBM，三角兽和呤呤英语。在智能客服、智能对话机器人领域发布和参与多个开源项目和开放数据集，出版图书《智能问答与深度学习》，曾运营北京 NodeJS 开发者社区，GitHub 用户名 [hailiang-wang](https://github.com/hailiang-wang)。
 工作经历概述：

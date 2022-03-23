@@ -105,7 +105,7 @@ IT 技术革命在过去 40 年蓬勃发展，梳理其发展脉络，不难发�
 我们还可以想到，在没有发明汽车以前，人们坐马车出行，能出远门的人很少，多数是富有的人才旅游，而汽车出现后，大家都可以出远门旅游了，这时候旅游的人就多了。
 
 
-## 关于作者
+# 关于作者
 
 ![Avatar of Author](/flossway/media/images/oss-plus-cloudnative-large-dist-enterprise-software/screenshot-20220323-110815.jpg)
 

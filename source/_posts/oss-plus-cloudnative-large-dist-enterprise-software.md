@@ -118,3 +118,20 @@ IT 技术革命在过去 40 年蓬勃发展，梳理其发展脉络，不难发�
 * 2016年，儿童英语聊天机器人，使用 TensorFlow 训练基于深度学习的语言模型
 * 2017年，海通证券、广发证券、安永的机器人客服
 * 2018年至今，开源客服系统，春松客服；Chatopera 云服务，低代码和无服务器上线聊天机器人
+
+
+# References
+
+1. [The Flywheel effect by Jim Collins](https://www.jimcollins.com/concepts/the-flywheel.html)
+
+2. [时间机器理论, 软银孙正义](https://zhuanlan.zhihu.com/p/88770582)
+
+3. [精细化分工理论，科学管理之父泰勒](https://baike.sogou.com/v3139958.htm)
+
+4. [15年覆盖100万+企业，腾讯企点全通路融合，拿下赛道Top1，2021](https://www.sohu.com/a/491351696_202972)
+
+5. [The Odoo Story, 2014](https://www.odoo.com/blog/odoo-news-5/the-odoo-story-56)
+
+6. [Odoo, the Open Source ERP Leader, Announces €180M New Investment from Summit Partners, 2021](https://www.summitpartners.com/news/odoo-the-open-source-erp-leader-announces-180m-new-investment-from-summit-partners)
+
+7. [Odoo, an open-source business management software developer, at a $2.3B+ valuation, 2021](https://techcrunch.com/2021/07/29/summit-invests-215m-into-odoo-an-open-source-business-management-software-developer-at-a-2-3b-valuation/ )

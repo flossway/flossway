@@ -112,19 +112,11 @@ IT 技术革命在过去 40 年蓬勃发展，梳理其发展脉络，不难发�
 # References
 
 1. [2021 年中国小企业数字初始化指数 2.0 白皮书](https://i.dell.com/sites/csdocuments/Shared-Content_data-Sheets_Documents/zh/cn/delldigitalizationbasic.pdf)
-
 2. [红杉中国：2021企业数字化年度指南](https://byteclicks.com/28909.html)
-
 3. [The Flywheel effect by Jim Collins](https://www.jimcollins.com/concepts/the-flywheel.html)
-
 4. [时间机器理论, 软银孙正义](https://zhuanlan.zhihu.com/p/88770582)
-
 5. [精细化分工理论，科学管理之父泰勒](https://baike.sogou.com/v3139958.htm)
-
 6. [15年覆盖100万+企业，腾讯企点全通路融合，拿下赛道Top1，2021](https://www.sohu.com/a/491351696_202972)
-
 7. [The Odoo Story, 2014](https://www.odoo.com/blog/odoo-news-5/the-odoo-story-56)
-
 8. [Odoo, the Open Source ERP Leader, Announces €180M New Investment from Summit Partners, 2021](https://www.summitpartners.com/news/odoo-the-open-source-erp-leader-announces-180m-new-investment-from-summit-partners)
-
 9. [Odoo, an open-source business management software developer, at a $2.3B+ valuation, 2021](https://techcrunch.com/2021/07/29/summit-invests-215m-into-odoo-an-open-source-business-management-software-developer-at-a-2-3b-valuation/ )

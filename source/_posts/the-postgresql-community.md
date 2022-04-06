@@ -1,5 +1,5 @@
 ---
-title: The PostgreSQL Community
+title: PostgreSQL 开源社群的经验
 date: 2022-02-10
 author: tison
 categories: tison

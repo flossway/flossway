@@ -127,3 +127,15 @@ giscus:
   reactions_enabled: 1
   # Available values: light | dark | dark_high_contrast | transparent_dark | preferred-color-scheme
   theme: light
+
+# Sitemap Generator for RSS Reader
+## https://github.com/hexojs/hexo-generator-sitemap
+sitemap:
+  path: 
+    - sitemap.xml
+    - sitemap.txt
+  template: ./sitemap_template.xml
+  template_txt: ./sitemap_template.txt
+  rel: false
+  tags: true
+  categories: true

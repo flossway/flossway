@@ -887,15 +887,3 @@ vendors:
 css: css
 js: js
 images: images
-
-# Sitemap Generator for RSS Reader
-## https://github.com/hexojs/hexo-generator-sitemap
-sitemap:
-  path: 
-    - sitemap.xml
-    - sitemap.txt
-  template: ./assets/tpls/sitemap_template.xml
-  template_txt: ./assets/tpls/sitemap_template.txt
-  rel: false
-  tags: true
-  categories: true

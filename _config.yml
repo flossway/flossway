@@ -134,8 +134,8 @@ sitemap:
   path: 
     - sitemap.xml
     - sitemap.txt
-  template: ./assets/tpls/sitemap_template.xml
-  template_txt: ./assets/tpls/sitemap_template.txt
+  template: ./sitemap_template.xml
+  template_txt: ./sitemap_template.txt
   rel: false
   tags: true
   categories: true

@@ -1,6 +1,6 @@
 ---
-title:  "从法律思维的角度看代码——《Code 2.0》读后感"
-date:   2021-11-20 10:02
+title: 从法律思维的角度看代码
+date: 2021-11-20 10:02
 author: 庄表伟
 categories: 庄表伟
 tags:
@@ -8,7 +8,7 @@ tags:
     - 法学
 ---
 
-《[Code 2.0](https://book.douban.com/subject/30276251/)》是一本常读常新的书，不时翻阅，也常常会有新的收获。
+[《Code 2.0》](https://book.douban.com/subject/30276251/)是一本常读常新的书，不时翻阅，也常常会有新的收获。
 
 这次[建盛的开源之道](https://opensourceway.community/)读书会，又组织了一次《Code 2.0》的共读活动，大家开了一个腾讯会议，各自聊聊从这本书里读到的感想。果不其然，畅谈之后，作业就来了。
 

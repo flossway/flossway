@@ -47,61 +47,7 @@
   </url>
   
   <url>
-    <loc>https://flossway.github.io/flossway/2022/01/15/talking-again-about-oss-supply-chain/</loc>
-    
-    <lastmod>2022-04-13</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://flossway.github.io/flossway/2022/04/16/the-apache-community/</loc>
-    
-    <lastmod>2022-04-13</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://flossway.github.io/flossway/2022/02/10/the-cathedral-and-the-bazaar/</loc>
-    
-    <lastmod>2022-04-13</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://flossway.github.io/flossway/2022/02/18/the-cathedral-recap/</loc>
-    
-    <lastmod>2022-04-13</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://flossway.github.io/flossway/2021/05/12/about-oss-supply-chain/</loc>
-    
-    <lastmod>2022-04-13</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://flossway.github.io/flossway/2022/03/10/challenge-of-community/</loc>
-    
-    <lastmod>2022-04-13</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://flossway.github.io/flossway/2022/03/30/chaos-and-order-in-open-source-world/</loc>
     
     <lastmod>2022-04-13</lastmod>
     
@@ -201,6 +147,60 @@
   
   <url>
     <loc>https://flossway.github.io/flossway/2022/03/23/oss-plus-cloudnative-large-dist-enterprise-software/</loc>
+    
+    <lastmod>2022-04-13</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://flossway.github.io/flossway/2022/01/15/talking-again-about-oss-supply-chain/</loc>
+    
+    <lastmod>2022-04-13</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://flossway.github.io/flossway/2022/04/16/the-apache-community/</loc>
+    
+    <lastmod>2022-04-13</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://flossway.github.io/flossway/2022/02/10/the-cathedral-and-the-bazaar/</loc>
+    
+    <lastmod>2022-04-13</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://flossway.github.io/flossway/2021/05/12/about-oss-supply-chain/</loc>
+    
+    <lastmod>2022-04-13</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://flossway.github.io/flossway/2022/03/10/challenge-of-community/</loc>
+    
+    <lastmod>2022-04-13</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://flossway.github.io/flossway/2022/03/30/chaos-and-order-in-open-source-world/</loc>
     
     <lastmod>2022-04-13</lastmod>
     
@@ -395,7 +395,7 @@
   </url>
   
   <url>
-    <loc>https://flossway.github.io/flossway/categories/hailiang-wang/</loc>
+    <loc>https://flossway.github.io/flossway/categories/%E7%8E%8B%E6%B5%B7%E8%89%AF/</loc>
     <lastmod>2022-04-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>

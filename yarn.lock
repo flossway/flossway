@@ -742,6 +742,15 @@ hexo-generator-searchdb@^1.4.0:
   dependencies:
     nunjucks "^3.2.2"
 
+hexo-generator-sitemap@^3.0.1:
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/hexo-generator-sitemap/-/hexo-generator-sitemap-3.0.1.tgz#6183995f918330c06d99aa18ca9de81dd8055841"
+  integrity sha512-n+0KLNmq6TLbiZPTQF6NY5MbEem/O+DFx0lgQZNQcU4tdjXIZRrQJs+KRKeT66NTkdlYTqb4WwCxswLqQz0crA==
+  dependencies:
+    hexo-util "^2.1.0"
+    micromatch "^4.0.2"
+    nunjucks "^3.1.6"
+
 hexo-generator-tag@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/hexo-generator-tag/-/hexo-generator-tag-1.0.0.tgz#54ec23de9409c75584ea81e36057a59031b022f1"
@@ -860,7 +869,7 @@ hexo-util@2.5.0:
     prismjs "^1.17.1"
     strip-indent "^3.0.0"
 
-hexo-util@^2.0.0, hexo-util@^2.4.0, hexo-util@^2.5.0:
+hexo-util@^2.0.0, hexo-util@^2.1.0, hexo-util@^2.4.0, hexo-util@^2.5.0:
   version "2.6.0"
   resolved "https://registry.yarnpkg.com/hexo-util/-/hexo-util-2.6.0.tgz#3265aa1b1983e48345a2af59c6785ac061886075"
   integrity sha512-sLG45foxXMnMgCo3FpP4Sicj5nLD6ezO46+DKP01BWj1CfNq2pYoUdJacfeVbKc+oFtitRcNIGsPNNt3pVbzdg==
@@ -1298,7 +1307,7 @@ normalize-path@^3.0.0, normalize-path@~3.0.0:
   resolved "https://registry.yarnpkg.com/normalize-path/-/normalize-path-3.0.0.tgz#0dcd69ff23a1c9b11fd0978316644a0388216a65"
   integrity sha512-6eZs5Ls3WtCisHWp9S2GUy8dqkpGi4BVSz3GaqiE6ezub0512ESztXUwUB6C6IKbQkY2Pnb/mD4WYojCRwcwLA==
 
-nunjucks@^3.2.1, nunjucks@^3.2.2:
+nunjucks@^3.1.6, nunjucks@^3.2.1, nunjucks@^3.2.2:
   version "3.2.3"
   resolved "https://registry.yarnpkg.com/nunjucks/-/nunjucks-3.2.3.tgz#1b33615247290e94e28263b5d855ece765648a31"
   integrity sha512-psb6xjLj47+fE76JdZwskvwG4MYsQKXUtMsPh6U0YMvmyjRtKRFcxnlXGWglNybtNTNVmGdp94K62/+NjF5FDQ==

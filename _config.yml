@@ -128,7 +128,7 @@ giscus:
   # Available values: light | dark | dark_high_contrast | transparent_dark | preferred-color-scheme
   theme: light
 
-# Sitemap Generator for RSS Reader
+# Sitemap Generator for Search Engine
 ## https://github.com/hexojs/hexo-generator-sitemap
 sitemap:
   path:
@@ -139,3 +139,23 @@ sitemap:
   rel: false
   tags: true
   categories: true
+
+# RSS Feed Generator for RSS Reader
+## https://github.com/hexojs/hexo-generator-sitemap
+feed:
+  enable: true
+  type:
+    - atom
+    - rss2
+  path:
+    - atom.xml
+    - rss2.xml
+  limit: 0
+  hub:
+  content: true
+  content_limit: 800
+  content_limit_delim: ' '
+  order_by: -date
+  icon: source/media/flossway.png
+  autodiscovery: true
+  template:

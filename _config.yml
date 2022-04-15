@@ -141,21 +141,17 @@ sitemap:
   categories: true
 
 # RSS Feed Generator for RSS Reader
-## https://github.com/hexojs/hexo-generator-sitemap
+## https://github.com/hexojs/hexo-generator-feed
 feed:
   enable: true
-  type:
-    - atom
-    - rss2
-  path:
-    - atom.xml
-    - rss2.xml
+  type: atom
+  path: atom.xml
   limit: 0
   hub:
   content: true
-  content_limit: 800
+  content_limit: 140
   content_limit_delim: ' '
   order_by: -date
-  icon: source/media/flossway.png
+  icon: ./source/media/flossway.png
   autodiscovery: true
   template:

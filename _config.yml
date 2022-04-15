@@ -152,6 +152,6 @@ feed:
   content_limit: 140
   content_limit_delim: ' '
   order_by: -date
-  icon: ./source/media/flossway.png
+  icon: /flossway/images/favicon-32x32-next.png
   autodiscovery: true
   template:

@@ -154,4 +154,3 @@ feed:
   order_by: -date
   icon: /flossway/images/favicon-32x32-next.png
   autodiscovery: true
-  template:

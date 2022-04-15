@@ -136,3 +136,18 @@ sitemap:
   rel: false
   tags: true
   categories: true
+
+# RSS Feed Generator for RSS Reader
+## https://github.com/hexojs/hexo-generator-feed
+feed:
+  enable: true
+  type: atom
+  path: atom.xml
+  limit: 0
+  hub:
+  content: true
+  content_limit: 140
+  content_limit_delim: ' '
+  order_by: -date
+  icon: /flossway/images/favicon-32x32-next.png
+  autodiscovery: true

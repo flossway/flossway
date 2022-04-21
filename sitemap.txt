@@ -3,10 +3,14 @@ https://flossway.github.io/flossway/2022/02/10/value-creation/
 https://flossway.github.io/flossway/2022/02/28/where-comes-the-community/
 https://flossway.github.io/flossway/categories/index.html
 https://flossway.github.io/flossway/tags/index.html
+https://flossway.github.io/flossway/2022/03/23/oss-plus-cloudnative-large-dist-enterprise-software/
 https://flossway.github.io/flossway/2022/01/15/talking-again-about-oss-supply-chain/
 https://flossway.github.io/flossway/2022/04/16/the-apache-community/
 https://flossway.github.io/flossway/2022/02/10/the-cathedral-and-the-bazaar/
 https://flossway.github.io/flossway/2022/02/18/the-cathedral-recap/
+https://flossway.github.io/flossway/2022/02/10/open-organization/
+https://flossway.github.io/flossway/2022/02/10/open-source-collaboration-enterprise-perspective/
+https://flossway.github.io/flossway/2022/03/05/opensource-code-spillover/
 https://flossway.github.io/flossway/2021/05/12/about-oss-supply-chain/
 https://flossway.github.io/flossway/2022/03/10/challenge-of-community/
 https://flossway.github.io/flossway/2022/03/30/chaos-and-order-in-open-source-world/
@@ -17,10 +21,6 @@ https://flossway.github.io/flossway/2022/02/10/effective-open-source-participant
 https://flossway.github.io/flossway/2022/02/17/enterprise-open-source-strategy/
 https://flossway.github.io/flossway/2022/03/13/influence-or-marketing/
 https://flossway.github.io/flossway/2021/11/20/legal-thinking-for-code/
-https://flossway.github.io/flossway/2022/02/10/open-organization/
-https://flossway.github.io/flossway/2022/02/10/open-source-collaboration-enterprise-perspective/
-https://flossway.github.io/flossway/2022/03/05/opensource-code-spillover/
-https://flossway.github.io/flossway/2022/03/23/oss-plus-cloudnative-large-dist-enterprise-software/
 https://flossway.github.io/flossway
 https://flossway.github.io/flossway/tags/%E5%BC%80%E6%BA%90/
 https://flossway.github.io/flossway/tags/%E4%BE%9B%E5%BA%94%E9%93%BE/
